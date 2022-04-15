@@ -1,7 +1,8 @@
 CACHE MANIFEST 
 
 CACHE: 
-..\img.jpg
+../img.jpg
+../style.css
 app-dumper.js
 app2usb.js
 backup.js
