@@ -1,0 +1,82 @@
+html, body {
+background-image: url('img.jpg');
+background-size: 100%;
+background-repeat: no-repeat;
+background-color: #24272b;
+color: white;
+text-align: center;
+margin: 0px;
+overflow: hidden;
+}
+h1 {
+text-shadow: 0.1em 0.1em 0.2em black;
+font-size: 25px;
+text-align: center;
+color: white;
+}
+a {
+text-decoration: none;
+}
+#main-section {
+text-align: center;
+display: block;
+}
+#crypto-section {
+text-align: center;
+display: none;
+}
+#backup-section {
+text-align: center;
+display: none;
+}
+#mods-section {
+text-align: center;
+display: none;
+}
+.btn {
+background-color: #003263;
+color: white;
+width: 227px;
+height: 46px;
+padding-bottom: 5px;
+text-align: center;
+font-size: 20px;
+margin-top: 8px;
+margin-bottom: 8px;
+margin-left: 5px;
+margin-right: 5px;
+border-bottom-width: 0px;
+border-right-width: 0px;
+border-top-width: 0px;
+border-left-width: 0px;
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 8px;
+}
+.btn:hover {
+background-color: #0058b1;
+}
+.btn-jb2 {
+background-color: #b10000;
+color: white;
+}
+.btn-jb2:hover {
+background-color: #f31414;
+color: white;
+}
+.btn-blank {
+background-color: #3d3d3d;
+pointer-events: none;
+}
+.btn-web {
+background-color: #076300;
+}
+.btn-web:hover {
+background-color: #18891b;
+}
+.btn-toolbox {
+background-color: #ae2301;
+}
+.btn-toolbox:hover {
+background-color: #d42a01;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html><head>
+<title>PS4 Main Host by GamerHack</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<h1 id="msgs">PS4 Main Host by GamerHack</h1>
+<hr>
+<br>
+<div id="main-section">
+<h1 style="font-size:18px;color:yellow;">Select Your Firmware</h1>
+<a href="672/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Host for Firmware 6.72'" onmouseout="msgs.innerHTML='PS4 Main Host by GamerHack'"> 6.72 FW v3.0 </button></a>
+<a href="702/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Host for Firmware 7.02'" onmouseout="msgs.innerHTML='PS4 Main Host by GamerHack'"> 7.02 FW v1.4 </button></a>
+<a href="75x/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack host for Firmwares 7.50 - 7.55'" onmouseout="msgs.innerHTML='PS4 Main Host by GamerHack'"> 7.50 - 7.55 FW v1.5 </button></a>
+<br>
+<a href="900goldhen/index.html"><button class="btn" onmouseover="msgs.innerHTML='Automatic GoldHen for Firmware 9.00'" onmouseout="msgs.innerHTML='PS4 Main Host by GamerHack'"> 9.00 FW Auto-GoldHen </button></a>
+<a href="900v2/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Host with Manual Exploitation for Firmware 9.00'" onmouseout="msgs.innerHTML='PS4 Main Host by GamerHack'"> 9.00 FW v2.5 </button></a>
+<a href="900v3/index.html"><button class="btn" onmouseover="msgs.innerHTML='GamerHack Host with Automatic Exploitation for Firmware 9.00'" onmouseout="msgs.innerHTML='PS4 Main Host by GamerHack'"> 9.00 FW v3.0 </button></a>
+<br><br><br><br><br>
+<button class="btn btn-web" onmouseover="msgs.innerHTML='If you like my work you can support me with a donation.'" onmouseout="msgs.innerHTML='PS4 Main Host by GamerHack'" onclick=load_crypto() style="margin-bottom: 246px;width: 468px;"> For Donations (Only in Cryptocurrencies) </button>
+<br>
+<h1 style="color:yellow;">Designed by <a href="https://twitter.com/GamerHack93" style="color:#f31414;">@GamerHack93</a><a style="color:white;"> A special thanks to all the developers involved in the scene.</a></h1>
+</div>
+<div id="crypto-section">
+<h1 style="font-size:18px;color:yellow;">For Transfers in Bitcoin (BTC) you can scan the OR Code.</h1>
+<img src="btc.jpg" width="160" height="160">
+<br>
+<h1 style="font-size:18px;">bc1q6cnsykmvem6zgw8wag3ygee0jkhtxj6rkp2nrm</h1>
+<br>
+<h1 style="font-size:18px;color:yellow;">For Transfers in Ethereum (ETH) you can scan the OR Code.</h1>
+<img src="eth.jpg" width="160" height="160">
+<h1 style="font-size:18px;">0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c</h1>
+<button class="btn btn-web" onclick=back()> Return </button>
+</div>
+<script>
+function load_crypto(){
+document.getElementById("crypto-section").style.display = "block";
+document.getElementById("main-section").style.display = "none";
+}
+
+function back(){
+document.getElementById("main-section").style.display = "block";
+document.getElementById("crypto-section").style.display = "none";
+}
+</script>
+</body>
+</html>
