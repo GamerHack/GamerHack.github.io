@@ -1,7 +1,8 @@
 CACHE MANIFEST 
 
 CACHE: 
-..\img.jpg
+../img.jpg
+../style.css
 app2usb.bin
 backup.bin
 disable-aslr.bin
