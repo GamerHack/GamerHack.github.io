@@ -1,0 +1,70 @@
+<html>
+<link rel="stylesheet" href="style.css">
+<body>
+<h1 style="margin-top: 17px;">Loading Payload... Please Wait !!!</h1>
+<hr><br><br><br><br><br><br><br><br><br><br><br><h1 style="font-size:30px;">This will take a time between 20 and 40 seconds ...</h1>
+<script>
+function wk_keep_alive()
+{
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', document.location.href, false);
+    xhr.send('');
+}
+
+function print(){}
+
+function getHashParams()
+{
+    var ans = {};
+    var p = document.location.hash.substr(1).split("&");
+    for(var i = 0; i < p.length; i++)
+    {
+        var kv = p[i].split('=');
+        var k = kv.shift();
+        ans[k] = decodeURIComponent(kv.join('='));
+    }
+    return ans;
+}
+
+function done()
+{
+    history.pushState({}, '', 'online.html');
+    if(main_ret == 0 || main_ret == 179)
+    {
+        alert("You're all set!");
+        setTimeout(function() { read_ptr_at(0); }, 1);
+    }
+    else
+        alert("Jailbreak is not activated.");
+}
+
+function runScript(what)
+{
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', what, false);
+    xhr.send('');
+    eval.call(window, xhr.responseText);
+}
+
+var params = getHashParams();
+</script>
+<script src="netcat.js"></script>
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="exploit.js"></script>
+<script src="malloc.js"></script>
+<script src="rop2.js"></script>
+<script src="syscalls.js"></script>
+<script src="syscalls2.js"></script>
+<script>
+if('p0' in params)
+    runScript(params.p0);
+if('p1' in params)
+    runScript(params.p1);
+</script>
+<script src="kexploit-launcher.js"></script>
+<script src="relocator.js"></script>
+<script>done();</script>
+</body>
+</html>

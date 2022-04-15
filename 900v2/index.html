@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest"><head>
+<title>PS4 9.00 FW Host v2.5 by GamerHack</title>
+<link rel="stylesheet" href="../style.css">
+<script src="int64.js"></script>
+<script src="rop.js"></script>
+<script src="kexploit.js"></script>
+<script src="webkit.js"></script>
+</head>
+<body>
+<script>
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+<h1 id="msgs">PS4 9.00 FW Host v2.5 by GamerHack</h1>
+<hr>
+<br>
+<h1 style="font-size:18px;color:yellow;">Main Payloads</h1>
+<button class="btn" onmouseover="msgs.innerHTML='GoldHen v2.2.2 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_goldhen222()> GoldHEN v2.2.2 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Send a Payload using port 9020'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_binloader()> Bin Loader </button>
+<br>
+<h1 style="font-size:18px;text-align:center;">Payloads</h1>
+<button class="btn" onmouseover="msgs.innerHTML='Enable Some Debugging Functions Available on TestKit'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_todex()> ToDex </button>
+<button class="btn" onmouseover="msgs.innerHTML='Dump Games to USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_dumper()> App-Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='Access this console Through FTP (Be careful what you do)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_ftp()> FTP </button>
+<button class="btn" onmouseover="msgs.innerHTML='Transfer Installed Games to USB Drive in exFAT'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_app2usb()> App2USB </button>
+<button class="btn" onmouseover="msgs.innerHTML='Create a Backup of the Database and Users to a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_dbackup()> DB Backup </button>
+<button class="btn" onmouseover="msgs.innerHTML='Restore a Backup of the Database and Users from a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_dbrestore()> DB Restore </button>
+<br>
+<button class="btn" onmouseover="msgs.innerHTML='Enable System Updates'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_enablebUpdates()> Enable Updates </button>
+<button class="btn" onmouseover="msgs.innerHTML='Disable System Updates'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_disableUpdates()> Disable Updates </button>
+<button class="btn" onmouseover="msgs.innerHTML='Enable/Disable Browser History.'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_historyBlocker()> History Blocker </button>
+<button class="btn" onmouseover="msgs.innerHTML='Dump a Conole Kernel to a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_kernelDump()> Kernel Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='Dump a Kernel Module to a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_moduleDump()> Module Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='PS4 Debug for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_ps4debug()> PS4 Debug </button>
+<br>
+<button class="btn" onmouseover="msgs.innerHTML='Disables the ASLR (Address space layout randomization)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_disbAslr()> Disable ASLR </button>
+<button class="btn" onmouseover="msgs.innerHTML='Disable IDU Mode if you have activated it by mistake'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_exitidu()> Exit IDU </button>
+<button class="btn" onmouseover="msgs.innerHTML='Renames 'fake' RIFs to 'free' RIFs'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_rifRen()> RIF Renamer </button>
+<button class="btn" onmouseover="msgs.innerHTML='Permanent UART for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_permUart()> Permanent UART </button>
+<button class="btn" onmouseover="msgs.innerHTML='Required to Activate Cheats Through the PS4 Trainer Website'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_webrte()> WebRTE </button>
+<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-web" onmouseover="msgs.innerHTML='PS4 Trainer Website (Follow Instructions There)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'"> PS4 Trainer Web </button></a>
+<br>
+<a href="webactivator.html"><button class="btn" style="margin-left: 77px;" onmouseover="msgs.innerHTML='Activate Your User Account from the Console Browser'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'"> Web-Activator </button></a>
+<button class="btn btn-toolbox" onmouseover="msgs.innerHTML='Orbis ToolBox Alpha 1190 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_toolbox()> Orbis-Toolbox </button>
+<button class="btn" onmouseover="msgs.innerHTML='Modify PS4 FAN Speed'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_fanthreshold() style="margin-right: 8px;"> Fan Threshold </button><select id="tempC"></select>&#176;C
+<br>
+<h1 style="font-size:18px;color:yellow;">Online Payloads</h1>
+<a href="online.html"><button class="btn btn-web" style="margin-bottom: 11px;width: 468px;" onmouseover="msgs.innerHTML='Payloads hosted Online'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'"> Click Here to Load Page </button></a>
+<br>
+<h1 style="margin-top: 55px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color:#f31414; margin-left: 15px;">@sleirsgoevy</a><a style="color:white; margin-left: 15px;">ChendoChap</a><a href="https://twitter.com/SpecterDev" style="color:#f31414; margin-left: 15px;">@SpecterDev</a><a style="color:white; margin-left: 15px;">SiSTR0</a><a href="https://twitter.com/Znullptr" style="color:#f31414; margin-left: 15px;">@Znullptr</a><a style="color:white; margin-left: 15px;">And Many More Developers ...</a></h1>
+<script>
+for(var i=40; i<=75; i=i+5){
+    var select = document.getElementById("tempC");
+    var option = document.createElement("OPTION");
+	select.options.add(option);
+	option.text = i;
+	option.value = i;
+}
+tempC.value=60;
+</script>
+<script>
+function load_goldhen222(){
+msgs.innerHTML="Loading GoldHEN v2.2.2... Please Wait !!!";
+PLfile = "goldhen_2.2.2.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_binloader(){
+msgs.innerHTML="Launching Bin Loader... Please Wait !!!";
+run_jb = "binloader";
+setTimeout(poc,1500);
+}
+
+function load_todex(){
+msgs.innerHTML="Loading ToDex... Please Wait !!!"
+PLfile = "todex.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_dumper(){
+msgs.innerHTML="Loading App-Dumper... Please Wait !!!"
+PLfile = "dumper.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_ftp(){
+msgs.innerHTML="Loading FTP... Please Wait !!!"
+PLfile = "ftp.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_app2usb(){
+msgs.innerHTML="Loading App2USB... Please Wait !!!"
+PLfile = "app2usb.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_dbackup(){
+msgs.innerHTML="Loading DB Backup... Please Wait !!!"
+PLfile = "backup.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_dbrestore(){
+msgs.innerHTML="Loading DB Restore... Please Wait !!!"
+PLfile = "restore.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_enablebUpdates(){
+msgs.innerHTML="Loading Enable Updates... Please Wait !!!"
+PLfile = "enable-updates.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_disableUpdates(){
+msgs.innerHTML="Loading Disable Updates... Please Wait !!!"
+PLfile = "disable-updates.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_historyBlocker(){
+msgs.innerHTML="Loading History Blocker... Please Wait !!!"
+PLfile = "history-blocker.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_kernelDump(){
+msgs.innerHTML="Loading Kernel Dumper... Please Wait !!!"
+PLfile = "kernel-dumper.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_moduleDump(){
+msgs.innerHTML="Loading Module Dumper... Please Wait !!!"
+PLfile = "module-dumper.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_ps4debug(){
+msgs.innerHTML="Loading PS4 Debug... Please Wait !!!"
+PLfile = "ps4debug.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_disbAslr(){
+msgs.innerHTML="Loading Disable ASLR... Please Wait !!!"
+PLfile = "disable-aslr.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_exitidu(){
+msgs.innerHTML="Loading Exit IDU... Please Wait !!!"
+PLfile = "exit-idu.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_rifRen(){
+msgs.innerHTML="Loading RIF Renamer... Please Wait !!!"
+PLfile = "rif-renamer.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_permUart(){
+msgs.innerHTML="Loading Permanent UART... Please Wait !!!"
+PLfile = "permanent-uart.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_webrte(){
+msgs.innerHTML="Loading WebRTE... Please Wait !!!"
+PLfile = "webrte.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_toolbox(){
+msgs.innerHTML="Loading Orbis-Toolbox... Please Wait !!!"
+PLfile = "Orbis-Toolbox-900.bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+
+function load_fanthreshold(){
+msgs.innerHTML="Loading Fan Threshold... Please Wait !!!"
+PLfile = "fan-threshold"+tempC.value+".bin";
+run_jb = "payload";
+setTimeout(poc,1500);
+}
+</script>
+</body>
+</html>
