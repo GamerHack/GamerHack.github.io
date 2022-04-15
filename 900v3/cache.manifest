@@ -2,6 +2,7 @@ CACHE MANIFEST
 
 CACHE: 
 ..\img.jpg
+..\style.css
 app2usb.bin
 backup.bin
 cache.html
