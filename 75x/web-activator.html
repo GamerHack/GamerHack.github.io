@@ -1,0 +1,53 @@
+<html>
+<style>
+html {
+background-image: url('img.jpg');
+background-size:100%;
+background-repeat:no-repeat;
+background-color: #24272b;
+color:white;
+}
+</style>
+<body onload="go()">
+<script>
+function print(){}
+
+var scriptCode = '';
+
+function preloadScripts(lst)
+{
+    for(var i = 0; i < lst.length; i++)
+    {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', lst[i], false);
+        xhr.send('');
+        scriptCode += xhr.responseText + '\n';
+    }
+}
+
+function done(){}
+
+window.midExploit = function()
+{
+    preloadScripts(['blob.js', 'jb.js', 'mira.js', 'web-activator.js', 'netcat.js', 'frontend.js'], go);
+}
+
+window.postExploit = function()
+{
+    history.pushState({}, '', '.');
+    setTimeout(function() //update the screen one last time...
+    {
+        eval.call(window, scriptCode);
+        done();
+    }, 100);
+};
+</script>
+<script src="utils.js"></script>
+<script src="int64.js"></script>
+<script src="ps4.js"></script>
+<button id="input1" onfocus="handle2()"></button>
+<button id="input2"></button>
+<button id="input3" onfocus="handle2()"></button>
+<select id="select1"><option value="value1">Value1</option></select>
+</body>
+</html>
