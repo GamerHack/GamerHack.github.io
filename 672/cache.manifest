@@ -1,7 +1,8 @@
 CACHE MANIFEST 
 
 CACHE: 
-..\img.jpg
+../img.jpg
+../style.css
 frontend.js
 index.html
 jb2.js
