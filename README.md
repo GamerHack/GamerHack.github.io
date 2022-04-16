@@ -1,6 +1,6 @@
 # ps4main
 
-PS4 Main Host for Jailbreakable Firmwares
+All PS4 Exploits
 
 ## Steps
 
