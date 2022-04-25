@@ -12,35 +12,105 @@
 <hr>
 <br>
 <h1 style="font-size:18px;color:yellow;">Online Payloads</h1>
-<a href="payload.html#p0=mira.js&p1=linux1gb.js"><button class="btn" onmouseover="msgs.innerHTML='Load Linux with 1GB VRAM'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'"> Linux 1GB </button></a>
-<a href="payload.html#p0=mira.js&p1=linux2gb.js"><button class="btn" onmouseover="msgs.innerHTML='Load Linux with 2GB VRAM'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'"> Linux 2GB </button></a>
-<a href="payload.html#p0=mira.js&p1=linux3gb.js"><button class="btn" onmouseover="msgs.innerHTML='Load Linux with 3GB VRAM'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'"> Linux 3GB </button></a>
-<a href="payload.html#p0=mira.js&p1=linux4gb.js"><button class="btn" onmouseover="msgs.innerHTML='Load Linux with 4GB VRAM'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'"> Linux 4GB </button></a>
-<a href="payload.html#p0=mira.js&p1=linux5gb.js"><button class="btn" onmouseover="msgs.innerHTML='Load Linux with 5GB VRAM'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'"> Linux 5GB </button></a>
+<a href="payload.html#p0=mira.js&p1=linux1gb.js"><button class="btn" onmouseover="Linux1()" onmouseout="pagetitle()"> Linux 1GB </button></a>
+<a href="payload.html#p0=mira.js&p1=linux2gb.js"><button class="btn" onmouseover="Linux2()" onmouseout="pagetitle()"> Linux 2GB </button></a>
+<a href="payload.html#p0=mira.js&p1=linux3gb.js"><button class="btn" onmouseover="Linux3()" onmouseout="pagetitle()"> Linux 3GB </button></a>
+<a href="payload.html#p0=mira.js&p1=linux4gb.js"><button class="btn" onmouseover="Linux4()" onmouseout="pagetitle()"> Linux 4GB </button></a>
+<a href="payload.html#p0=mira.js&p1=linux5gb.js"><button class="btn" onmouseover="Linux5()" onmouseout="pagetitle()"> Linux 5GB </button></a>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.00 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_arabicGuy100()> Arabic Guy v1.00 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.27 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_arabicGuy127()> Arabic Guy v1.27 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.32 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_arabicGuy132()> Arabic Guy v1.32 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.33 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_arabicGuy133()> Arabic Guy v1.33 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Expulsion v4.0-1.38'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_Expulsion()> Expulsion v4.0 - 1.38 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Lamance v0.8.1 - 1.38'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_Lamance()> Lamance v0.8.1 - 1.38 </button>
+<button class="btn" onmouseover="GTAVMod1()" onmouseout="pagetitle()" onclick=load_arabicGuy100()> Arabic Guy v1.00 </button>
+<button class="btn" onmouseover="GTAVMod2()" onmouseout="pagetitle()" onclick=load_arabicGuy127()> Arabic Guy v1.27 </button>
+<button class="btn" onmouseover="GTAVMod3()" onmouseout="pagetitle()" onclick=load_arabicGuy132()> Arabic Guy v1.32 </button>
+<button class="btn" onmouseover="GTAVMod4()" onmouseout="pagetitle()" onclick=load_arabicGuy133()> Arabic Guy v1.33 </button>
+<button class="btn" onmouseover="GTAVMod5()" onmouseout="pagetitle()" onclick=load_Expulsion()> Expulsion v4.0 - 1.38 </button>
+<button class="btn" onmouseover="GTAVMod6()" onmouseout="pagetitle()" onclick=load_Lamance()> Lamance v0.8.1 - 1.38 </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.32 v1.3'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_WildeModz132()> WildeModz-1.32 v1.3 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.33 v1.3'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_WildeModz133()> WildeModz-1.33 v1.3 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.38 v1.7'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_WildeModz138()> WildeModz-1.38 v1.7 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.33'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_beefQueef133()> Beef Queef Mod v1.33 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.34'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_beefQueef134()> Beef Queef Mod v1.34 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.38d'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_beefQueef138()> Beef Queef Mod v1.38d </button>
+<button class="btn" onmouseover="GTAVMod7()" onmouseout="pagetitle()" onclick=load_WildeModz132()> WildeModz-1.32 v1.3 </button>
+<button class="btn" onmouseover="GTAVMod8()" onmouseout="pagetitle()" onclick=load_WildeModz133()> WildeModz-1.33 v1.3 </button>
+<button class="btn" onmouseover="GTAVMod9()" onmouseout="pagetitle()" onclick=load_WildeModz138()> WildeModz-1.38 v1.7 </button>
+<button class="btn" onmouseover="GTAVMod10()" onmouseout="pagetitle()" onclick=load_beefQueef133()> Beef Queef Mod v1.33 </button>
+<button class="btn" onmouseover="GTAVMod11()" onmouseout="pagetitle()" onclick=load_beefQueef134()> Beef Queef Mod v1.34 </button>
+<button class="btn" onmouseover="GTAVMod12()" onmouseout="pagetitle()" onclick=load_beefQueef138()> Beef Queef Mod v1.38d </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.00'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_Oysters100()> Oysters Menu v1.00 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.13'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_Oysters113()> Oysters Menu v1.13 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.19'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_Oysters119()> Oysters Menu v1.19 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.24'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_Oysters124()> Oysters Menu v1.24 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.29'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.5 by GamerHack'" onclick=load_Oysters129()> Oysters Menu v1.29 </button>
+<button class="btn" onmouseover="RedDeadMod1()" onmouseout="pagetitle()" onclick=load_Oysters100()> Oysters Menu v1.00 </button>
+<button class="btn" onmouseover="RedDeadMod2()" onmouseout="pagetitle()" onclick=load_Oysters113()> Oysters Menu v1.13 </button>
+<button class="btn" onmouseover="RedDeadMod3()" onmouseout="pagetitle()" onclick=load_Oysters119()> Oysters Menu v1.19 </button>
+<button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick=load_Oysters124()> Oysters Menu v1.24 </button>
+<button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick=load_Oysters129()> Oysters Menu v1.29 </button>
 <br>
 <a href="index.html"><button class="btn btn-web"> Return to Main Page </button></a>
 <h1 style="margin-top: 211px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color:#f31414; margin-left: 15px;">@sleirsgoevy</a><a style="color:white; margin-left: 15px;">ChendoChap</a><a href="https://twitter.com/SpecterDev" style="color:#f31414; margin-left: 15px;">@SpecterDev</a><a style="color:white; margin-left: 15px;">SiSTR0</a><a href="https://twitter.com/Znullptr" style="color:#f31414; margin-left: 15px;">@Znullptr</a><a style="color:white; margin-left: 15px;">And Many More Developers ...</a></h1>
 <script>
+function Linux1(){
+document.getElementById("msgs").innerHTML = "Load Linux with 1GB VRAM";
+}
+function Linux2(){
+document.getElementById("msgs").innerHTML = "Load Linux with 2GB VRAM";
+}
+function Linux3(){
+document.getElementById("msgs").innerHTML = "Load Linux with 3GB VRAM";
+}
+function Linux4(){
+document.getElementById("msgs").innerHTML = "Load Linux with 4GB VRAM";
+}
+function Linux5(){
+document.getElementById("msgs").innerHTML = "Load Linux with 5GB VRAM";
+}
+function GTAVMod1(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - Arabic Guy v1.00 (L1 + R1)";
+}
+function GTAVMod2(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - Arabic Guy v1.27 (L1 + R1)";
+}
+function GTAVMod3(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - Arabic Guy v1.32 (L1 + R1)";
+}
+function GTAVMod4(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - Arabic Guy v1.33 (L1 + R1)";
+}
+function GTAVMod5(){
+document.getElementById("msgs").innerHTML = "Expulsion v4.0-1.38";
+}
+function GTAVMod6(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - Lamance v0.8.1 - 1.38";
+}
+function GTAVMod7(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - WildeModz-1.32 v1.3";
+}
+function GTAVMod8(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - WildeModz-1.33 v1.3";
+}
+function GTAVMod9(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - WildeModz-1.38 v1.7";
+}
+function GTAVMod10(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - Beef Queef Mod v1.33";
+}
+function GTAVMod11(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - Beef Queef Mod v1.34";
+}
+function GTAVMod12(){
+document.getElementById("msgs").innerHTML = "GTA V Mod - Beef Queef Mod v1.38d";
+}
+function RedDeadMod1(){
+document.getElementById("msgs").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu v1.00";
+}
+function RedDeadMod2(){
+document.getElementById("msgs").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu v1.13";
+}
+function RedDeadMod3(){
+document.getElementById("msgs").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu v1.19";
+}
+function RedDeadMod4(){
+document.getElementById("msgs").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu v1.24";
+}
+function RedDeadMod5(){
+document.getElementById("msgs").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu v1.29";
+}
+function pagetitle(){
+document.getElementById("msgs").innerHTML = "PS4 9.00 FW Host v2.5 by GamerHack";
+}
+
 function load_arabicGuy100(){
 msgs.innerHTML="Loading Arabic Guy v1.00... Please Wait !!!";
 PLfile = "arabic-guy100.bin";
