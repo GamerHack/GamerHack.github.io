@@ -29,14 +29,12 @@ else {
 </head>
 <body onload="setTimeout(load_nobd, 500);">
 <div>
-<h1 id=msgs>NoBD 6.7X FW Host by GamerHack</h1>
+<h1 id=msgs><font color="green">Pass = <span id=passCounter></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="white">NoBD 6.7X FW Host by GamerHack</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">Fail = <span id=failCounter></span></h1>
 <hr>
-<br>
-<h1><font color="green">Pass = <span id=passCounter></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">Fail = <span id=failCounter></span></h1>
-<br><br><br>
+<br><br><br><br>
 <h1 id=msgs2 style="font-size:30px;"> Waiting... </h1>
 </div>
-<h1 style="margin-top:383px;color:yellow;">Special Thanks to: <a href="https://twitter.com/LightningMods_" style="color:#f31414;">@LightningMods_</a><a style="color:white;"> for making this possible.</a></h1>
+<h1 style="margin-top:449px;color:yellow;">Special Thanks to: <a href="https://twitter.com/LightningMods_" style="color:#f31414;">@LightningMods_</a><a style="color:white;"> for making this possible.</a></h1>
 <script>
 if (localStorage.passcount == null) localStorage.passcount=0;
 window.passCounter.innerHTML=localStorage.passcount;
@@ -44,8 +42,8 @@ if (localStorage.failcount == null) localStorage.failcount=0;
 window.failCounter.innerHTML=localStorage.failcount;
 
 function load_nobd(){
-msgs2.innerHTML="Loading NoBD Payload... Please Wait";
-LoadedMSG="NoBD Payload Loaded ✔";
+msgs2.innerHTML="Loading Payload... Please Wait";
+LoadedMSG="Payload Loaded ✔";
 PLfile="payload.bin";
 setTimeout(jailbreak,500);
 }
