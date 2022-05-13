@@ -18,19 +18,15 @@ a {
 text-decoration: none;
 }
 #main-section {
-text-align: center;
 display: block;
 }
 #crypto-section {
-text-align: center;
 display: none;
 }
 #backup-section {
-text-align: center;
 display: none;
 }
 #mods-section {
-text-align: center;
 display: none;
 }
 .btn {
@@ -56,17 +52,11 @@ border-radius: 8px;
 .btn:hover {
 background-color: #0058b1;
 }
-.btn-jb2 {
+.btn2 {
 background-color: #b10000;
-color: white;
 }
-.btn-jb2:hover {
+.btn2:hover {
 background-color: #f31414;
-color: white;
-}
-.btn-blank {
-background-color: #3d3d3d;
-pointer-events: none;
 }
 .btn-web {
 background-color: #076300;
