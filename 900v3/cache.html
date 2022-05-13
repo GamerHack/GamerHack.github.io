@@ -1,57 +1,38 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest"><head>
 <title>PS4 9.00 FW Host v3.0 by GamerHack</title>
-<link rel="stylesheet" href="../style.css">
+<style>
+html, body {
+background-image: url('../img.jpg');
+background-size: 100%;
+background-repeat: no-repeat;
+background-color: #24272b;
+color: white;
+text-align: center;
+margin: 0px;
+overflow: hidden;
+}
+h1 {
+text-shadow: 0.1em 0.1em 0.2em black;
+font-size: 25px;
+text-align: center;
+color: white;
+}
+a {
+text-decoration: none;
+}
+</style>
 </head>
 <body>
 <script>
 history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
-function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.msgs2.innerHTML="Installing Offline Cache: " + Percent + "%";},500)}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs2.innerHTML="Cache Installed Successfully ✔";},1500);setTimeout(function(){window.msgs2.innerHTML="Now Close And Re-Open Your Browser ...";},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 <h1 id="msgs">PS4 9.00 FW Host v3.0 by GamerHack</h1>
 <hr>
 <br>
-<h1 style="font-size:18px;color:yellow;">Main Payloads</h1>
-<button class="btn btn-blank"> GoldHEN v2.2.2 </button>
-<button class="btn btn-blank"> Bin Loader </button>
-<br>
-<h1 style="font-size:18px;text-align:center;">Payloads</h1>
-<button class="btn btn-blank"> Game-Dumper </button>
-<button class="btn btn-blank"> Update-Dumper </button>
-<button class="btn btn-blank"> SGU-Dumper </button>
-<button class="btn btn-blank"> MGU-Dumper </button>
-<br>
-<button class="btn btn-blank"> ToDex </button>
-<button class="btn btn-blank"> Web-Activator </button>
-<button class="btn btn-blank"> FTP </button>
-<button class="btn btn-blank"> App2USB </button>
-<button class="btn btn-blank"> DB Backup </button>
-<button class="btn btn-blank"> DB Restore </button>
-<br>
-<button class="btn btn-blank"> Enable Updates </button>
-<button class="btn btn-blank"> Disable Updates </button>
-<button class="btn btn-blank"> History Blocker </button>
-<button class="btn btn-blank"> Kernel Dumper </button>
-<button class="btn btn-blank"> Module Dumper </button>
-<button class="btn btn-blank"> PS4 Debug </button>
-<br>
-<button class="btn btn-blank"> Disable ASLR </button>
-<button class="btn btn-blank"> Exit IDU </button>
-<button class="btn btn-blank"> RIF Renamer </button>
-<button class="btn btn-blank"> Permanent UART </button>
-<button class="btn btn-blank"> WebRTE </button>
-<button class="btn btn-blank"> PS4 Trainer Web </button>
-<br>
-<button class="btn btn-blank"> Linux 1GB </button>
-<button class="btn btn-blank"> Linux 2GB </button>
-<button class="btn btn-blank"> Linux 3GB </button>
-<button class="btn btn-blank"> Linux 4GB </button>
-<button class="btn btn-blank"> Linux 5GB </button>
-<br>
-<button class="btn btn-blank"> Games-Mods (Online) </button>
-<button class="btn btn-blank"> Orbis-Toolbox </button>
-<button class="btn btn-blank"> Fan Threshold </button>
+<h1 id=msgs2 style="font-size:30px; margin-top: 77px; margin-bottom: 391px;"> Waiting... </h1>
 <br>
 <h1 style="margin-top: 43px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color:#f31414; margin-left: 15px;">@sleirsgoevy</a><a style="color:white; margin-left: 15px;">ChendoChap</a><a href="https://twitter.com/SpecterDev" style="color:#f31414; margin-left: 15px;">@SpecterDev</a><a style="color:white; margin-left: 15px;">SiSTR0</a><a href="https://twitter.com/Znullptr" style="color:#f31414; margin-left: 15px;">@Znullptr</a><a style="color:white; margin-left: 15px;">And Many More Developers ...</a></h1>
 </body>
