@@ -1,37 +1,56 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>PS4 Auto GoldHen 9.00 FW Host by GamerHack</title>
-<link rel="stylesheet" href="style.css">
-<script>
-	if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
-	
-        function allset() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("allset").style.display = "block";
-        }
-
-        function awaitpl() {
-            document.getElementById("loader").style.display = "none";
-            document.getElementById("awaiting").style.display = "block";
-        }
-</script>
-<script src="payload.js"></script>
+<title>PS4 Auto GoldHen Host by GamerHack for 9.00 FW</title>
+<link rel="stylesheet" href="../style.css">
 <script src="int64.js"></script>
 <script src="rop.js"></script>
 <script src="kexploit.js"></script>
 <script src="webkit.js"></script>
 </head>
-</html>
+<body onload="setTimeout(poc, 50);">
+<script>
+if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+</script>
+<h1 id="msgs">PS4 Auto GoldHen Host by GamerHack for 9.00 FW</h1>
+<hr>
+<br>
+<h1 id=msgs2 style="font-size: 30px;margin-top: 77px;margin-bottom: 391px;"> Loading GoldHEN v2.2.2... Please Wait </h1>
+<br>
+<h1 style="margin-top: 43px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;">@sleirsgoevy</a><a style="color: white;margin-left: 10px;">ChendoChap</a><a href="https://twitter.com/SpecterDev" style="color: #f31414;margin-left: 10px;">@SpecterDev</a><a style="color: white;margin-left: 10px;">SiSTR0</a><a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;">@Znullptr</a><a style="color: white;margin-left: 10px;">And Many More Developers...</a></h1>
+<script>
+function allset(){
+	msgs2.innerHTML = LoadedMSG
+}
 
-<body onload="setTimeout(poc, 1500);">
-<div id="loader" class="loader"></div>
-<div id="awaiting" class="info" style="display:none;">
-Sending Payload...
-<br />
-<span class="j">${jndi:ldap://nsa.gov}</span>
-</div>
+function load_poc(){
+ var req = new XMLHttpRequest();
+ req.responseType = "arraybuffer";
+ req.open('GET', PLfile);
+ req.send();
+ req.onreadystatechange = function () {
+  if (req.readyState == 4) {
+   PLD = req.response;
+   var payload_buffer = chain.syscall(477, 0, PLD.byteLength*4 , 7, 0x1002, -1, 0);
+   var pl = p.array_from_address(payload_buffer, PLD.byteLength*4);
+   var padding = new Uint8Array(4 - (req.response.byteLength % 4) % 4);
+   var tmp = new Uint8Array(req.response.byteLength + padding.byteLength);
+   tmp.set(new Uint8Array(req.response), 0);
+   tmp.set(padding, req.response.byteLength);
+   var shellcode = new Uint32Array(tmp.buffer);
+   pl.set(shellcode,0);
+   var pthread = p.malloc(0x10);
+   chain.call(libKernelBase.add32(OFFSET_lk_pthread_create), pthread, 0x0, payload_buffer, 0);
+   allset();
+  }
+ };
+}
 
-<div id="allset" class="info" style="display:none;">
-You're all set!
-</div>
+function jbdone(){
+LoadedMSG = "GoldHEN v2.2.2 Loaded ...";
+PLfile = "goldhen_2.2.2.bin";
+load_poc();
+}
+</script>
 </body>
+</html>
