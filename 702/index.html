@@ -35,8 +35,8 @@ document.cookie = 'kex=1';
 <button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> Linux 3GB </button>
 <br>
 <button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
-<button class="btn" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
-<button class="btn" onmouseover="gtavmods()" onmouseout="pagetitle()" onclick=load_gtavmods_section()> GTA V Mods </button>
+<button class="btn btn-web" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
+<button class="btn btn-web" onmouseover="mods()" onmouseout="pagetitle()" onclick=load_mods()> Games Mods </button>
 <button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()> History Blocker </button>
 <br>
 <button style="margin-left: 78px;" class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick=load_webact()> Web-Activator </button>
@@ -47,7 +47,7 @@ document.cookie = 'kex=1';
 <button class="btn btn-toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick=load_toolbox()> Orbis-Toolbox </button>
 </div>
 <div id="mods-section">
-<h1 id=msgs-mods>GTA V Mods </h1>
+<h1 id=msgs-mods>Games Mods</h1>
 <hr>
 <br>
 <h1 style="font-size:20px;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
@@ -55,11 +55,17 @@ document.cookie = 'kex=1';
 <button class="btn" onmouseover="arabicGuy127()" onmouseout="pagetitle()" onclick=load_arabicGuy127()> Arabic Guy v1.27 </button>
 <button class="btn" onmouseover="arabicGuy132()" onmouseout="pagetitle()" onclick=load_arabicGuy132()> Arabic Guy v1.32 </button>
 <br>
-<button class="btn" onmouseover="home()" onmouseout="pagetitle()" onclick=close_section() style="margin-bottom: 372px"> Return </button>
+<button class="btn" onmouseover="RedDeadMod1()" onmouseout="pagetitle()" onclick=load_Oysters100()> Oysters Menu 1.00 </button>
+<button class="btn" onmouseover="RedDeadMod2()" onmouseout="pagetitle()" onclick=load_Oysters113()> Oysters Menu 1.13 </button>
+<button class="btn" onmouseover="RedDeadMod3()" onmouseout="pagetitle()" onclick=load_Oysters119()> Oysters Menu 1.19 </button>
+<button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick=load_Oysters124()> Oysters Menu 1.24 </button>
+<button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick=load_Oysters129()> Oysters Menu 1.29 </button>
+<br>
+<button class="btn btn-web" onclick=close_section() style="margin-bottom: 310px"> Return </button>
 </div>
 <h1 style="margin-top: 30px;color: yellow;">Many Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;">@sleirsgoevy</a><a style="color: white;margin-left: 10px;">ChendoChap</a><a style="color: white;margin-left: 10px;">SiSTRo</a><a href="https://twitter.com/NazkyYT" style="color: #f31414;margin-left: 10px;">@NazkyYT</a><a href="https://twitter.com/salt13939424" style="color: #f31414;margin-left: 10px;">@salt13939424</a><a href="https://twitter.com/84Ciss" style="color: #f31414;margin-left: 10px;">@84Ciss</a><a href="https://twitter.com/mohammad_fadel1" style="color: #f31414;margin-left: 10px;">@mohammad_fadel1</a></h1>
 <script>
-function load_gtavmods_section(){
+function load_mods(){
 document.getElementById("mods-section").style.display = "block";
 document.getElementById("main-section").style.display = "none";
 }
@@ -121,8 +127,8 @@ document.getElementById("msgs").innerHTML = "Link to PS4 Trainer Website (Follow
 function orbistoolbox(){
 document.getElementById("msgs").innerHTML = "Orbis ToolBox Alpha Build 1167 for Firmware 7.55";
 }
-function gtavmods(){
-document.getElementById("msgs").innerHTML = "Choose Desired Cheats for GTA V (Click Here to Load Section)";
+function mods(){
+document.getElementById("msgs").innerHTML = "Games Mods";
 }
 function historyBlocker(){
 document.getElementById("msgs").innerHTML = "Disable Browser History, it will only show Frequently used Pages once you open";
@@ -151,12 +157,24 @@ document.getElementById("msgs-mods").innerHTML = "GTA V Mod Arabic Guy v1.27 (L1
 function arabicGuy132(){
 document.getElementById("msgs-mods").innerHTML = "GTA V Mod Arabic Guy v1.32 (L1 + R1)";
 }
-function home(){
-document.getElementById("msgs-mods").innerHTML = "Return to Main Section";
+function RedDeadMod1(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.00 v1.3.6";
+}
+function RedDeadMod2(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.13 v1.3.6";
+}
+function RedDeadMod3(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.19 v1.3.6";
+}
+function RedDeadMod4(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.24 v1.3.6";
+}
+function RedDeadMod5(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.29 v1.3.6";
 }
 function pagetitle(){
 document.getElementById("msgs").innerHTML = "PS4 7.02 FW Host v1.4 by GamerHack";
-document.getElementById("msgs-mods").innerHTML = "GTA V Mods";
+document.getElementById("msgs-mods").innerHTML = "Games Mods";
 }
 
 for(var i=50; i<=75; i=i+5){
@@ -287,13 +305,6 @@ function load_ps4trainer(){
         link.href = 'http://ps4trainer.com/Trainer/index.html';
         link.click();
 }
-function load_gtavmods(){
-
-  var link = document.createElement('a');
-        document.body.appendChild(link);
-        link.href = 'gtav-mods.html';
-        link.click();
-}
 function load_historyBlocker(){
 
   var link = document.createElement('a');
@@ -355,6 +366,41 @@ function load_arabicGuy132(){
   var link = document.createElement('a');
         document.body.appendChild(link);
         link.href = 'payload.html#f=arabic-guy132.js';
+        link.click();
+}
+function load_Oysters100(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.6-1.00.js';
+        link.click();
+}
+function load_Oysters113(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.6-1.13.js';
+        link.click();
+}
+function load_Oysters119(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.6-1.19.js';
+        link.click();
+}
+function load_Oysters124(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.6-1.24.js';
+        link.click();
+}
+function load_Oysters129(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.6-1.29.js';
         link.click();
 }
 
