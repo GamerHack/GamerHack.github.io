@@ -67,7 +67,7 @@ else {
 <button class="btn" onclick=load_fwspoof()> Spoof Firmware </button><select id="fws1"></select>&nbsp;<select id="fws2"></select>
 <br>
 <button class="btn" onclick=load_webact() style="margin-left: 73px;"> Web-Activator </button>
-<button class="btn" onclick=load_mods_section()> Games Mods </button>
+<button class="btn btn-web" onclick=load_mods_section()> Games Mods </button>
 <button class="btn btn-toolbox" onclick=load_orbistlbox()> Orbis-Toolbox </button>
 <button class="btn btn-main" onclick=load_fanthresh()> Fan Threshold </button><font color="white"><select id="tempC"></select>&#176;C
 <br>
@@ -104,11 +104,13 @@ else {
 <button class="btn" onclick=load_ArabicGuy132()> Arabic Guy 1.32 </button>
 <button class="btn" onclick=load_Lamance132()> Lamance 1.32 </button>
 <br>
-<button class="btn" onclick=load_RDR2_113()>  RDR2 1.13 </button>
-<button class="btn" onclick=load_RDR2_119()> RDR2 1.19 </button>
-<button class="btn" onclick=load_RDR2_124()> RDR2 1.24 </button>
+<button class="btn" onclick=load_Oysters100()> Oysters Menu 1.00 </button>
+<button class="btn" onclick=load_Oysters113()> Oysters Menu 1.13 </button>
+<button class="btn" onclick=load_Oysters119()> Oysters Menu 1.19 </button>
+<button class="btn" onclick=load_Oysters124()> Oysters Menu 1.24 </button>
+<button class="btn" onclick=load_Oysters129()> Oysters Menu 1.29 </button>
 <br>
-<button class="btn" onclick=close_section() style="margin-bottom: 310px"> Return </button>
+<button class="btn btn-web" onclick=close_section() style="margin-bottom: 310px"> Return </button>
 </div>
 <h1 style="font-size: 25px;text-align: center;margin-top: 30px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;">@sleirsgoevy</a><a style="color: white;margin-left: 10px;">Leeful</a><a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a><a style="color: white;margin-left: 10px;">and to all the developers involved in the scene.</a></h1>
 <script>
@@ -421,24 +423,38 @@ PLfile="pl_GTA_Lamance132.bin";
 loadScript1();
 }
 
-function load_RDR2_113(){
-msgs3.innerHTML="Loading RDR2 1.13 ...";
-LoadedMSG="RDR2 1.13 Loaded ✔";
-PLfile="pl_RDR2_113.bin";
+function load_Oysters100(){
+msgs3.innerHTML="Loading Oysters Menu v1.00 ...";
+LoadedMSG="Oysters Menu 1.00 Loaded ✔";
+PLfile="OystersMenu-v1.3.6-1.00.bin";
 loadScript1();
 }
 
-function load_RDR2_119(){
-msgs3.innerHTML="Loading RDR2 1.19 ...";
-LoadedMSG="RDR2 1.19 Loaded ✔";
-PLfile="pl_RDR2_119.bin";
+function load_Oysters113(){
+msgs3.innerHTML="Loading Oysters Menu v1.13 ...";
+LoadedMSG="Oysters Menu 1.13 Loaded ✔";
+PLfile="OystersMenu-v1.3.6-1.13.bin";
 loadScript1();
 }
 
-function load_RDR2_124(){
-msgs3.innerHTML="Loading RDR2 1.24 ...";
-LoadedMSG="RDR2 1.24 Loaded ✔";
-PLfile="pl_RDR2_124.bin";
+function load_Oysters119(){
+msgs3.innerHTML="Loading Oysters Menu v1.19 ...";
+LoadedMSG="Oysters Menu 1.19 Loaded ✔";
+PLfile="OystersMenu-v1.3.6-1.19.bin";
+loadScript1();
+}
+
+function load_Oysters124(){
+msgs3.innerHTML="Loading Oysters Menu v1.24 ...";
+LoadedMSG="Oysters Menu 1.24 Loaded ✔";
+PLfile="OystersMenu-v1.3.6-1.24.bin";
+loadScript1();
+}
+
+function load_Oysters129(){
+msgs3.innerHTML="Loading Oysters Menu v1.29 ...";
+LoadedMSG="Oysters Menu 1.29 Loaded ✔";
+PLfile="OystersMenu-v1.3.6-1.29.bin";
 loadScript1();
 }
 

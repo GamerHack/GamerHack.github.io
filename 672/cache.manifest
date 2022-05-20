@@ -6,6 +6,11 @@ CACHE:
 frontend.js
 index.html
 jb2.js
+OystersMenu-v1.3.6-1.00.bin
+OystersMenu-v1.3.6-1.13.bin
+OystersMenu-v1.3.6-1.19.bin
+OystersMenu-v1.3.6-1.24.bin
+OystersMenu-v1.3.6-1.29.bin
 payload.js
 pl_App2usb.bin
 pl_AvatarBackup.bin
@@ -41,9 +46,6 @@ pl_OfflineCacheBackup.bin
 pl_OfflineCacheRestore.bin
 pl_Orbis-Toolbox-672.bin
 pl_PS4Debug.bin
-pl_RDR2_113.bin
-pl_RDR2_119.bin
-pl_RDR2_124.bin
 pl_SaveDataBackup.bin
 pl_SaveDataRestore.bin
 pl_ToDex.bin
