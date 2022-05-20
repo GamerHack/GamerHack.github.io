@@ -27,9 +27,6 @@ kernel-clock.js
 kernel-dumper.js
 linux-1gb.js
 linux-3gb.js
-loader-750.js
-loader-751.js
-loader-755.js
 mira-750.js
 mira-751.js
 mira-755.js
@@ -37,6 +34,11 @@ mira-75x.html
 mira.js
 netcat.js
 Orbis-Toolbox-755.js
+OystersMenu-v1.3.6-1.00.js
+OystersMenu-v1.3.6-1.13.js
+OystersMenu-v1.3.6-1.19.js
+OystersMenu-v1.3.6-1.24.js
+OystersMenu-v1.3.6-1.29.js
 payload.html
 ps4.js
 ps4debug.js

@@ -9,11 +9,11 @@ document.cookie = 'kex=1';
 </script>
 </head>
 <body>
+<div id="main-section">
 <h1 id=msgs>PS4 7.50 - 7.55 Host v1.5 by GamerHack</h1>
 <hr>
 <br>
 <h1 style="font-size:20px;text-align:center;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
-<div style="text-align:center">
 <button class="btn" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_goldhen222()> GoldHEN v2.2.2 </button>
 <button class="btn" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_mira75x()> MIRA 7.5x </button>
 <button class="btn" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_binloader()> Bin Loader </button>
@@ -44,12 +44,34 @@ document.cookie = 'kex=1';
 <button class="btn" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick=load_linux1gb()> Linux 1GB </button>
 <button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> Linux 3GB </button>
 <br>
+<button class="btn btn-web" onmouseover="mods()" onmouseout="pagetitle()" onclick=load_mods()> Games Mods </button>
 <button class="btn btn-toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick=load_toolbox()> Orbis-Toolbox </button>
 <button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
-<button class="btn btn-web" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>&nbsp
-<h1 style="margin-top: 30px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;">@sleirsgoevy</a><a style="color: white;margin-left: 10px;">ChendoChap</a><a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a><a style="color: white;margin-left: 10px;">And Many More Developers...</a></h1>
+<button class="btn btn-web" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
 </div>
+<div id="mods-section">
+<h1 id=msgs-mods>Games Mods</h1>
+<hr>
+<br>
+<h1 style="font-size:20px;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
+<button class="btn" onmouseover="RedDeadMod1()" onmouseout="pagetitle()" onclick=load_Oysters100()> Oysters Menu 1.00 </button>
+<button class="btn" onmouseover="RedDeadMod2()" onmouseout="pagetitle()" onclick=load_Oysters113()> Oysters Menu 1.13 </button>
+<button class="btn" onmouseover="RedDeadMod3()" onmouseout="pagetitle()" onclick=load_Oysters119()> Oysters Menu 1.19 </button>
+<button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick=load_Oysters124()> Oysters Menu 1.24 </button>
+<button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick=load_Oysters129()> Oysters Menu 1.29 </button>
+<br>
+<button class="btn btn-web" onmouseover="home()" onmouseout="pagetitle()" onclick=close_section() style="margin-bottom: 372px"> Return </button>
+</div>
+<h1 style="margin-top: 30px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;">@sleirsgoevy</a><a style="color: white;margin-left: 10px;">ChendoChap</a><a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a><a style="color: white;margin-left: 10px;">And Many More Developers...</a></h1>
 <script>
+function load_mods(){
+document.getElementById("mods-section").style.display = "block";
+document.getElementById("main-section").style.display = "none";
+}
+function close_section(){
+document.getElementById("main-section").style.display = "block";
+document.getElementById("mods-section").style.display = "none";
+}
 function mainpayload1(){
 document.getElementById("msgs").innerHTML = "GoldHEN v2.2.2 for All Firmwares 7.5x (Includes Temporary Fix for CE-30391-6)";
 }
@@ -119,6 +141,9 @@ document.getElementById("msgs").innerHTML = "Load Linux with 1GB VRAM";
 function linux3gb(){
 document.getElementById("msgs").innerHTML = "Load Linux with 3GB VRAM";
 }
+function mods(){
+document.getElementById("msgs").innerHTML = "Games Mods";
+}
 function orbistoolbox(){
 document.getElementById("msgs").innerHTML = "Orbis ToolBox Alpha Build 1167 for Firmware 7.55";
 }
@@ -128,8 +153,24 @@ document.getElementById("msgs").innerHTML = "Required to Activate Cheats Through
 function ps4trainer(){
 document.getElementById("msgs").innerHTML = "PS4 Trainer Website (Follow Instructions There)";
 }
+function RedDeadMod1(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.00 v1.3.6";
+}
+function RedDeadMod2(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.13 v1.3.6";
+}
+function RedDeadMod3(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.19 v1.3.6";
+}
+function RedDeadMod4(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.24 v1.3.6";
+}
+function RedDeadMod5(){
+document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.29 v1.3.6";
+}
 function pagetitle(){
 document.getElementById("msgs").innerHTML = "PS4 7.50 - 7.55 FW Host v1.5 by GamerHack";
+document.getElementById("msgs-mods").innerHTML = "Games Mods";
 }
 
 for(var i=40; i<=79; i++){
@@ -322,6 +363,41 @@ function load_ps4trainer(){
         document.body.appendChild(link);
         link.href = 'http://ps4trainer.com/Trainer/index.html';
 		link.target = "blank";
+        link.click();
+}
+function load_Oysters100(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.6-1.00.js';
+        link.click();
+}
+function load_Oysters113(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.6-1.13.js';
+        link.click();
+}
+function load_Oysters119(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.6-1.19.js';
+        link.click();
+}
+function load_Oysters124(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.6-1.24.js';
+        link.click();
+}
+function load_Oysters129(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=OystersMenu-v1.3.6-1.29.js';
         link.click();
 }
 
