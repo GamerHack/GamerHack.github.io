@@ -54,6 +54,7 @@ document.cookie = 'kex=1';
 <button class="btn" onmouseover="arabicGuy100()" onmouseout="pagetitle()" onclick=load_arabicGuy100()> Arabic Guy v1.00 </button>
 <button class="btn" onmouseover="arabicGuy127()" onmouseout="pagetitle()" onclick=load_arabicGuy127()> Arabic Guy v1.27 </button>
 <button class="btn" onmouseover="arabicGuy132()" onmouseout="pagetitle()" onclick=load_arabicGuy132()> Arabic Guy v1.32 </button>
+<button class="btn" onmouseover="Lamance()" onmouseout="pagetitle()" onclick=load_Lamance()> Lamance v0.9 - 1.38 </button>
 <br>
 <button class="btn" onmouseover="RedDeadMod1()" onmouseout="pagetitle()" onclick=load_Oysters100()> Oysters Menu 1.00 </button>
 <button class="btn" onmouseover="RedDeadMod2()" onmouseout="pagetitle()" onclick=load_Oysters113()> Oysters Menu 1.13 </button>
@@ -156,6 +157,9 @@ document.getElementById("msgs-mods").innerHTML = "GTA V Mod Arabic Guy v1.27 (L1
 }
 function arabicGuy132(){
 document.getElementById("msgs-mods").innerHTML = "GTA V Mod Arabic Guy v1.32 (L1 + R1)";
+}
+function Lamance(){
+document.getElementById("msgs-mods").innerHTML = "GTA V Mod - Lamance v0.9 - 1.38 (Right + Square)";
 }
 function RedDeadMod1(){
 document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.00 v1.3.6";
@@ -366,6 +370,13 @@ function load_arabicGuy132(){
   var link = document.createElement('a');
         document.body.appendChild(link);
         link.href = 'payload.html#f=arabic-guy132.js';
+        link.click();
+}
+function load_Lamance(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=Lamance-v0.9-1.38.js';
         link.click();
 }
 function load_Oysters100(){
