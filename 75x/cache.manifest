@@ -25,6 +25,7 @@ int64.js
 jb.js
 kernel-clock.js
 kernel-dumper.js
+Lamance-v0.9-1.38.js
 linux-1gb.js
 linux-3gb.js
 mira-750.js

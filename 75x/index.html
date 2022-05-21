@@ -54,13 +54,15 @@ document.cookie = 'kex=1';
 <hr>
 <br>
 <h1 style="font-size:20px;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
+<button class="btn" onmouseover="Lamance()" onmouseout="pagetitle()" onclick=load_Lamance()> Lamance v0.9 - 1.38 </button>
+<br>
 <button class="btn" onmouseover="RedDeadMod1()" onmouseout="pagetitle()" onclick=load_Oysters100()> Oysters Menu 1.00 </button>
 <button class="btn" onmouseover="RedDeadMod2()" onmouseout="pagetitle()" onclick=load_Oysters113()> Oysters Menu 1.13 </button>
 <button class="btn" onmouseover="RedDeadMod3()" onmouseout="pagetitle()" onclick=load_Oysters119()> Oysters Menu 1.19 </button>
 <button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick=load_Oysters124()> Oysters Menu 1.24 </button>
 <button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick=load_Oysters129()> Oysters Menu 1.29 </button>
 <br>
-<button class="btn btn-web" onmouseover="home()" onmouseout="pagetitle()" onclick=close_section() style="margin-bottom: 372px"> Return </button>
+<button class="btn btn-web" onclick=close_section() style="margin-bottom: 310px"> Return </button>
 </div>
 <h1 style="margin-top: 30px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;">@sleirsgoevy</a><a style="color: white;margin-left: 10px;">ChendoChap</a><a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a><a style="color: white;margin-left: 10px;">And Many More Developers...</a></h1>
 <script>
@@ -152,6 +154,9 @@ document.getElementById("msgs").innerHTML = "Required to Activate Cheats Through
 }
 function ps4trainer(){
 document.getElementById("msgs").innerHTML = "PS4 Trainer Website (Follow Instructions There)";
+}
+function Lamance(){
+document.getElementById("msgs-mods").innerHTML = "GTA V Mod - Lamance v0.9 - 1.38 (Right + Square)";
 }
 function RedDeadMod1(){
 document.getElementById("msgs-mods").innerHTML = "Red Dead Redemption 2 Mod - Oysters Menu 1.00 v1.3.6";
@@ -363,6 +368,13 @@ function load_ps4trainer(){
         document.body.appendChild(link);
         link.href = 'http://ps4trainer.com/Trainer/index.html';
 		link.target = "blank";
+        link.click();
+}
+function load_Lamance(){
+
+  var link = document.createElement('a');
+        document.body.appendChild(link);
+        link.href = 'payload.html#f=Lamance-v0.9-1.38.js';
         link.click();
 }
 function load_Oysters100(){
