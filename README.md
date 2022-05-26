@@ -1,6 +1,4 @@
-# ps4main
-
-All PS4 Exploits
+# It contains all the Exploit Hosts for PS4 made by me, this is the most complete project.
 
 ## Steps
 
