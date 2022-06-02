@@ -1,4 +1,6 @@
-# PS4 Exploit Host for firmwares 6.72, 7.02, 7.5X and 9.00
+# PS4 Exploit Host
+
+Jailbreak for PS4 on firmwares: 6.72, 7.02, 7.5X and 9.00
 
 ## Steps:
 
