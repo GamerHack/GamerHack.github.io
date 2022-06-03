@@ -1,5 +1,5 @@
-## PS4 Jailbreak
-Full exploit chain for PS4 firmwares: `6.72` `7.02` `7.5X` `9.00`
+# PS4 Exploit Host
+Firmwares: `6.72` `7.02` `7.5X` `9.00`
 
 ## Steps:
 
