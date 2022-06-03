@@ -1,4 +1,4 @@
-# PS4 Exploit Host
+# GamerHack Exploit Host for PS4
 Firmwares: `6.72` `7.02` `7.5X` `9.00`
 
 ## Steps:
