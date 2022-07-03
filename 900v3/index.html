@@ -85,8 +85,9 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </div>
 <div id="main-section">
 <h1 style="font-size:18px;color:yellow;">Main Payloads</h1>
-<button class="btn btn-disable" onmouseover="msgs.innerHTML='GoldHen v2.2.2 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_goldhen222()> GoldHEN v2.2.2 </button>
-<button class="btn btn-disable" onmouseover="msgs.innerHTML='Send a Payload using port 9020'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_binloader()> Bin Loader </button>
+<button class="btn" onmouseover="msgs.innerHTML='GoldHen v2.3b2 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_goldhen23b2()> GoldHEN v2.3b2 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GoldHen v2.2.2 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_goldhen222()> GoldHEN v2.2.2 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Send a Payload using port 9020'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_binloader()> Bin Loader </button>
 <br>
 <h1 style="font-size:18px;text-align:center;">Payloads</h1>
 <button class="btn" onmouseover="msgs.innerHTML='Dump Game Only to USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Gdumper()> Game-Dumper </button>
@@ -141,11 +142,11 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.34'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_beefQueef134()> Beef Queef Mod v1.34 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.38d'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_beefQueef138()> Beef Queef Mod v1.38d </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.00 v1.3.6'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Oysters100()> Oysters Menu 1.00 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.13 v1.3.6'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Oysters113()> Oysters Menu 1.13 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.19 v1.3.6'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Oysters119()> Oysters Menu 1.19 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.24 v1.3.6'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Oysters124()> Oysters Menu 1.24 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.29 v1.3.6'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Oysters129()> Oysters Menu 1.29 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.00 v1.3.7 Beta'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Oysters100()> RDR2 v1.00 Beta </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.13 v1.3.6'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Oysters113()> RDR2 v1.13 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.19 v1.3.6'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Oysters119()> RDR2 v1.19 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.24 v1.3.7 Beta'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Oysters124()> RDR2 v1.24 Beta </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.29 v1.3.7 Beta'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_Oysters129()> RDR2 v1.29 Beta </button>
 <br>
 <button class="btn btn-web" onclick=back() style="margin-bottom: 241px"> Return </button>
 </div>
@@ -352,6 +353,12 @@ eval.call(window, loadScript('netcat.js')
 +loadScript('linux1gb.js')
 +loadScript('mira.js')
 +loadScript('relocator.js'));
+}
+
+function load_goldhen23b2(){
+LoadedMSG = "GoldHEN v2.3b2 Loaded ...";
+PLfile = "goldhen_2.3b2.bin";
+load_poc();
 }
 
 function load_goldhen222(){
@@ -580,7 +587,7 @@ load_poc();
 function load_Oysters100(){
 msgs.innerHTML="Loading... Please Wait";
 LoadedMSG = "Oysters Menu v1.00 Loaded ..."
-PLfile = "OystersMenu-v1.3.6-1.00.bin";
+PLfile = "OystersMenu-v1.3.7-1.00.bin";
 load_poc();
 }
 
@@ -601,14 +608,14 @@ load_poc();
 function load_Oysters124(){
 msgs.innerHTML="Loading... Please Wait";
 LoadedMSG = "Oysters Menu v1.24 Loaded ..."
-PLfile = "OystersMenu-v1.3.6-1.24.bin";
+PLfile = "OystersMenu-v1.3.7-1.24.bin";
 load_poc();
 }
 
 function load_Oysters129(){
 msgs.innerHTML="Loading... Please Wait";
 LoadedMSG = "Oysters Menu v1.29 Loaded ..."
-PLfile = "OystersMenu-v1.3.6-1.29.bin";
+PLfile = "OystersMenu-v1.3.7-1.29.bin";
 load_poc();
 }
 </script>
