@@ -16,8 +16,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <hr>
 <br>
 <h1 style="font-size:18px;color:yellow;">Main Payloads</h1>
-<button class="btn" onmouseover="GoldHen23b2()" onmouseout="pagetitle()" onclick=load_goldhen23b2()> GoldHEN v2.3b2 </button>
-<button class="btn" onmouseover="GoldHen()" onmouseout="pagetitle()" onclick=load_goldhen222()> GoldHEN v2.2.2 </button>
+<button class="btn" onmouseover="GoldHen223()" onmouseout="pagetitle()" onclick=load_goldhen223()> GoldHEN v2.2.3 </button>
 <button class="btn" onmouseover="BinLoader()" onmouseout="pagetitle()" onclick=load_binloader()> Bin Loader </button>
 <br>
 <h1 style="font-size:18px;text-align:center;">Payloads</h1>
@@ -61,11 +60,8 @@ for(var i=40; i<=75; i=i+5){
 tempC.value=60;
 </script>
 <script>
-function GoldHen23b2(){
-document.getElementById("msgs").innerHTML = "GoldHen v2.3b2 for 9.00 FW";
-}
-function GoldHen(){
-document.getElementById("msgs").innerHTML = "GoldHen v2.2.2 for 9.00 FW";
+function GoldHen223(){
+document.getElementById("msgs").innerHTML = "GoldHen v2.2.3 for 9.00 FW";
 }
 function BinLoader(){
 document.getElementById("msgs").innerHTML = "Send a Payload using port 9020";
@@ -140,18 +136,9 @@ function pagetitle(){
 document.getElementById("msgs").innerHTML = "PS4 9.00 FW Host v2.5 by GamerHack";
 }
 
-function load_goldhen23b2(){
-document.getElementById("msgs").innerHTML = "GoldHen v2.3b2 for 9.00 FW";
-msgs.innerHTML="Loading GoldHEN v2.3b2... Please Wait !!!";
-PLfile = "goldhen_2.3b2.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
-}
-
-function load_goldhen222(){
-document.getElementById("msgs").innerHTML = "GoldHen v2.2.2 for 9.00 FW";
-msgs.innerHTML="Loading GoldHEN v2.2.2... Please Wait !!!";
-PLfile = "goldhen_2.2.2.bin";
+function load_goldhen223(){
+msgs.innerHTML="Loading GoldHEN v2.2.3... Please Wait !!!";
+PLfile = "goldhen_2.2.3.bin";
 run_jb = "payload";
 setTimeout(poc,1500);
 }
