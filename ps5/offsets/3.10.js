@@ -25,21 +25,21 @@ let wk_gadgetmap = {
     "pop rax": 0x0002C827,
     "pop rsp": 0x00099A22,
 
-    "mov [rdi], rsi": 0x00A2D5B8,
+    "mov [rdi], rsi": 0x00A2D5B8, //check
     "mov [rdi], rax": 0x0003A79A,
     "mov [rdi], eax": 0x0003A79B,
 
     "infloop": 0x00007351,
 
     //branching specific gadgets
-    "cmp [rcx], eax" : 0x00E4EEDB,
+    "cmp [rcx], eax" : 0x00E4EEDB, //check
     "sete al"        : 0x00022549,
     "seta al"        : 0x0000C94F,
     "setb al"        : 0x0015E348,
     "setg al"        : 0x002F89AA,
     "setl al"        : 0x000E0D91,
-    "shl rax, 3"     : 0x01A26823,
-    "add rax, rdx"   : 0x016D53B2,
+    "shl rax, 3"     : 0x01A26823, //check
+    "add rax, rdx"   : 0x016D53B2, //check
     "mov rax, [rax]" : 0x00047FEC,
     "inc dword [rax]": 0x004971AA,
 };
