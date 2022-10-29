@@ -6,11 +6,11 @@ CACHE:
 frontend.js
 index.html
 jb2.js
-OystersMenu-v1.3.6-1.13.bin
-OystersMenu-v1.3.6-1.19.bin
-OystersMenu-v1.3.7-1.00.bin
-OystersMenu-v1.3.7-1.24.bin
-OystersMenu-v1.3.7-1.29.bin
+OystersMenu-v1.3.8-v1.00.bin
+OystersMenu-v1.3.8-v1.13.bin
+OystersMenu-v1.3.8-v1.19.bin
+OystersMenu-v1.3.8-v1.24.bin
+OystersMenu-v1.3.8-v1.29.bin
 payload.js
 pl_App2usb.bin
 pl_AvatarBackup.bin
