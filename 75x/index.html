@@ -14,7 +14,7 @@ document.cookie = 'kex=1';
 <hr>
 <br>
 <h1 style="font-size:20px;text-align:center;color:yellow;">You Will Experience Insufficient Memory Problems in the Browser (You Must Insist)</h1>
-<button class="btn" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_goldhen222()> GoldHEN v2.2.2 </button>
+<button class="btn" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_goldhen23()> GoldHEN v2.3 </button>
 <button class="btn" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_mira75x()> MIRA 7.5x </button>
 <button class="btn" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_binloader()> Bin Loader </button>
 <br>
@@ -75,7 +75,7 @@ document.getElementById("main-section").style.display = "block";
 document.getElementById("mods-section").style.display = "none";
 }
 function mainpayload1(){
-document.getElementById("msgs").innerHTML = "GoldHEN v2.2.2 for All Firmwares 7.5x (Includes Temporary Fix for CE-30391-6)";
+document.getElementById("msgs").innerHTML = "GoldHEN v2.3 for Firmware 7.55 (Includes Temporary Fix for CE-30391-6)";
 }
 function mainpayload2(){
 document.getElementById("msgs").innerHTML = "MIRA for All Firmwares 7.5x";
@@ -187,11 +187,11 @@ for(var i=40; i<=79; i++){
 }
 tempC.value=60;
 
-function load_goldhen222(){
+function load_goldhen23(){
 
   var link = document.createElement('a');
         document.body.appendChild(link);
-        link.href = 'goldhen2.2.2.html';
+        link.href = 'payload.html#f=goldhen_2.3.js';
         link.click();
 }
 function load_mira75x(){
