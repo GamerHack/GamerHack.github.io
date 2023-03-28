@@ -85,8 +85,8 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 </div>
 <div id="main-section">
 <h1 style="font-size:18px;color:yellow;">Main Payloads</h1>
+<button class="btn" onmouseover="msgs.innerHTML='GoldHen v2.4b5 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_goldhen24b5()> GoldHEN v2.4b5 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GoldHen v2.3 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_goldhen23()> GoldHEN v2.3 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GoldHen v2.2.4 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_goldhen224()> GoldHEN v2.2.4 </button>
 <button class="btn" onmouseover="msgs.innerHTML='Send a Payload using port 9020'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_binloader()> Bin Loader </button>
 <br>
 <h1 style="font-size:18px;text-align:center;">Payloads</h1>
@@ -354,16 +354,15 @@ eval.call(window, loadScript('netcat.js')
 +loadScript('mira.js')
 +loadScript('relocator.js'));
 }
+function load_goldhen24b5(){
+LoadedMSG = "GoldHEN v2.4b5 Loaded ...";
+PLfile = "goldhen_v2.4b5.bin";
+load_poc();
+}
 
 function load_goldhen23(){
 LoadedMSG = "GoldHEN v2.3 Loaded ...";
 PLfile = "goldhen_2.3.bin";
-load_poc();
-}
-
-function load_goldhen224(){
-LoadedMSG = "GoldHEN v2.2.4 Loaded ...";
-PLfile = "goldhen_2.2.4.bin";
 load_poc();
 }
 
