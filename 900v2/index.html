@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html manifest="cache.manifest"><head>
-<title>PS4 9.00 FW Host v2.5 by GamerHack</title>
+<title>PS4 9.00 FW Host v2.8 by GamerHack - (Manual Exploitation)</title>
 <link rel="stylesheet" href="../style.css">
 <script src="int64.js"></script>
 <script src="rop.js"></script>
@@ -12,43 +12,85 @@
 function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));document.getElementById="display:none";window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
-<h1 id="msgs">PS4 9.00 FW Host v2.5 by GamerHack</h1>
+<h1 id="msgs">PS4 9.00 FW Host v2.8 by GamerHack</h1>
 <hr>
 <br>
+<div id="main-section">
 <h1 style="font-size:18px;color:yellow;">Main Payloads</h1>
-<button class="btn" onmouseover="GoldHen24b5()" onmouseout="pagetitle()" onclick=load_goldhen24b5()> GoldHEN v2.4b5 </button>
-<button class="btn" onmouseover="GoldHen23()" onmouseout="pagetitle()" onclick=load_goldhen23()> GoldHEN v2.3 </button>
-<button class="btn" onmouseover="BinLoader()" onmouseout="pagetitle()" onclick=load_binloader()> Bin Loader </button>
+<button class="btn" onmouseover="msgs.innerHTML='GoldHen v2.4b13 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_goldhen24b13()> GoldHEN v2.4b13 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GoldHen v2.3 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_goldhen23()> GoldHEN v2.3 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Send a Payload using port 9020'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_binloader()> Bin Loader </button>
 <br>
 <h1 style="font-size:18px;text-align:center;">Payloads</h1>
-<button class="btn" onmouseover="ToDex()" onmouseout="pagetitle()" onclick=load_todex()> ToDex </button>
-<button class="btn" onmouseover="Dumper()" onmouseout="pagetitle()" onclick=load_dumper()> App-Dumper </button>
-<button class="btn" onmouseover="FTP()" onmouseout="pagetitle()" onclick=load_ftp()> FTP </button>
-<button class="btn" onmouseover="App2USB()" onmouseout="pagetitle()" onclick=load_app2usb()> App2USB </button>
-<button class="btn" onmouseover="Backup()" onmouseout="pagetitle()" onclick=load_dbackup()> DB Backup </button>
-<button class="btn" onmouseover="Restore()" onmouseout="pagetitle()" onclick=load_dbrestore()> DB Restore </button>
+<button class="btn" onmouseover="msgs.innerHTML='Enable Some Debugging Functions Available on TestKit'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_todex()> ToDex </button>
+<button class="btn" onmouseover="msgs.innerHTML='Dump Games to USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_dumper()> App-Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='Access this console Through FTP (Be careful what you do)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_ftp()> FTP </button>
+<button class="btn" onmouseover="msgs.innerHTML='Transfer Installed Games to USB Drive in exFAT'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_app2usb()> App2USB </button>
+<button class="btn" onmouseover="msgs.innerHTML='Create a Backup of the Database and Users to a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_dbackup()> DB Backup </button>
+<button class="btn" onmouseover="msgs.innerHTML='Restore a Backup of the Database and Users from a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_dbrestore()> DB Restore </button>
 <br>
-<button class="btn" onmouseover="EnableUpdates()" onmouseout="pagetitle()" onclick=load_enablebUpdates()> Enable Updates </button>
-<button class="btn" onmouseover="DisableUpdates()" onmouseout="pagetitle()" onclick=load_disableUpdates()> Disable Updates </button>
-<button class="btn" onmouseover="HistoryBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()> History Blocker </button>
-<button class="btn" onmouseover="KernelDump()" onmouseout="pagetitle()" onclick=load_kernelDump()> Kernel Dumper </button>
-<button class="btn" onmouseover="ModuleDump()" onmouseout="pagetitle()" onclick=load_moduleDump()> Module Dumper </button>
-<button class="btn" onmouseover="PS4Debug()" onmouseout="pagetitle()" onclick=load_ps4debug()> PS4 Debug </button>
+<button class="btn" onmouseover="msgs.innerHTML='Enable System Updates'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_enablebUpdates()> Enable Updates </button>
+<button class="btn" onmouseover="msgs.innerHTML='Disable System Updates'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_disableUpdates()> Disable Updates </button>
+<button class="btn" onmouseover="msgs.innerHTML='Enable/Disable Browser History.'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_historyBlocker()> History Blocker </button>
+<button class="btn" onmouseover="msgs.innerHTML='Dump a Console Kernel to a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_kernelDump()> Kernel Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='Dump a Kernel Module to a USB Drive'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_moduleDump()> Module Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='PS4 Debug for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_ps4debug()> PS4 Debug </button>
 <br>
-<button class="btn" onmouseover="DisableASLR()" onmouseout="pagetitle()" onclick=load_disbAslr()> Disable ASLR </button>
-<button class="btn" onmouseover="ExitIDU()" onmouseout="pagetitle()" onclick=load_exitidu()> Exit IDU </button>
-<button class="btn" onmouseover="RifRen()" onmouseout="pagetitle()" onclick=load_rifRen()> RIF Renamer </button>
-<button class="btn" onmouseover="PermUART()" onmouseout="pagetitle()" onclick=load_permUart()> Permanent UART </button>
-<button class="btn" onmouseover="WebRTE()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
-<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-web" onmouseover="TrainerWeb()" onmouseout="pagetitle()"> PS4 Trainer Web </button></a>
+<button class="btn" onmouseover="msgs.innerHTML='Disables the ASLR (Address space layout randomization)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_disbAslr()> Disable ASLR </button>
+<button class="btn" onmouseover="msgs.innerHTML='Disable IDU Mode if you have activated it by mistake'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_exitidu()> Exit IDU </button>
+<button class="btn" onmouseover="msgs.innerHTML='Renames (fake) RIFs to (free) RIFs'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_rifRen()> RIF Renamer </button>
+<button class="btn" onmouseover="msgs.innerHTML='Permanent UART for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_permUart()> Permanent UART </button>
+<button class="btn" onmouseover="msgs.innerHTML='Required to Activate Cheats Through the PS4 Trainer Website'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_webrte()> WebRTE </button>
+<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-web" onmouseover="msgs.innerHTML='PS4 Trainer Website (Follow Instructions There)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'"> PS4 Trainer Web </button></a>
 <br>
-<a href="webactivator.html"><button class="btn" style="margin-left: 77px;" onmouseover="WebAct()" onmouseout="pagetitle()"> Web-Activator </button></a>
-<button class="btn btn-toolbox" onmouseover="ToolBox()" onmouseout="pagetitle()" onclick=load_toolbox()> Orbis-Toolbox </button>
-<button class="btn" onmouseover="FanSpeed()" onmouseout="pagetitle()" onclick=load_fanthreshold() style="margin-right: 8px;"> Fan Threshold </button><select id="tempC"></select>&#176;C
+<a href="webactivator.html"><button class="btn" onmouseover="msgs.innerHTML='Activate Your User Account from the Console Browser'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" style="margin-left: 76px;"> Web-Activator </button></a>
+<button class="btn" onmouseover="msgs.innerHTML='Linux Loaders Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_linuxmenu()> Linux Loaders </button>
+<button class="btn btn-toolbox" onmouseover="msgs.innerHTML='Orbis ToolBox Alpha 1190 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_toolbox()> Orbis-Toolbox </button>
+<button class="btn" onmouseover="msgs.innerHTML='Modify PS4 FAN Speed'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_fanthreshold() style="margin-right: 8px;"> Fan Threshold </button><select id="tempC"></select>&#176;C
 <br>
 <h1 style="font-size:18px;color:yellow;">Online Payloads</h1>
-<a href="online.html"><button class="btn btn-web" style="margin-bottom: 11px;width: 468px;" onmouseover="OnlinePLS()" onmouseout="pagetitle()"> Click Here to Load Page </button></a>
+<button class="btn btn-web" onclick=load_onlinePLS() style="margin-bottom: 11px;width: 468px;"> Click Here to Load this Section </button>
+</div>
+<div id="linux-section">
+<h1 style="font-size:18px;color:yellow;">Linux Payloads</h1>
+<button class="btn" onmouseover="msgs.innerHTML='Identify the Southbridge of your Console for the Linux Installation'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_southbridge()> Whos that Southbridge </button>
 <br>
+<button class="btn" onmouseover="msgs.innerHTML='Load Linux with 1GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_linux1gb()> Linux 1GB </button>
+<button class="btn" onmouseover="msgs.innerHTML='Load Linux with 2GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_linux2gb()> Linux 2GB </button>
+<button class="btn" onmouseover="msgs.innerHTML='Load Linux with 3GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_linux3gb()> Linux 3GB </button>
+<button class="btn" onmouseover="msgs.innerHTML='Load Linux with 4GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack - (Manual Exploitation)'" onclick=load_linux4gb()> Linux 4GB </button>
+<br>
+<button class="btn" onmouseover="msgs.innerHTML='Load Linux for (PS4-Pro) with 1GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_linuxPS4Pro1gb()> Linux 1GB (PS4-Pro) </button>
+<button class="btn" onmouseover="msgs.innerHTML='Load Linux for (PS4-Pro) with 2GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_linuxPS4Pro2gb()> Linux 2GB (PS4-Pro) </button>
+<button class="btn" onmouseover="msgs.innerHTML='Load Linux for (PS4-Pro) with 3GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_linuxPS4Pro3gb()> Linux 3GB (PS4-Pro) </button>
+<button class="btn" onmouseover="msgs.innerHTML='Load Linux for (PS4-Pro) with 4GB VRAM (PSXita)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_linuxPS4Pro4gb()> Linux 4GB (PS4-Pro) </button>
+<br>
+<button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_menu() style="margin-bottom: 229px"> Return </button>
+</div>
+<div id="mods-section">
+<h1 style="font-size:18px;color:yellow;">Online Payloads</h1>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.00 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_arabicGuy100()> Arabic Guy v1.00 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.27 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_arabicGuy127()> Arabic Guy v1.27 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.32 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_arabicGuy132()> Arabic Guy v1.32 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.33 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_arabicGuy133()> Arabic Guy v1.33 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Expulsion v4.0 - 1.38'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_Expulsion()> Expulsion v4.0 - 1.38 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Lamance v0.9 - 1.38 (Right + Square)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_Lamance()> Lamance v0.9 - 1.38 </button>
+<br>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.32 v1.3'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_WildeModz132()> WildeModz-1.32 v1.3 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.33 v1.3'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_WildeModz133()> WildeModz-1.33 v1.3 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.38 v1.7'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_WildeModz138()> WildeModz-1.38 v1.7 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.33'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_beefQueef133()> Beef Queef Mod v1.33 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.34'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_beefQueef134()> Beef Queef Mod v1.34 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.38d'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_beefQueef138()> Beef Queef Mod v1.38d </button>
+<br>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.00 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_Oysters100()> RDR2 v1.00 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.13 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_Oysters113()> RDR2 v1.13 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.19 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_Oysters119()> RDR2 v1.19 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.24 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_Oysters124()> RDR2 v1.24 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.29 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_Oysters129()> RDR2 v1.29 </button>
+<br>
+<button class="btn btn-web" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_menu() style="margin-bottom: 229px"> Return </button>
+</div>
 <h1 style="margin-top: 55px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;">@sleirsgoevy</a><a style="color: white;margin-left: 10px;">ChendoChap</a><a href="https://twitter.com/SpecterDev" style="color: #f31414;margin-left: 10px;">@SpecterDev</a><a style="color: white;margin-left: 10px;">SiSTR0</a><a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;">@Znullptr</a><a style="color: white;margin-left: 10px;">And Many More Developers...</a></h1>
 <script>
 for(var i=40; i<=75; i=i+5){
@@ -61,236 +103,540 @@ for(var i=40; i<=75; i=i+5){
 tempC.value=60;
 </script>
 <script>
-function GoldHen24b5(){
-document.getElementById("msgs").innerHTML = "GoldHen v2.4b5 for 9.00 FW";
-}
-function GoldHen23(){
-document.getElementById("msgs").innerHTML = "GoldHen v2.3 for 9.00 FW";
-}
-function BinLoader(){
-document.getElementById("msgs").innerHTML = "Send a Payload using port 9020";
-}
-function ToDex(){
-document.getElementById("msgs").innerHTML = "Enable Some Debugging Functions Available on TestKit";
-}
-function Dumper(){
-document.getElementById("msgs").innerHTML = "Dump Games to USB Drive";
-}
-function FTP(){
-document.getElementById("msgs").innerHTML = "Access this console Through FTP (Be careful what you do)";
-}
-function App2USB(){
-document.getElementById("msgs").innerHTML = "Transfer Installed Games to USB Drive in exFAT";
-}
-function Backup(){
-document.getElementById("msgs").innerHTML = "Create a Backup of the Database and Users to a USB Drive";
-}
-function Restore(){
-document.getElementById("msgs").innerHTML = "Restore a Backup of the Database and Users from a USB Drive";
-}
-function EnableUpdates(){
-document.getElementById("msgs").innerHTML = "Enable System Updates";
-}
-function DisableUpdates(){
-document.getElementById("msgs").innerHTML = "Disable System Updates";
-}
-function HistoryBlocker(){
-document.getElementById("msgs").innerHTML = "Enable/Disable Browser History.";
-}
-function KernelDump(){
-document.getElementById("msgs").innerHTML = "Dump a Console Kernel to a USB Drive";
-}
-function ModuleDump(){
-document.getElementById("msgs").innerHTML = "Dump a Kernel Module to a USB Drive";
-}
-function PS4Debug(){
-document.getElementById("msgs").innerHTML = "PS4 Debug for 9.00 FW";
-}
-function DisableASLR(){
-document.getElementById("msgs").innerHTML = "Disables the ASLR (Address space layout randomization)";
-}
-function ExitIDU(){
-document.getElementById("msgs").innerHTML = "Disable IDU Mode if you have activated it by mistake";
-}
-function RifRen(){
-document.getElementById("msgs").innerHTML = "Renames 'fake' RIFs to 'free' RIFs";
-}
-function PermUART(){
-document.getElementById("msgs").innerHTML = "Permanent UART for 9.00 FW";
-}
-function WebRTE(){
-document.getElementById("msgs").innerHTML = "Required to Activate Cheats Through the PS4 Trainer Website";
-}
-function TrainerWeb(){
-document.getElementById("msgs").innerHTML = "PS4 Trainer Website (Follow Instructions There)";
-}
-function WebAct(){
-document.getElementById("msgs").innerHTML = "Activate Your User Account from the Console Browser";
-}
-function ToolBox(){
-document.getElementById("msgs").innerHTML = "Orbis ToolBox Alpha 1190 for 9.00 FW";
-}
-function FanSpeed(){
-document.getElementById("msgs").innerHTML = "Modify PS4 FAN Speed";
-}
-function OnlinePLS(){
-document.getElementById("msgs").innerHTML = "Payloads hosted Online";
-}
-function pagetitle(){
-document.getElementById("msgs").innerHTML = "PS4 9.00 FW Host v2.5 by GamerHack";
+sessionStorage.setItem("exploit","no");
+sessionStorage.setItem("netcat","no");
+sessionStorage.setItem("linux","no");
+
+function load_linuxmenu(){
+	document.getElementById("linux-section").style.display = "block";
+	document.getElementById("main-section").style.display = "none";
 }
 
-function load_goldhen24b5(){
-msgs.innerHTML="Loading GoldHEN v2.4b5... Please Wait !!!";
-PLfile = "goldhen_v2.4b5.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+function load_onlinePLS(){
+	document.getElementById("mods-section").style.display = "block";
+	document.getElementById("main-section").style.display = "none";
+}
+
+function load_menu(){
+	document.getElementById("main-section").style.display = "block";
+	document.getElementById("linux-section").style.display = "none";
+	document.getElementById("mods-section").style.display = "none";
+}
+
+function allset(){
+	msgs.innerHTML = LoadedMSG
+}
+
+function load_poc(){
+    if (sessionStorage.exploit == "yes"){
+  var req = new XMLHttpRequest();
+  req.responseType = "arraybuffer";
+  req.open('GET', PLfile);
+  req.send();
+  req.onreadystatechange = function () {
+    if (req.readyState == 4) {
+    PLD = req.response;
+    var payload_buffer = chain.syscall(477, 0, PLD.byteLength*4 , 7, 0x1002, -1, 0);
+    var pl = p.array_from_address(payload_buffer, PLD.byteLength*4);
+    var padding = new Uint8Array(4 - (req.response.byteLength % 4) % 4);
+    var tmp = new Uint8Array(req.response.byteLength + padding.byteLength);
+    tmp.set(new Uint8Array(req.response), 0);
+    tmp.set(padding, req.response.byteLength);
+    var shellcode = new Uint32Array(tmp.buffer);
+    pl.set(shellcode,0);
+    var pthread = p.malloc(0x10);
+    chain.call(libKernelBase.add32(OFFSET_lk_pthread_create), pthread, 0x0, payload_buffer, 0);
+	setTimeout(allset, 50);
+    }
+  };
+}
+    else {
+        setTimeout(poc, 1500);
+    }
+}
+
+function exec_binserver(){
+    var payload_buffer = chain.syscall(477, 0x0, 0x300000, 0x7, 0x1000, 0xFFFFFFFF, 0);
+    var payload_loader = p.malloc32(0x1000);
+    
+    var loader_writer = payload_loader.backing;
+    loader_writer[0] = 0x56415741;
+    loader_writer[1] = 0x83485541;
+    loader_writer[2] = 0x894818EC;
+    loader_writer[3] = 0xC748243C;
+    loader_writer[4] = 0x10082444;
+    loader_writer[5] = 0x483C2302;
+    loader_writer[6] = 0x102444C7;
+    loader_writer[7] = 0x00000000;
+    loader_writer[8] = 0x000002BF;
+    loader_writer[9] = 0x0001BE00;
+    loader_writer[10] = 0xD2310000;
+    loader_writer[11] = 0x00009CE8;
+    loader_writer[12] = 0xC7894100;
+    loader_writer[13] = 0x8D48C789;
+    loader_writer[14] = 0xBA082474;
+    loader_writer[15] = 0x00000010;
+    loader_writer[16] = 0x000095E8;
+    loader_writer[17] = 0xFF894400;
+    loader_writer[18] = 0x000001BE;
+    loader_writer[19] = 0x0095E800;
+    loader_writer[20] = 0x89440000;
+    loader_writer[21] = 0x31F631FF;
+    loader_writer[22] = 0x0062E8D2;
+    loader_writer[23] = 0x89410000;
+    loader_writer[24] = 0x2C8B4CC6;
+    loader_writer[25] = 0x45C64124;
+    loader_writer[26] = 0x05EBC300;
+    loader_writer[27] = 0x01499848;
+    loader_writer[28] = 0xF78944C5;
+    loader_writer[29] = 0xBAEE894C;
+    loader_writer[30] = 0x00001000;
+    loader_writer[31] = 0x000025E8;
+    loader_writer[32] = 0x7FC08500;
+    loader_writer[33] = 0xFF8944E7;
+    loader_writer[34] = 0x000026E8;
+    loader_writer[35] = 0xF7894400;
+    loader_writer[36] = 0x00001EE8;
+    loader_writer[37] = 0x2414FF00;
+    loader_writer[38] = 0x18C48348;
+    loader_writer[39] = 0x5E415D41;
+    loader_writer[40] = 0x31485F41;
+    loader_writer[41] = 0xC748C3C0;
+    loader_writer[42] = 0x000003C0;
+    loader_writer[43] = 0xCA894900;
+    loader_writer[44] = 0x48C3050F;
+    loader_writer[45] = 0x0006C0C7;
+    loader_writer[46] = 0x89490000;
+    loader_writer[47] = 0xC3050FCA;
+    loader_writer[48] = 0x1EC0C748;
+    loader_writer[49] = 0x49000000;
+    loader_writer[50] = 0x050FCA89;
+    loader_writer[51] = 0xC0C748C3;
+    loader_writer[52] = 0x00000061;
+    loader_writer[53] = 0x0FCA8949;
+    loader_writer[54] = 0xC748C305;
+    loader_writer[55] = 0x000068C0;
+    loader_writer[56] = 0xCA894900;
+    loader_writer[57] = 0x48C3050F;
+    loader_writer[58] = 0x006AC0C7;
+    loader_writer[59] = 0x89490000;
+    loader_writer[60] = 0xC3050FCA;
+    chain.syscall(74, payload_loader, 0x4000, (0x1 | 0x2 | 0x4));
+
+    var pthread = p.malloc(0x10);
+    //
+    {
+        chain.fcall(window.syscalls[203], payload_buffer, 0x300000);
+        chain.fcall(libKernelBase.add32(OFFSET_lk_pthread_create), pthread, 0x0, payload_loader, payload_buffer);
+    }
+    chain.run();
+	sessionStorage.netcat = "no";
+	LoadedMSG = "Bin Loader Launched ...";
+	alert("Waiting for Payload... Send it using the PS4 IP and port 9020");
+	setTimeout(allset, 50);
+	}
+
+function loadScript(path)
+{
+    var xhr = new XMLHttpRequest(path);
+    xhr.open("GET", path, false);
+    xhr.send('');
+    return xhr.responseText;
+}
+
+function load_linuxPL(pl){
+if (sessionStorage.exploit == "yes"){
+setTimeout(loadScript("netcat.js")
++loadScript('malloc.js')
++loadScript('rop2.js')
++loadScript('syscalls.js')
++loadScript('syscalls2.js')
++loadScript(pl)
++loadScript('jbc_loader.js')
++loadScript('relocator.js'),1500);
+setTimeout(allset, 50);
+LoadedMSG = "Linux Loader Launched ..."
+}
+}
+
+function load_goldhen24b13(){
+msgs.innerHTML="Loading GoldHEN v2.4b13... Please Wait !!!";
+LoadedMSG = "GoldHEN v2.4b13 Loaded ...";
+PLfile = "goldhen_v2.4b13.bin";
+load_poc();
 }
 
 function load_goldhen23(){
 msgs.innerHTML="Loading GoldHEN v2.3... Please Wait !!!";
+LoadedMSG = "GoldHEN v2.3 Loaded ...";
 PLfile = "goldhen_2.3.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_binloader(){
 msgs.innerHTML="Launching Bin Loader... Please Wait !!!";
-run_jb = "binloader";
-setTimeout(poc,1500);
+if (sessionStorage.exploit == "yes") {  
+   exec_binserver();
+}
+else {
+    sessionStorage.netcat = "yes";
+    setTimeout(poc, 1500);   
+}    
 }
 
 function load_todex(){
 msgs.innerHTML="Loading ToDex... Please Wait !!!"
+LoadedMSG = "ToDex Loaded ...";
 PLfile = "todex.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_dumper(){
 msgs.innerHTML="Loading App-Dumper... Please Wait !!!"
+LoadedMSG = "App-Dumper Loaded ...";
 PLfile = "dumper.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_ftp(){
 msgs.innerHTML="Loading FTP... Please Wait !!!"
+LoadedMSG = "FTP Loaded ..."
 PLfile = "ftp.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_app2usb(){
 msgs.innerHTML="Loading App2USB... Please Wait !!!"
+LoadedMSG = "App2USB Loaded ..."
 PLfile = "app2usb.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_dbackup(){
 msgs.innerHTML="Loading DB Backup... Please Wait !!!"
+LoadedMSG = "DB Backup Loaded ..."
 PLfile = "backup.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_dbrestore(){
 msgs.innerHTML="Loading DB Restore... Please Wait !!!"
+LoadedMSG = "DB Restore Loaded ..."
 PLfile = "restore.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_enablebUpdates(){
 msgs.innerHTML="Loading Enable Updates... Please Wait !!!"
+LoadedMSG = "Enable Updates Loaded ..."
 PLfile = "enable-updates.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_disableUpdates(){
 msgs.innerHTML="Loading Disable Updates... Please Wait !!!"
+LoadedMSG = "Disable Updates Loaded ..."
 PLfile = "disable-updates.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_historyBlocker(){
 msgs.innerHTML="Loading History Blocker... Please Wait !!!"
+LoadedMSG = "History Blocker Loaded ..."
 PLfile = "history-blocker.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_kernelDump(){
 msgs.innerHTML="Loading Kernel Dumper... Please Wait !!!"
+LoadedMSG = "Kernel Dumper Loaded ..."
 PLfile = "kernel-dumper.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_moduleDump(){
 msgs.innerHTML="Loading Module Dumper... Please Wait !!!"
+LoadedMSG = "Module Dumper Loaded ..."
 PLfile = "module-dumper.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_ps4debug(){
 msgs.innerHTML="Loading PS4 Debug... Please Wait !!!"
+LoadedMSG = "PS4 Debug Loaded ..."
 PLfile = "ps4debug.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_disbAslr(){
 msgs.innerHTML="Loading Disable ASLR... Please Wait !!!"
+LoadedMSG = "Disable ASLR Loaded ..."
 PLfile = "disable-aslr.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_exitidu(){
 msgs.innerHTML="Loading Exit IDU... Please Wait !!!"
+LoadedMSG = "Exit IDU Loaded ..."
 PLfile = "exit-idu.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_rifRen(){
 msgs.innerHTML="Loading RIF Renamer... Please Wait !!!"
+LoadedMSG = "RIF Renamer Loaded ..."
 PLfile = "rif-renamer.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_permUart(){
 msgs.innerHTML="Loading Permanent UART... Please Wait !!!"
+LoadedMSG = "Permanent UART Loaded ..."
 PLfile = "permanent-uart.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_webrte(){
 msgs.innerHTML="Loading WebRTE... Please Wait !!!"
+LoadedMSG = "WebRTE Loaded ..."
 PLfile = "webrte.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_toolbox(){
 msgs.innerHTML="Loading Orbis-Toolbox... Please Wait !!!"
+LoadedMSG = "Orbis-Toolbox Loaded ..."
 PLfile = "Orbis-Toolbox-900.bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
 }
 
 function load_fanthreshold(){
 msgs.innerHTML="Loading Fan Threshold... Please Wait !!!"
+LoadedMSG = "Fan Threshold Loaded ..."
 PLfile = "fan-threshold"+tempC.value+".bin";
-run_jb = "payload";
-setTimeout(poc,1500);
+load_poc();
+}
+
+function load_southbridge(){
+msgs.innerHTML="Loading Payload... Please Wait !!!"
+LoadedMSG = "Payload Loaded ..."
+PLfile = "southbridge.bin";
+load_poc();
+}
+
+function load_linux1gb(){
+msgs.innerHTML="Loading Linux with 1GB VRAM... Please Wait !!!"
+PLfile = "Linux-1gb.js";
+if (sessionStorage.exploit == "yes") {  
+   load_linuxPL(PLfile);
+}
+else {
+    sessionStorage.linux = "yes";
+    setTimeout(poc, 1500);   
+}    
+}
+
+function load_linux2gb(){
+msgs.innerHTML="Loading Linux with 2GB VRAM... Please Wait !!!"
+PLfile = "Linux-2gb.js";
+if (sessionStorage.exploit == "yes") {  
+   load_linuxPL(PLfile);
+}
+else {
+    sessionStorage.linux = "yes";
+    setTimeout(poc, 1500);   
+}    
+}
+
+function load_linux3gb(){
+msgs.innerHTML="Loading Linux with 3GB VRAM... Please Wait !!!"
+PLfile = "Linux-3gb.js";
+if (sessionStorage.exploit == "yes") {  
+   load_linuxPL(PLfile);
+}
+else {
+    sessionStorage.linux = "yes";
+    setTimeout(poc, 1500);   
+}    
+}
+
+function load_linux4gb(){
+msgs.innerHTML="Loading Linux with 4GB VRAM... Please Wait !!!"
+PLfile = "Linux-4gb.js";
+if (sessionStorage.exploit == "yes") {  
+   load_linuxPL(PLfile);
+}
+else {
+    sessionStorage.linux = "yes";
+    setTimeout(poc, 1500);   
+}    
+}
+
+function load_linuxPS4Pro1gb(){
+msgs.innerHTML="Loading Linux with 1GB VRAM... Please Wait !!!"
+PLfile = "LinuxPro-1gb.js";
+if (sessionStorage.exploit == "yes") {  
+   load_linuxPL(PLfile);
+}
+else {
+    sessionStorage.linux = "yes";
+    setTimeout(poc, 1500);   
+}    
+}
+
+function load_linuxPS4Pro2gb(){
+msgs.innerHTML="Loading Linux with 2GB VRAM... Please Wait !!!"
+PLfile = "LinuxPro-2gb.js";
+if (sessionStorage.exploit == "yes") {  
+   load_linuxPL(PLfile);
+}
+else {
+    sessionStorage.linux = "yes";
+    setTimeout(poc, 1500);   
+}    
+}
+
+function load_linuxPS4Pro3gb(){
+msgs.innerHTML="Loading Linux with 3GB VRAM... Please Wait !!!"
+PLfile = "LinuxPro-3gb.js";
+if (sessionStorage.exploit == "yes") {  
+   load_linuxPL(PLfile);
+}
+else {
+    sessionStorage.linux = "yes";
+    setTimeout(poc, 1500);   
+}    
+}
+
+function load_linuxPS4Pro4gb(){
+msgs.innerHTML="Loading Linux with 4GB VRAM... Please Wait !!!"
+PLfile = "LinuxPro-4gb.js";
+if (sessionStorage.exploit == "yes") {  
+   load_linuxPL(PLfile);
+}
+else {
+    sessionStorage.linux = "yes";
+    setTimeout(poc, 1500);   
+}    
+}
+
+function load_arabicGuy100(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Arabic Guy v1.00 Loaded ..."
+PLfile = "arabic-guy100.bin";
+load_poc();
+}
+
+function load_arabicGuy127(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Arabic Guy v1.27 Loaded ..."
+PLfile = "arabic-guy127.bin";
+load_poc();
+}
+
+function load_arabicGuy132(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Arabic Guy v1.32 Loaded ..."
+PLfile = "arabic-guy132.bin";
+load_poc();
+}
+
+function load_arabicGuy133(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Arabic Guy v1.33 Loaded ..."
+PLfile = "arabic-guy133.bin";
+load_poc();
+}
+
+function load_Expulsion(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Expulsion v4.0 Loaded ..."
+PLfile = "Expulsion-V4.0-1.38.bin";
+load_poc();
+}
+
+function load_Lamance(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Lamance v0.9 Loaded ..."
+PLfile = "Lamance-v0.9-1.38.bin";
+load_poc();
+}
+
+function load_WildeModz132(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "WildeModz-1.32 v1.3 Loaded ..."
+PLfile = "WildeModz-1.32-1.3.bin";
+load_poc();
+}
+
+function load_WildeModz133(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "WildeModz-1.33 v1.3 Loaded ..."
+PLfile = "WildeModz-1.33-1.3.bin";
+load_poc();
+}
+
+function load_WildeModz138(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "WildeModz-1.38 v1.7 Loaded ..."
+PLfile = "WildeModz-1.38-1.7.bin";
+load_poc();
+}
+
+function load_beefQueef133(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Beef Queef Mod v1.33 Loaded ..."
+PLfile = "BeefQueefMod-133.bin";
+load_poc();
+}
+
+function load_beefQueef134(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Beef Queef Mod v1.34 Loaded ..."
+PLfile = "BeefQueefMod-134.bin";
+load_poc();
+}
+
+function load_beefQueef138(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Beef Queef Mod v1.38d Loaded ..."
+PLfile = "BeefQueefMod-138d.bin";
+load_poc();
+}
+
+function load_Oysters100(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Oysters Menu v1.00 Loaded ..."
+PLfile = "OystersMenu-v1.3.8-v1.00.bin";
+load_poc();
+}
+
+function load_Oysters113(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Oysters Menu v1.13 Loaded ..."
+PLfile = "OystersMenu-v1.3.8-v1.13.bin";
+load_poc();
+}
+
+function load_Oysters119(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Oysters Menu v1.19 Loaded ..."
+PLfile = "OystersMenu-v1.3.8-v1.19.bin";
+load_poc();
+}
+
+function load_Oysters124(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Oysters Menu v1.24 Loaded ..."
+PLfile = "OystersMenu-v1.3.8-v1.24.bin";
+load_poc();
+}
+
+function load_Oysters129(){
+msgs.innerHTML="Loading... Please Wait";
+LoadedMSG = "Oysters Menu v1.29 Loaded ..."
+PLfile = "OystersMenu-v1.3.8-v1.29.bin";
+load_poc();
 }
 </script>
 </body>
