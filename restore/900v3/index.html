@@ -16,13 +16,14 @@
 <h1 style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;"> Loading Payload... Please Wait </h1>
 </div>
 <div id="main-section" style="display: none">
-<h1 id=msgs2 style="font-size: 30px;margin-top: 77px;margin-bottom: 391px;"> Loading Payload... Please Wait </h1>
+<h1 style="font-size: 30px;margin-top: 77px;margin-bottom: 391px;"> Payload Loaded ... </h1>
 <br>
 </div>
 <h1 style="margin-top: 43px;color: yellow;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;">@sleirsgoevy</a><a style="color: white;margin-left: 10px;">ChendoChap</a><a href="https://twitter.com/SpecterDev" style="color: #f31414;margin-left: 10px;">@SpecterDev</a><a style="color: white;margin-left: 10px;">SiSTR0</a><a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;">@Znullptr</a><a style="color: white;margin-left: 10px;">And Many More Developers...</a></h1>
 <script>
 function allset(){
-	msgs2.innerHTML="Payload Loaded ...";
+	document.getElementById("main-section").style.display = "block";
+	document.getElementById("jb-progress").style.display = "none";
 }
 
 function load_poc(){
@@ -49,8 +50,6 @@ function load_poc(){
 }
 
 function jbdone(){
-	document.getElementById("main-section").style.display = "block";
-	document.getElementById("jb-progress").style.display = "none";
 	PLfile = "payload.bin";
 	setTimeout(load_poc, 500);
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html manifest="cache.manifest"><head>
+<html>
+<head>
 <title>PS4 Restore Host to User's Guide for 6.72 FW</title>
 <link rel="stylesheet" href="../../style.css">
 <script>
@@ -31,7 +32,7 @@ else {
 <h1 id=msgs><font color="green">Pass = <span id=passCounter></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="white">PS4 Restore Host to User's Guide for 6.72 FW</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font color="red">Fail = <span id=failCounter></span></h1>
 <hr>
 <br>
-<h1 id=msgs2 style="font-size: 30px;margin-top: 77px;margin-bottom: 391px;"> Waiting... </h1>
+<h1 id=msgs2 style="font-size: 30px;margin-top: 77px;margin-bottom: 391px;"> Loading Payload... Please Wait </h1>
 <br>
 <h1 style="margin-top:43px;color:yellow;">Designed by<a href="https://twitter.com/GamerHack93" style="color: #f31414;margin-left: 10px;">@GamerHack93</a><a style="color: white;margin-left: 10px;">A special thanks to all the developers involved in the scene.</a></h1>
 <script>
@@ -41,7 +42,6 @@ if (localStorage.failcount == null) localStorage.failcount=0;
 window.failCounter.innerHTML=localStorage.failcount;
 
 function restore_PL(){
-msgs2.innerHTML="Loading Payload... Please Wait";
 LoadedMSG="Payload Loaded ✔";
 PLfile="payload.bin";
 setTimeout(jailbreak,500);
