@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html manifest="cache.manifest">
 <head>
 <title>PS4 9.00 FW GoldHEN Host by GamerHack | Automatic Exploitation</title>
 <link rel="stylesheet" href="../style.css">
@@ -8,9 +8,10 @@
 <script src="kexploit.js"></script>
 <script src="webkit.js"></script>
 </head>
-<body onload="setTimeout(poc, 50);">
+<body onload="if(localStorage.cache=='yes')setTimeout(poc, 50);">
 <script>
-if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));window.msgs2.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs2.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs2.innerHTML="Now Close And Re-Open Your Browser ...";},3000);localStorage.cache="yes";}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 <h1 id="msgs">PS4 9.00 FW GoldHEN Host by GamerHack</h1>
 <hr>
