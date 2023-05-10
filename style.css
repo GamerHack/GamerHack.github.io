@@ -1,4 +1,4 @@
-html {
+html, body {
   background-image: url('img.jpg');
   background-position: center;
   background-size: cover;
