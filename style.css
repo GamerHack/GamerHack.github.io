@@ -1,5 +1,6 @@
 html {
   background-image: url('img.jpg');
+  background-position: center;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -11,7 +12,6 @@ html {
 h1 {
   text-shadow: 0.1em 0.1em 0.2em black;
   font-size: 25px;
-  text-align: center;
   color: white;
 }
 a {
