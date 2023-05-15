@@ -52,7 +52,7 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-web" onmouseover="msgs.innerHTML='PS4 Trainer Website (Follow Instructions There)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'"> PS4 Trainer Web </button></a>
 <br>
 <button class="btn" onmouseover="msgs.innerHTML='Linux Loaders Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_linuxmenu() style="margin-left: 69px"> Linux Loaders </button>
-<button class="btn btn-web" onmouseover="msgs.innerHTML='Games Mods (Hosted Online)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_mods()> Games-Mods (Online) </button>
+<button class="btn btn-web" onmouseover="msgs.innerHTML='Games Mods (Hosted Online)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_modsmenu()> Games-Mods (Online) </button>
 <button class="btn btn-toolbox" onmouseover="msgs.innerHTML='Orbis ToolBox Alpha 1190 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_toolbox()> Orbis-Toolbox </button>
 <button class="btn" onmouseover="msgs.innerHTML='Modify PS4 FAN Speed'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick=load_fanthreshold() style="margin-bottom: 70px"> Fan Threshold </button><select id="tempC"></select>°C
 </div>
@@ -110,7 +110,7 @@ function load_linuxmenu(){
 	document.getElementById("jb-progress").style.display = "none";
 }
 
-function load_mods(){
+function load_modsmenu(){
 	document.getElementById("mods-section").style.display = "block";
 	document.getElementById("main-section").style.display = "none";
 	document.getElementById("jb-progress").style.display = "none";

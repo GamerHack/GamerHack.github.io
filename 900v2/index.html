@@ -50,7 +50,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <button class="btn" onmouseover="msgs.innerHTML='Modify PS4 FAN Speed'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C
 <br>
 <h1 style="font-size:18px;color:yellow;">Online Payloads</h1>
-<button class="btn btn-web" onclick=load_onlinePLS() style="margin-bottom: 11px;width: 468px;"> Click Here to Load this Section </button>
+<button class="btn btn-web" onclick=load_modsmenu() style="margin-bottom: 11px;width: 468px;"> Click Here to Load this Section </button>
 </div>
 <div id="linux-section">
 <h1 style="font-size:18px;">Linux Payloads</h1>
@@ -103,7 +103,7 @@ function load_linuxmenu(){
 	document.getElementById("main-section").style.display = "none";
 }
 
-function load_onlinePLS(){
+function load_modsmenu(){
 	document.getElementById("mods-section").style.display = "block";
 	document.getElementById("main-section").style.display = "none";
 }
@@ -244,7 +244,7 @@ for(var i=40; i<=75; i=i+5){
 }
 tempC.value=60;
 
-function load_linuxPL(pl){
+function linux_loader(pl){
 if (sessionStorage.exploit == "yes"){
 setTimeout(loadScript("netcat.js")
 +loadScript('malloc.js')
@@ -428,7 +428,7 @@ function load_linux1gb(){
 msgs.innerHTML="Loading Linux with 1GB VRAM... Please Wait"
 PLfile = "Linux-1gb.js";
 if (sessionStorage.exploit == "yes") {  
-   load_linuxPL(PLfile);
+   linux_loader(PLfile);
 }
 else {
     sessionStorage.linux = "yes";
@@ -440,7 +440,7 @@ function load_linux2gb(){
 msgs.innerHTML="Loading Linux with 2GB VRAM... Please Wait"
 PLfile = "Linux-2gb.js";
 if (sessionStorage.exploit == "yes") {  
-   load_linuxPL(PLfile);
+   linux_loader(PLfile);
 }
 else {
     sessionStorage.linux = "yes";
@@ -452,7 +452,7 @@ function load_linux3gb(){
 msgs.innerHTML="Loading Linux with 3GB VRAM... Please Wait"
 PLfile = "Linux-3gb.js";
 if (sessionStorage.exploit == "yes") {  
-   load_linuxPL(PLfile);
+   linux_loader(PLfile);
 }
 else {
     sessionStorage.linux = "yes";
@@ -464,7 +464,7 @@ function load_linux4gb(){
 msgs.innerHTML="Loading Linux with 4GB VRAM... Please Wait"
 PLfile = "Linux-4gb.js";
 if (sessionStorage.exploit == "yes") {  
-   load_linuxPL(PLfile);
+   linux_loader(PLfile);
 }
 else {
     sessionStorage.linux = "yes";
@@ -476,7 +476,7 @@ function load_linuxPS4Pro1gb(){
 msgs.innerHTML="Loading Linux with 1GB VRAM... Please Wait"
 PLfile = "LinuxPro-1gb.js";
 if (sessionStorage.exploit == "yes") {  
-   load_linuxPL(PLfile);
+   linux_loader(PLfile);
 }
 else {
     sessionStorage.linux = "yes";
@@ -488,7 +488,7 @@ function load_linuxPS4Pro2gb(){
 msgs.innerHTML="Loading Linux with 2GB VRAM... Please Wait"
 PLfile = "LinuxPro-2gb.js";
 if (sessionStorage.exploit == "yes") {  
-   load_linuxPL(PLfile);
+   linux_loader(PLfile);
 }
 else {
     sessionStorage.linux = "yes";
@@ -500,7 +500,7 @@ function load_linuxPS4Pro3gb(){
 msgs.innerHTML="Loading Linux with 3GB VRAM... Please Wait"
 PLfile = "LinuxPro-3gb.js";
 if (sessionStorage.exploit == "yes") {  
-   load_linuxPL(PLfile);
+   linux_loader(PLfile);
 }
 else {
     sessionStorage.linux = "yes";
@@ -512,7 +512,7 @@ function load_linuxPS4Pro4gb(){
 msgs.innerHTML="Loading Linux with 4GB VRAM... Please Wait"
 PLfile = "LinuxPro-4gb.js";
 if (sessionStorage.exploit == "yes") {  
-   load_linuxPL(PLfile);
+   linux_loader(PLfile);
 }
 else {
     sessionStorage.linux = "yes";

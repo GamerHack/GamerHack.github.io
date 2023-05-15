@@ -20,7 +20,7 @@
 <a href="restore/index.html"><button class="btn" onmouseover="msgs.innerHTML='Restore a Host to User&#8217;s Guide without using DNS'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> Restore Host </button></a>
 <a href="nobd/index.html"><button class="btn btn2" onmouseover="msgs.innerHTML='Update to 9.00 FW on consoles with broken Blu-ray drive'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'"> Mira NoBD </button></a>
 <br>
-<button class="btn btn-web" onmouseover="msgs.innerHTML='If you like my work you can support me with a donation.'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'" onclick=load_crypto() style="margin-top:100px;margin-bottom: 176px;width: 468px;"> For Donations (Only in Cryptocurrencies) </button>
+<button class="btn btn-web" onmouseover="msgs.innerHTML='If you like my work you can support me with a donation.'" onmouseout="msgs.innerHTML='PS4 Exploit Host by GamerHack'" onclick=load_cryptomenu() style="margin-top:100px;margin-bottom: 176px;width: 468px;"> For Donations (Only in Cryptocurrencies) </button>
 <br>
 <h1>Designed by:<a href="https://twitter.com/GamerHack93" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@GamerHack93</a>A special thanks to all the devs on the scene.</h1>
 </div>
@@ -33,15 +33,15 @@
 <h1 style="font-size:18px;color:yellow;">Donate with Ethereum (ETH):</h1>
 <img src="eth.jpg" width="150" height="150">
 <h1 style="font-size:18px;">0x7Ae1825ddE196925dB8B7832F436cA0eAeaF932c</h1>
-<button class="btn btn-web" onclick=back()> Return </button>
+<button class="btn btn-web" onclick=load_menu()> Return </button>
 </div>
 <script>
-function load_crypto(){
+function load_cryptomenu(){
 document.getElementById("crypto-section").style.display = "block";
 document.getElementById("main-section").style.display = "none";
 }
 
-function back(){
+function load_menu(){
 document.getElementById("main-section").style.display = "block";
 document.getElementById("crypto-section").style.display = "none";
 }

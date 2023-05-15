@@ -45,7 +45,7 @@ document.cookie = 'kex=1';
 <button class="btn" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick=load_linux1gb()> Linux 1GB </button>
 <button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> Linux 3GB </button>
 <br>
-<button class="btn btn-web" onmouseover="mods()" onmouseout="pagetitle()" onclick=load_mods()> Games Mods </button>
+<button class="btn btn-web" onmouseover="mods()" onmouseout="pagetitle()" onclick=load_modsmenu()> Games Mods </button>
 <button class="btn btn-toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick=load_toolbox()> Orbis-Toolbox </button>
 <button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
 <button class="btn btn-web" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
@@ -63,15 +63,15 @@ document.cookie = 'kex=1';
 <button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick=load_Oysters124()> RDR2 v1.24 </button>
 <button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick=load_Oysters129()> RDR2 v1.29 </button>
 <br>
-<button class="btn btn-web" onclick=close_section() style="margin-bottom: 303px"> Return </button>
+<button class="btn btn-web" onclick=load_menu() style="margin-bottom: 303px"> Return </button>
 </div>
 <h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a></h1>
 <script>
-function load_mods(){
+function load_modsmenu(){
 document.getElementById("mods-section").style.display = "block";
 document.getElementById("main-section").style.display = "none";
 }
-function close_section(){
+function load_menu(){
 document.getElementById("main-section").style.display = "block";
 document.getElementById("mods-section").style.display = "none";
 }

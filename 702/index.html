@@ -37,7 +37,7 @@ document.cookie = 'kex=1';
 <br>
 <button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
 <button class="btn btn-web" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
-<button class="btn btn-web" onmouseover="mods()" onmouseout="pagetitle()" onclick=load_mods()> Games Mods </button>
+<button class="btn btn-web" onmouseover="mods()" onmouseout="pagetitle()" onclick=load_modsmenu()> Games Mods </button>
 <button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()> History Blocker </button>
 <br>
 <button style="margin-left: 78px;" class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick=load_webact()> Web-Activator </button>
@@ -63,15 +63,15 @@ document.cookie = 'kex=1';
 <button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick=load_Oysters124()> RDR2 v1.24 </button>
 <button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick=load_Oysters129()> RDR2 v1.29 </button>
 <br>
-<button class="btn btn-web" onclick=close_section() style="margin-bottom: 303px"> Return </button>
+<button class="btn btn-web" onclick=load_menu() style="margin-bottom: 303px"> Return </button>
 </div>
 <h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a></h1>
 <script>
-function load_mods(){
+function load_modsmenu(){
 document.getElementById("mods-section").style.display = "block";
 document.getElementById("main-section").style.display = "none";
 }
-function close_section(){
+function load_menu(){
 document.getElementById("main-section").style.display = "block";
 document.getElementById("mods-section").style.display = "none";
 }
