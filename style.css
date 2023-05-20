@@ -17,22 +17,22 @@ h1 {
 a {
   text-decoration: none;
 }
-#jb-progress {
+#progress {
   display: block;
 }
-#main-section {
+#menu {
   display: block;
 }
-#crypto-section {
+#crypto {
   display: none;
 }
-#backup-section {
+#tools {
   display: none;
 }
-#linux-section {
+#lnx {
   display: none;
 }
-#mods-section {
+#mods {
   display: none;
 }
 .btn {
@@ -58,21 +58,21 @@ a {
 .btn:hover {
   background-color: #0058b1;
 }
-.btn2 {
+.alt {
   background-color: #b10000;
 }
-.btn2:hover {
+.alt:hover {
   background-color: #f31414;
 }
-.btn-web {
+.onln {
   background-color: #076300;
 }
-.btn-web:hover {
+.onln:hover {
   background-color: #18891b;
 }
-.btn-toolbox {
+.toolbox {
   background-color: #ae2301;
 }
-.btn-toolbox:hover {
+.toolbox:hover {
   background-color: #d42a01;
 }

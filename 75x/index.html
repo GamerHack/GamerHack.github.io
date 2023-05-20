@@ -10,7 +10,7 @@ document.cookie = 'kex=1';
 </script>
 </head>
 <body>
-<div id="main-section">
+<div id="menu">
 <h1 id=msgs>PS4 7.50 - 7.55 FW Host v1.5 by GamerHack</h1>
 <hr>
 <br>
@@ -38,19 +38,19 @@ document.cookie = 'kex=1';
 <button class="btn" style="margin-left: 77px" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick=load_ps4debug()> PS4 Debug </button>
 <button class="btn" onmouseover="disbaslr()" onmouseout="pagetitle()" onclick=load_disbAslr()> Disable ASLR </button>
 <button class="btn" onmouseover="rifrenamer()" onmouseout="pagetitle()" onclick=load_rifRen()> RIF Renamer </button>
-<button class="btn btn-main" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C
+<button class="btn" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C
 <br>
 <button class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick=load_webact()> Web-Activator </button>
 <button class="btn" onmouseover="exitidu()" onmouseout="pagetitle()" onclick=load_exitidu()> Exit IDU </button>
 <button class="btn" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick=load_linux1gb()> Linux 1GB </button>
 <button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> Linux 3GB </button>
 <br>
-<button class="btn btn-web" onmouseover="mods()" onmouseout="pagetitle()" onclick=load_modsmenu()> Games Mods </button>
-<button class="btn btn-toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick=load_toolbox()> Orbis-Toolbox </button>
+<button class="btn" onmouseover="mods()" onmouseout="pagetitle()" onclick=mods_group()> Games Mods </button>
+<button class="btn toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick=load_toolbox()> Orbis-Toolbox </button>
 <button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
-<button class="btn btn-web" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
+<button class="btn onln" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
 </div>
-<div id="mods-section">
+<div id="mods">
 <h1 id=msgs-mods>Games Mods</h1>
 <hr>
 <br>
@@ -63,18 +63,20 @@ document.cookie = 'kex=1';
 <button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick=load_Oysters124()> RDR2 v1.24 </button>
 <button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick=load_Oysters129()> RDR2 v1.29 </button>
 <br>
-<button class="btn btn-web" onclick=load_menu() style="margin-bottom: 303px"> Return </button>
+<button class="btn" onclick=load_menu() style="margin-bottom: 303px"> Return </button>
 </div>
 <h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a></h1>
 <script>
-function load_modsmenu(){
-document.getElementById("mods-section").style.display = "block";
-document.getElementById("main-section").style.display = "none";
+function mods_group(){
+document.getElementById("mods").style.display = "block";
+document.getElementById("menu").style.display = "none";
 }
+
 function load_menu(){
-document.getElementById("main-section").style.display = "block";
-document.getElementById("mods-section").style.display = "none";
+document.getElementById("menu").style.display = "block";
+document.getElementById("mods").style.display = "none";
 }
+
 function mainpayload1(){
 document.getElementById("msgs").innerHTML = "GoldHEN v2.3 for Firmware 7.55 (Includes Temporary Fix for CE-30391-6)";
 }

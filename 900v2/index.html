@@ -16,7 +16,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <h1 id="msgs">PS4 9.00 FW Host v2.8 by GamerHack</h1>
 <hr>
 <br>
-<div id="main-section">
+<div id="menu">
 <h1 style="font-size:18px;color:yellow;">Main Payloads</h1>
 <button class="btn" onmouseover="msgs.innerHTML='GoldHEN v2.4b13 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_goldhen24b13()> GoldHEN v2.4b13 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GoldHEN v2.3 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_goldhen23()> GoldHEN v2.3 </button>
@@ -42,17 +42,17 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <button class="btn" onmouseover="msgs.innerHTML='Renames (fake) RIFs to (free) RIFs'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_rifRen()> RIF Renamer </button>
 <button class="btn" onmouseover="msgs.innerHTML='Permanent UART for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_permUart()> Permanent UART </button>
 <button class="btn" onmouseover="msgs.innerHTML='Required to Activate Cheats Through the PS4 Trainer Website'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_webrte()> WebRTE </button>
-<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-web" onmouseover="msgs.innerHTML='PS4 Trainer Website (Follow Instructions There)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'"> PS4 Trainer Web </button></a>
+<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn onln" onmouseover="msgs.innerHTML='PS4 Trainer Website (Follow Instructions There)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'"> PS4 Trainer Web </button></a>
 <br>
 <a href="webactivator.html"><button class="btn" onmouseover="msgs.innerHTML='Activate Your User Account from the Console Browser'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" style="margin-left: 72px;"> Web-Activator </button></a>
-<button class="btn" onmouseover="msgs.innerHTML='Linux Loaders Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_linuxmenu()> Linux Loaders </button>
-<button class="btn btn-toolbox" onmouseover="msgs.innerHTML='Orbis ToolBox Alpha 1190 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_toolbox()> Orbis-Toolbox </button>
+<button class="btn" onmouseover="msgs.innerHTML='Linux Loaders Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=linux_group()> Linux Loaders </button>
+<button class="btn toolbox" onmouseover="msgs.innerHTML='Orbis ToolBox Alpha 1190 for 9.00 FW'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_toolbox()> Orbis-Toolbox </button>
 <button class="btn" onmouseover="msgs.innerHTML='Modify PS4 FAN Speed'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C
 <br>
 <h1 style="font-size:18px;color:yellow;">Online Payloads</h1>
-<button class="btn btn-web" onclick=load_modsmenu() style="margin-bottom: 11px;width: 468px;"> Click Here to Load this Section </button>
+<button class="btn onln" onclick=mods_group() style="margin-bottom: 11px;width: 468px;"> Click Here to Load this Section </button>
 </div>
-<div id="linux-section">
+<div id="lnx">
 <h1 style="font-size:18px;">Linux Payloads</h1>
 <button class="btn" onmouseover="msgs.innerHTML='Identify the Southbridge of your Console for the Linux Installation'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_southbridge()> Whos that Southbridge </button>
 <br>
@@ -68,7 +68,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <br>
 <button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_menu() style="margin-bottom: 229px"> Return </button>
 </div>
-<div id="mods-section">
+<div id="mods">
 <h1 style="font-size:18px;color:yellow;">Online Payloads</h1>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.00 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_arabicGuy100()> Arabic Guy v1.00 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Arabic Guy v1.27 (L1 + R1)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_arabicGuy127()> Arabic Guy v1.27 </button>
@@ -90,7 +90,7 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.24 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_Oysters124()> RDR2 v1.24 </button>
 <button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.29 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_Oysters129()> RDR2 v1.29 </button>
 <br>
-<button class="btn btn-web" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_menu() style="margin-bottom: 229px"> Return </button>
+<button class="btn onln" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick=load_menu() style="margin-bottom: 229px"> Return </button>
 </div>
 <h1 style="margin-top: 55px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Znullptr</a>SiSTR0</h1>
 <script>
@@ -98,24 +98,24 @@ sessionStorage.setItem("exploit","no");
 sessionStorage.setItem("netcat","no");
 sessionStorage.setItem("linux","no");
 
-function load_linuxmenu(){
-	document.getElementById("linux-section").style.display = "block";
-	document.getElementById("main-section").style.display = "none";
+function linux_group(){
+document.getElementById("lnx").style.display = "block";
+document.getElementById("menu").style.display = "none";
 }
 
-function load_modsmenu(){
-	document.getElementById("mods-section").style.display = "block";
-	document.getElementById("main-section").style.display = "none";
+function mods_group(){
+document.getElementById("mods").style.display = "block";
+document.getElementById("menu").style.display = "none";
 }
 
 function load_menu(){
-	document.getElementById("main-section").style.display = "block";
-	document.getElementById("linux-section").style.display = "none";
-	document.getElementById("mods-section").style.display = "none";
+document.getElementById("menu").style.display = "block";
+document.getElementById("lnx").style.display = "none";
+document.getElementById("mods").style.display = "none";
 }
 
 function allset(){
-	msgs.innerHTML = LoadedMSG
+msgs.innerHTML = LoadedMSG
 }
 
 function load_poc(){

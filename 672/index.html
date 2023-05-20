@@ -31,7 +31,7 @@ else {
 </script>
 </head>
 <body>
-<div id="main-section">
+<div id="menu">
 <h1 id=msgs>PS4 6.72 FW Host v3.0 by GamerHack</h1>
 <hr>
 <br>
@@ -42,7 +42,7 @@ else {
 <button class="btn" onclick=load_mira()> Mira </button>
 <br>
 <h1 style="font-size:18px;">Payloads</h1>
-<button class="btn btn2" onclick=load_jb2()> Jailbreak </button>
+<button class="btn alt" onclick=load_jb2()> Jailbreak </button>
 <button class="btn" onclick=load_ftp()> FTP </button>
 <button class="btn" onclick=load_App2usb()> App2USB </button>
 <button class="btn" onclick=load_binloader()> Bin Loader </button>
@@ -54,13 +54,13 @@ else {
 <br>
 <button class="btn" onclick=load_enableUpdates()>  Enable Updates </button>
 <button class="btn" onclick=load_disableUpdates()> Disable Updates </button>
-<button class="btn" onclick=load_bakmenu()> Backup and Restore </button>
+<button class="btn" onclick=tools_group()> Backup and Restore </button>
 <button class="btn" onclick=load_historyBlocker()> History Blocker </button>
 <br>
 <button class="btn" onclick=load_LinuxUSB()> Linux USB </button>
 <button class="btn" onclick=load_LinuxBaikal()> Linux Baikal </button>
 <button class="btn" onclick=load_webrte()> WebRTE </button>
-<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-web"> PS4 Trainer Web </button></a>
+<a href="http://ps4trainer.com/Trainer/index.html"><button class="btn onln"> PS4 Trainer Web </button></a>
 <br>
 <button class="btn" onclick=load_todex() style="margin-left: 108px;"> ToDEX </button>
 <button class="btn" onclick=load_ps4debug()> PS4 Debug </button>
@@ -68,12 +68,12 @@ else {
 <button class="btn" onclick=load_fwspoof()> Spoof Firmware </button><select id="fws1"></select><select id="fws2"></select>
 <br>
 <button class="btn" onclick=load_webact() style="margin-left: 73px;"> Web-Activator </button>
-<button class="btn btn-web" onclick=load_modsmenu()> Games Mods </button>
-<button class="btn btn-toolbox" onclick=load_orbistlbox()> Orbis-Toolbox </button>
+<button class="btn" onclick=mods_group()> Games Mods </button>
+<button class="btn toolbox" onclick=load_orbistlbox()> Orbis-Toolbox </button>
 <button class="btn" onclick=load_fanthreshold()> Fan Threshold </button><font color="white"><select id="tempC"></select>&#176;C
 <br>
 </div>
-<div id="backup-section">
+<div id="tools">
 <h1 id=msgs2>Backup and Restore </h1>
 <hr>
 <br>
@@ -95,7 +95,7 @@ else {
 <br>
 <button class="btn" onclick=load_menu() style="margin-bottom: 241px"> Return </button>
 </div>
-<div id="mods-section">
+<div id="mods">
 <h1 id=msgs3>Games Mods </h1>
 <hr>
 <br>
@@ -111,7 +111,7 @@ else {
 <button class="btn" onclick=load_Oysters124()> RDR2 v1.24 </button>
 <button class="btn" onclick=load_Oysters129()> RDR2 v1.29 </button>
 <br>
-<button class="btn btn-web" onclick=load_menu() style="margin-bottom: 303px"> Return </button>
+<button class="btn" onclick=load_menu() style="margin-bottom: 303px"> Return </button>
 </div>
 <h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>Leeful<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a></h1>
 <script>
@@ -125,20 +125,20 @@ for(var i=00; i<=99; i++){var select2 = document.getElementById("fws2"); var opt
 fws2.value=00;
 </script>
 <script>
-function load_bakmenu(){
-document.getElementById("backup-section").style.display = "block";
-document.getElementById("main-section").style.display = "none";
+function tools_group(){
+document.getElementById("tools").style.display = "block";
+document.getElementById("menu").style.display = "none";
 }
 
-function load_modsmenu(){
-document.getElementById("mods-section").style.display = "block";
-document.getElementById("main-section").style.display = "none";
+function mods_group(){
+document.getElementById("mods").style.display = "block";
+document.getElementById("menu").style.display = "none";
 }
 
 function load_menu(){
-document.getElementById("main-section").style.display = "block";
-document.getElementById("backup-section").style.display = "none";
-document.getElementById("mods-section").style.display = "none";
+document.getElementById("menu").style.display = "block";
+document.getElementById("tools").style.display = "none";
+document.getElementById("mods").style.display = "none";
 }
 
 function getScript(source,callback){var gs=document.createElement('script');gs.src=source;gs.onload=callback;gs.async=false;document.body.appendChild(gs);}
