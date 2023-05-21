@@ -11,59 +11,59 @@ document.cookie = 'kex=1';
 </head>
 <body>
 <div id="menu">
-<h1 id=msgs>PS4 7.50 - 7.55 FW Host v1.5 by GamerHack</h1>
+<h1 id="msgs">PS4 7.50 - 7.55 FW Host v1.5 by GamerHack</h1>
 <hr>
 <br>
 <h1 style="font-size:18px;color:yellow;">Main Payloads</h1>
-<button class="btn" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick=load_goldhen23()> GoldHEN v2.3 </button>
-<button class="btn" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick=load_mira75x()> MIRA 7.5x </button>
-<button class="btn" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick=load_binloader()> Bin Loader </button>
+<button class="btn" onmouseover="mainpayload1()" onmouseout="pagetitle()" onclick="load_goldhen23()"> GoldHEN v2.3 </button>
+<button class="btn" onmouseover="mainpayload2()" onmouseout="pagetitle()" onclick="load_mira75x()"> MIRA 7.5x </button>
+<button class="btn" onmouseover="mainpayload3()" onmouseout="pagetitle()" onclick="load_binloader()"> Bin Loader </button>
 <br>
 <h1 style="font-size:18px;">Payloads</h1>
-<button class="btn" onmouseover="todex()" onmouseout="pagetitle()" onclick=load_todex()> ToDex </button>
-<button class="btn" onmouseover="dumper()" onmouseout="pagetitle()" onclick=load_dumper()> Dumper </button>
-<button class="btn" onmouseover="ftp()" onmouseout="pagetitle()" onclick=load_ftp()> FTP </button>
-<button class="btn" onmouseover="app2usb()" onmouseout="pagetitle()" onclick=load_app2usb()> App2USB </button>
+<button class="btn" onmouseover="todex()" onmouseout="pagetitle()" onclick="load_todex()"> ToDex </button>
+<button class="btn" onmouseover="dumper()" onmouseout="pagetitle()" onclick="load_dumper()"> Dumper </button>
+<button class="btn" onmouseover="ftp()" onmouseout="pagetitle()" onclick="load_ftp()"> FTP </button>
+<button class="btn" onmouseover="app2usb()" onmouseout="pagetitle()" onclick="load_app2usb()"> App2USB </button>
 <br>
-<button class="btn" onmouseover="enableUpdates()" onmouseout="pagetitle()" onclick=load_enablebUpdates()> Enable Updates </button>
-<button class="btn" onmouseover="disableUpdates()" onmouseout="pagetitle()" onclick=load_disableUpdates()> Disable Updates </button>
-<button class="btn" onmouseover="dbackup()" onmouseout="pagetitle()" onclick=load_dbackup()> DB Backup </button>
-<button class="btn" onmouseover="dbrestore()" onmouseout="pagetitle()" onclick=load_dbrestore()> DB Restore </button>
+<button class="btn" onmouseover="enableUpdates()" onmouseout="pagetitle()" onclick="load_enablebUpdates()"> Enable Updates </button>
+<button class="btn" onmouseover="disableUpdates()" onmouseout="pagetitle()" onclick="load_disableUpdates()"> Disable Updates </button>
+<button class="btn" onmouseover="dbackup()" onmouseout="pagetitle()" onclick="load_dbackup()"> DB Backup </button>
+<button class="btn" onmouseover="dbrestore()" onmouseout="pagetitle()" onclick="load_dbrestore()"> DB Restore </button>
 <br>
-<button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick=load_historyBlocker()> History Blocker </button>
-<button class="btn" onmouseover="ebrowser()" onmouseout="pagetitle()" onclick=load_ebrowser()> Enable Browser </button>
-<button class="btn" onmouseover="kernelDump()" onmouseout="pagetitle()" onclick=load_kernelDump()> Kernel Dumper </button>
-<button class="btn" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick=load_kernelClock()> Kernel Clock </button>
+<button class="btn" onmouseover="historyBlocker()" onmouseout="pagetitle()" onclick="load_historyBlocker()"> History Blocker </button>
+<button class="btn" onmouseover="ebrowser()" onmouseout="pagetitle()" onclick="load_ebrowser()"> Enable Browser </button>
+<button class="btn" onmouseover="kernelDump()" onmouseout="pagetitle()" onclick="load_kernelDump()"> Kernel Dumper </button>
+<button class="btn" onmouseover="kernelClock()" onmouseout="pagetitle()" onclick="load_kernelClock()"> Kernel Clock </button>
 <br>
-<button class="btn" style="margin-left: 77px" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick=load_ps4debug()> PS4 Debug </button>
-<button class="btn" onmouseover="disbaslr()" onmouseout="pagetitle()" onclick=load_disbAslr()> Disable ASLR </button>
-<button class="btn" onmouseover="rifrenamer()" onmouseout="pagetitle()" onclick=load_rifRen()> RIF Renamer </button>
-<button class="btn" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick=load_fanthreshold()> Fan Threshold </button><select id="tempC"></select>&#176;C
+<button class="btn" style="margin-left: 77px" onmouseover="ps4debug()" onmouseout="pagetitle()" onclick="load_ps4debug()"> PS4 Debug </button>
+<button class="btn" onmouseover="disbaslr()" onmouseout="pagetitle()" onclick="load_disbAslr()"> Disable ASLR </button>
+<button class="btn" onmouseover="rifrenamer()" onmouseout="pagetitle()" onclick="load_rifRen()"> RIF Renamer </button>
+<button class="btn" onmouseover="fanthreshold()" onmouseout="pagetitle()"  style="margin-right:10px" onclick="load_fanthreshold()"> Fan Threshold </button><select id="tempC"></select>&#176;C
 <br>
-<button class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick=load_webact()> Web-Activator </button>
-<button class="btn" onmouseover="exitidu()" onmouseout="pagetitle()" onclick=load_exitidu()> Exit IDU </button>
-<button class="btn" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick=load_linux1gb()> Linux 1GB </button>
-<button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick=load_linux3gb()> Linux 3GB </button>
+<button class="btn" onmouseover="webact()" onmouseout="pagetitle()" onclick="load_webact()"> Web-Activator </button>
+<button class="btn" onmouseover="exitidu()" onmouseout="pagetitle()" onclick="load_exitidu()"> Exit IDU </button>
+<button class="btn" onmouseover="linux1gb()" onmouseout="pagetitle()" onclick="load_linux1gb()"> Linux 1GB </button>
+<button class="btn" onmouseover="linux3gb()" onmouseout="pagetitle()" onclick="load_linux3gb()"> Linux 3GB </button>
 <br>
-<button class="btn" onmouseover="mods()" onmouseout="pagetitle()" onclick=mods_group()> Games Mods </button>
-<button class="btn toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick=load_toolbox()> Orbis-Toolbox </button>
-<button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick=load_webrte()> WebRTE </button>
-<button class="btn onln" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick=load_ps4trainer()> PS4 Trainer Web </button>
+<button class="btn" onmouseover="mods()" onmouseout="pagetitle()" onclick="mods_group()"> Games Mods </button>
+<button class="btn toolbox" onmouseover="orbistoolbox()" onmouseout="pagetitle()" onclick="load_toolbox()"> Orbis-Toolbox </button>
+<button class="btn" onmouseover="webrte()" onmouseout="pagetitle()" onclick="load_webrte()"> WebRTE </button>
+<button class="btn onln" onmouseover="ps4trainer()" onmouseout="pagetitle()" onclick="load_ps4trainer()"> PS4 Trainer Web </button>
 </div>
 <div id="mods">
-<h1 id=msgs-mods>Games Mods</h1>
+<h1 id="msgs-mods">Games Mods</h1>
 <hr>
 <br>
 <h1 style="font-size:18px;">Payloads</h1>
-<button class="btn" onmouseover="Lamance()" onmouseout="pagetitle()" onclick=load_Lamance()> Lamance v0.9 - 1.38 </button>
+<button class="btn" onmouseover="Lamance()" onmouseout="pagetitle()" onclick="load_Lamance()"> Lamance v0.9 - 1.38 </button>
 <br>
-<button class="btn" onmouseover="RedDeadMod1()" onmouseout="pagetitle()" onclick=load_Oysters100()> RDR2 v1.00 </button>
-<button class="btn" onmouseover="RedDeadMod2()" onmouseout="pagetitle()" onclick=load_Oysters113()> RDR2 v1.13 </button>
-<button class="btn" onmouseover="RedDeadMod3()" onmouseout="pagetitle()" onclick=load_Oysters119()> RDR2 v1.19 </button>
-<button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick=load_Oysters124()> RDR2 v1.24 </button>
-<button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick=load_Oysters129()> RDR2 v1.29 </button>
+<button class="btn" onmouseover="RedDeadMod1()" onmouseout="pagetitle()" onclick="load_Oysters100()"> RDR2 v1.00 </button>
+<button class="btn" onmouseover="RedDeadMod2()" onmouseout="pagetitle()" onclick="load_Oysters113()"> RDR2 v1.13 </button>
+<button class="btn" onmouseover="RedDeadMod3()" onmouseout="pagetitle()" onclick="load_Oysters119()"> RDR2 v1.19 </button>
+<button class="btn" onmouseover="RedDeadMod4()" onmouseout="pagetitle()" onclick="load_Oysters124()"> RDR2 v1.24 </button>
+<button class="btn" onmouseover="RedDeadMod5()" onmouseout="pagetitle()" onclick="load_Oysters129()"> RDR2 v1.29 </button>
 <br>
-<button class="btn" onclick=load_menu() style="margin-bottom: 303px"> Return </button>
+<button class="btn" onclick="load_menu()" style="margin-bottom: 303px"> Return </button>
 </div>
 <h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;">@_AlAzif</a></h1>
 <script>
