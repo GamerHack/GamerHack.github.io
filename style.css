@@ -9,32 +9,41 @@ html {
   text-align: center;
   overflow: hidden;
 }
+
 h1 {
   text-shadow: 0.1em 0.1em 0.2em black;
   font-size: 25px;
   color: white;
 }
+
 a {
   text-decoration: none;
 }
+
 #progress {
   display: block;
 }
+
 #menu {
   display: block;
 }
+
 #crypto {
   display: none;
 }
+
 #tools {
   display: none;
 }
+
 #lnx {
   display: none;
 }
+
 #mods {
   display: none;
 }
+
 .btn {
   background-color: #003263;
   color: white;
@@ -55,24 +64,31 @@ a {
   cursor: pointer;
   border-radius: 8px;
 }
+
 .btn:hover {
   background-color: #0058b1;
 }
+
 .alt {
   background-color: #b10000;
 }
+
 .alt:hover {
   background-color: #f31414;
 }
+
 .onln {
   background-color: #076300;
 }
+
 .onln:hover {
   background-color: #18891b;
 }
+
 .toolbox {
   background-color: #ae2301;
 }
+
 .toolbox:hover {
   background-color: #d42a01;
 }
