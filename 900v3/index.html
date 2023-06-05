@@ -84,6 +84,8 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.32 v1.3'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_WildeModz132()"> WildeModz-1.32 v1.3 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.33 v1.3'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_WildeModz133()"> WildeModz-1.33 v1.3 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.38 v1.7'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_WildeModz138()"> WildeModz-1.38 v1.7 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.46'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_WildeModz146()"> WildeModz-1.46 </button>
+<br>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.33'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_beefQueef133()"> Beef Queef Mod v1.33 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.34'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_beefQueef134()"> Beef Queef Mod v1.34 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.38d'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_beefQueef138()"> Beef Queef Mod v1.38d </button>
@@ -94,7 +96,7 @@ if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
 <button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.24 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Oysters124()"> RDR2 v1.24 </button>
 <button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.29 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_Oysters129()"> RDR2 v1.29 </button>
 <br>
-<button class="btn" onclick="load_menu()" style="margin-bottom: 241px"> Return </button>
+<button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v3.0 by GamerHack'" onclick="load_menu()" style="margin-bottom: 179px"> Return </button>
 </div>
 <br>
 <h1 style="margin-top: 22px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Znullptr</a>SiSTR0</h1>
@@ -544,6 +546,12 @@ load_poc();
 function load_WildeModz138(){
 LoadedMSG = "WildeModz-1.38 v1.7 Loaded ..."
 PLfile = "WildeModz-1.38-1.7.bin";
+load_poc();
+}
+
+function load_WildeModz146(){
+LoadedMSG = "WildeModz-1.46 Loaded ..."
+PLfile = "WildeModz-1.46.bin";
 load_poc();
 }
 
