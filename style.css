@@ -1,94 +1,91 @@
 html {
-  background-image: url('img.jpg');
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-color: #24272b;
-  color: white;
-  text-align: center;
-  overflow: hidden;
+    background-image: url('img.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #24272b;
+    color: white;
+    text-align: center;
+    overflow: hidden;
 }
 
 h1 {
-  text-shadow: 0.1em 0.1em 0.2em black;
-  font-size: 25px;
-  color: white;
+    text-shadow: 0.1em 0.1em 0.2em black;
+    font-size: 25px;
+    color: white;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 #progress {
-  display: block;
+    display: block;
 }
 
 #menu {
-  display: block;
+    display: block;
 }
 
 #crypto {
-  display: none;
+    display: none;
 }
 
 #tools {
-  display: none;
+    display: none;
 }
 
 #lnx {
-  display: none;
+    display: none;
 }
 
 #mods {
-  display: none;
+    display: none;
 }
 
 .btn {
-  background-color: #003263;
-  color: white;
-  width: 227px;
-  height: 46px;
-  padding-bottom: 5px;
-  text-align: center;
-  font-size: 20px;
-  margin-top: 8px;
-  margin-bottom: 8px;
-  margin-left: 5px;
-  margin-right: 5px;
-  border-bottom-width: 0px;
-  border-right-width: 0px;
-  border-top-width: 0px;
-  border-left-width: 0px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 8px;
+    background-color: #003263;
+    color: white;
+    width: 227px;
+    height: 46px;
+    padding-bottom: 5px;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-style: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 .btn:hover {
-  background-color: #0058b1;
+    background-color: #0069d9;
 }
 
-.alt {
-  background-color: #b10000;
+.btn-alt {
+    background-color: #b10000;
 }
 
-.alt:hover {
-  background-color: #f31414;
+.btn-alt:hover {
+    background-color: #f31414;
 }
 
-.onln {
-  background-color: #076300;
+.btn-onln {
+    background-color: #076300;
 }
 
-.onln:hover {
-  background-color: #18891b;
+.btn-onln:hover {
+    background-color: #18891b;
 }
 
-.toolbox {
-  background-color: #ae2301;
+.btn-toolbox {
+    background-color: #ae2301;
 }
 
-.toolbox:hover {
-  background-color: #d42a01;
+.btn-toolbox:hover {
+    background-color: #d42a01;
 }
