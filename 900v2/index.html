@@ -10,7 +10,7 @@
 </head>
 <body>
 <script>
-function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));for (let i=0; i<55; i++){document.getElementsByTagName("button")[i].removeAttribute("onmouseover");}for (let i=0; i<55; i++){document.getElementsByTagName("button")[i].removeAttribute("onmouseout");}window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));for (let i=0; i<57; i++){document.getElementsByTagName("button")[i].removeAttribute("onmouseover");}for (let i=0; i<57; i++){document.getElementsByTagName("button")[i].removeAttribute("onmouseout");}window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";}
 function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1000);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3000);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
 </script>
 <h1 id="msgs">PS4 9.00 FW Host v2.8 by GamerHack</h1>
@@ -77,20 +77,22 @@ function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cac
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Expulsion v4.0 - 1.38'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Expulsion()"> Expulsion v4.0 - 1.38 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Lamance v0.9 - 1.38 (Right + Square)'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Lamance()"> Lamance v0.9 - 1.38 </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.32 v1.3'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_WildeModz132()"> WildeModz-1.32 v1.3 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.33 v1.3'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_WildeModz133()"> WildeModz-1.33 v1.3 </button>
-<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.38 v1.7'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_WildeModz138()"> WildeModz-1.38 v1.7 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.32'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_WildeModz132()"> WildeModz-1.32 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.33'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_WildeModz133()"> WildeModz-1.33 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.38'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_WildeModz138()"> WildeModz-1.38 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.46'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_WildeModz146()"> WildeModz-1.46 </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - WildeModz-1.47'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_WildeModz147()"> WildeModz-1.47 </button>
 <br>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.33'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_beefQueef133()"> Beef Queef Mod v1.33 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.34'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_beefQueef134()"> Beef Queef Mod v1.34 </button>
 <button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.38d'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_beefQueef138()"> Beef Queef Mod v1.38d </button>
+<button class="btn" onmouseover="msgs.innerHTML='GTA V Mod - Beef Queef Mod v1.47'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_beefQueef147()"> Beef Queef Mod v1.47 </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.00 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Oysters100()"> RDR2 v1.00 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.13 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Oysters113()"> RDR2 v1.13 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.19 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Oysters119()"> RDR2 v1.19 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.24 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Oysters124()"> RDR2 v1.24 </button>
-<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu 1.29 v1.3.8'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Oysters129()"> RDR2 v1.29 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.00'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Oysters100()"> RDR2 v1.00 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.13'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Oysters113()"> RDR2 v1.13 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.19'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Oysters119()"> RDR2 v1.19 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.24'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Oysters124()"> RDR2 v1.24 </button>
+<button class="btn" onmouseover="msgs.innerHTML='Red Dead Redemption 2 Mod - Oysters Menu v1.29'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_Oysters129()"> RDR2 v1.29 </button>
 <br>
 <button class="btn" onmouseover="msgs.innerHTML='Return to Main Menu'" onmouseout="msgs.innerHTML='PS4 9.00 FW Host v2.8 by GamerHack'" onclick="load_menu()" style="margin-bottom: 167px"> Return </button>
 </div>
@@ -566,22 +568,22 @@ load_poc();
 
 function load_WildeModz132(){
 msgs.innerHTML="Loading WildeModz-1.32... Please Wait";
-LoadedMSG = "WildeModz-1.32 v1.3 Loaded ..."
-PLfile = "WildeModz-1.32-1.3.bin";
+LoadedMSG = "WildeModz-1.32 Loaded ..."
+PLfile = "WildeModz-1.32.bin";
 load_poc();
 }
 
 function load_WildeModz133(){
 msgs.innerHTML="Loading WildeModz-1.33... Please Wait";
-LoadedMSG = "WildeModz-1.33 v1.3 Loaded ..."
-PLfile = "WildeModz-1.33-1.3.bin";
+LoadedMSG = "WildeModz-1.33 Loaded ..."
+PLfile = "WildeModz-1.33.bin";
 load_poc();
 }
 
 function load_WildeModz138(){
 msgs.innerHTML="Loading WildeModz-1.38... Please Wait";
-LoadedMSG = "WildeModz-1.38 v1.7 Loaded ..."
-PLfile = "WildeModz-1.38-1.7.bin";
+LoadedMSG = "WildeModz-1.38 Loaded ..."
+PLfile = "WildeModz-1.38.bin";
 load_poc();
 }
 
@@ -589,6 +591,13 @@ function load_WildeModz146(){
 msgs.innerHTML="Loading WildeModz-1.46... Please Wait";
 LoadedMSG = "WildeModz-1.46 Loaded ..."
 PLfile = "WildeModz-1.46.bin";
+load_poc();
+}
+
+function load_WildeModz147(){
+msgs.innerHTML="Loading WildeModz-1.47... Please Wait";
+LoadedMSG = "WildeModz-1.47 Loaded ..."
+PLfile = "WildeModz-1.47.bin";
 load_poc();
 }
 
@@ -613,38 +622,45 @@ PLfile = "BeefQueefMod-138d.bin";
 load_poc();
 }
 
+function load_beefQueef147(){
+msgs.innerHTML="Loading Beef Queef Mod v1.47... Please Wait";
+LoadedMSG = "Beef Queef Mod v1.47 Loaded ..."
+PLfile = "BeefQueefMod-Unified-147e.bin";
+load_poc();
+}
+
 function load_Oysters100(){
 msgs.innerHTML="Loading Oysters Menu v1.00... Please Wait";
 LoadedMSG = "Oysters Menu v1.00 Loaded ..."
-PLfile = "OystersMenu-v1.3.8-v1.00.bin";
+PLfile = "OystersMenu-v1.00.bin";
 load_poc();
 }
 
 function load_Oysters113(){
 msgs.innerHTML="Loading Oysters Menu v1.13... Please Wait";
 LoadedMSG = "Oysters Menu v1.13 Loaded ..."
-PLfile = "OystersMenu-v1.3.8-v1.13.bin";
+PLfile = "OystersMenu-v1.13.bin";
 load_poc();
 }
 
 function load_Oysters119(){
 msgs.innerHTML="Loading Oysters Menu v1.19... Please Wait";
 LoadedMSG = "Oysters Menu v1.19 Loaded ..."
-PLfile = "OystersMenu-v1.3.8-v1.19.bin";
+PLfile = "OystersMenu-v1.19.bin";
 load_poc();
 }
 
 function load_Oysters124(){
 msgs.innerHTML="Loading Oysters Menu v1.24... Please Wait";
 LoadedMSG = "Oysters Menu v1.24 Loaded ..."
-PLfile = "OystersMenu-v1.3.8-v1.24.bin";
+PLfile = "OystersMenu-v1.24.bin";
 load_poc();
 }
 
 function load_Oysters129(){
 msgs.innerHTML="Loading Oysters Menu v1.29... Please Wait";
 LoadedMSG = "Oysters Menu v1.29 Loaded ..."
-PLfile = "OystersMenu-v1.3.8-v1.29.bin";
+PLfile = "OystersMenu-v1.29.bin";
 load_poc();
 }
 </script>
