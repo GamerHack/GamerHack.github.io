@@ -1,0 +1,71 @@
+<html>
+<body>
+<script>function print(){}</script>
+<script>
+if (window.applicationCache.status=='0'){window.location.replace("cache.html");}
+
+var cachedJS = {};
+
+function runJS(path)
+{
+    if(!(path in cachedJS))
+    {
+        var xxx = new XMLHttpRequest();
+        xxx.open("GET", path, false);
+        xxx.send('');
+        cachedJS[path] = xxx.responseText;
+    }
+    eval.call(window, cachedJS[path]);
+}
+
+function c_code_done(printf_ans, main_ret)
+{
+    if(main_ret)
+        alert("Jailbreak failed! Reboot your PS5 and try again!\n"+printf_ans+"\nmain() returned "+main_ret);
+    else
+        alert("You're all set!");
+    window.sigsegv_handler = 0;
+    runJS('sigsegv.js');
+    read_ptr_at(0);
+}
+
+function runScripts()
+{
+    runJS('exploit.js');
+    document.body.setAttribute('bgColor', 'green');
+    runJS('malloc.js');
+    runJS('rop.js');
+    runJS('syscalls.js');
+    runJS('syscalls2.js');
+    window.sigsegv_handler = infloop_addr;
+    runJS('sigsegv.js');
+    runJS('c-code.js');
+}
+
+function main()
+{
+    if(!document.location.hash.startsWith("#payload="))
+        return runScripts();
+    var xhr = new XMLHttpRequest();
+    xhr.responseType = 'arraybuffer';
+    xhr.open('GET', decodeURIComponent(document.location.hash.substr(9)), true);
+    xhr.send('');
+    xhr.onload = function()
+    {
+        window.payload = new Uint8Array(xhr.response);
+        runScripts();
+    };
+}
+
+var blob = new Blob(['self.onmessage = function() { postMessage(1); }'], {'type': 'text/javascript'});
+var url = URL.createObjectURL(blob);
+the_worker = new Worker(url);
+the_worker.onmessage = function()
+{
+    setTimeout(main, 0);
+    main = function(){};
+}
+the_worker.postMessage(1);
+</script>
+</body>
+</html>
