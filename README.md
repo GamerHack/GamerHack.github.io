@@ -1,5 +1,7 @@
 # PS4 Exploit Host
-Firmwares: `6.72` `7.02` `7.5X` `9.00`
+PS4 Firmwares: `6.72` `7.02` `7.5X` `9.00`
+
+PS5 Firmwares: `4.03`
 
 ## Steps:
 
