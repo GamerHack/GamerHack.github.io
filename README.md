@@ -7,7 +7,7 @@ PS5 Firmwares: `4.03`
 
 - In the PS4 browser go to: https://gamerhack.github.io/
 
-  - If it's a PS5, edit the network settings and set the following DNS to access the Hidden Browser on the console:
+  - If it is a PS5, edit the network settings and set the following DNS to access the hidden browser:
     - Primary DNS: 165.227.83.145
     - Secondary DNS: 192.241.221.79
   - Then go to "User's Guide" and you will be redirected to the [Al Azif](https://github.com/Al-Azif) server.
