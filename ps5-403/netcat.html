@@ -11,7 +11,7 @@ h1 {
 }
 </style>
 <body>
-<h1 id="msgs" style="font-size:25px;margin-top: 17px;">Loading... Please Wait !!!</h1>
+<h1 style="font-size:25px;margin-top: 17px;">Loading... Please Wait !!!</h1>
 <hr>
 <br>
 <h1 style="font-size:30px;margin-top: 77px;">This will take a time between 20 and 40 seconds ...</h1>
@@ -39,7 +39,6 @@ function c_code_done(printf_ans, main_ret)
         alert("Jailbreak failed! Reboot your PS5 and try again!\n"+printf_ans+"\nmain() returned "+main_ret);
     else
         alert("You're all set!");
-		window.msgs.innerHTML="<h1>Exploit Loaded!</h1>";
     window.sigsegv_handler = 0;
     runJS('sigsegv.js');
     read_ptr_at(0);
@@ -48,6 +47,7 @@ function c_code_done(printf_ans, main_ret)
 function runScripts()
 {
     runJS('exploit.js');
+    document.body.setAttribute('bgColor', 'green');
     runJS('malloc.js');
     runJS('rop.js');
     runJS('syscalls.js');
