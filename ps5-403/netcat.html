@@ -1,22 +1,15 @@
+<!DOCTYPE html>
 <html>
-<style>
-html {
-    background-color: #24272b;
-    text-align: center;
-}
-h1 {
-    text-shadow: 0.1em 0.1em 0.2em black;
-    font-size: 25px;
-    color: white;
-}
-</style>
+<head>
+<title>PS5 4.03 FW HEN Host by GamerHack</title>
+<link rel="stylesheet" href="../style.css">
+</head>
 <body>
-<h1 style="font-size:25px;margin-top: 17px;">Loading... Please Wait</h1>
+<h1>PS5 4.03 FW HEN Host by GamerHack</h1>
 <hr>
 <br>
-<h1 style="font-size:30px;margin-top: 77px;">This will take a time between 20 and 40 seconds ...</h1>
-<br>
-<h1 style="font-size:25px;margin-top: 17px;color: #f31414;">If something went wrong during the process, you may receive an alert saying "Jailbreak failed! Restart your PS5 and try again." In this case you will have to restart your PS5, preferably without closing the dialog box.</h1>
+<h1 id="msgs" style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading Jailbreak... Please Wait</h1>
+<h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/SpecterDev" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@SpecterDev</a></h1>
 <script>function print(){}</script>
 <script>
 var cachedJS = {};
@@ -47,7 +40,7 @@ function c_code_done(printf_ans, main_ret)
 function runScripts()
 {
     runJS('exploit.js');
-    document.body.setAttribute('bgColor', 'green');
+    window.msgs.innerHTML="<h1>Exploit Loaded! Launching Payload...</h1>";
     runJS('malloc.js');
     runJS('rop.js');
     runJS('syscalls.js');
