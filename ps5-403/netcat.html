@@ -40,7 +40,7 @@ function c_code_done(printf_ans, main_ret)
 function runScripts()
 {
     runJS('exploit.js');
-    window.msgs.innerHTML="<h1 style='font-size:30px;'>Exploit Loaded! Launching Payload...</h1>";
+    window.msgs.innerHTML="<h1 style='font-size:30px;'>Launching Payload...</h1>";
     runJS('malloc.js');
     runJS('rop.js');
     runJS('syscalls.js');
