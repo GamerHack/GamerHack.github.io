@@ -1,0 +1,17 @@
+CACHE MANIFEST 
+
+CACHE: 
+../img.jpg
+../style.css
+c-code.js
+exploit.js
+malloc.js
+netcat.html
+ps5-kstuff.bin
+rop.js
+sigsegv.js
+syscalls.js
+syscalls2.js
+
+NETWORK: 
+* 
