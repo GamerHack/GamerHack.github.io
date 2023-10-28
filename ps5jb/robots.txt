@@ -1,0 +1,169 @@
+<html manifest="cache.appcache">
+
+<head>
+    <title>PS5 Kernel Exploit (3.xx-4.xx)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css">
+
+    <script>
+        function allset() { }
+    </script>
+    <script defer src="int64.js"></script>
+    <script defer src="rop.js"></script>
+    <script defer src="exploit.js"></script>
+    <script defer src="payload_map.js"></script>
+    <script defer src="custom_host_stuff.js"></script>
+    <script defer src="appcache_handler.js"></script>
+    <script>
+        window.addEventListener('load', function () {
+            add_cache_event_toasts();
+        }, false);
+    </script>
+</head>
+
+</html>
+
+
+<body>
+    <div id="toast-container"></div>
+
+    <div style="margin: 2.5rem;">
+        <h1 style="text-align: center;">PS5 Jailbreak 3.xx-4.xx</h1>
+        <p id="current-fw" class="text-secondary" style="text-align: center;"></p>
+    </div>
+
+    <div id="before-jb-view">
+
+        <div id="run-jb-parent" class="opacity-transition"
+            style="display: flex; justify-content: center; align-items: center; position: absolute; top: 0;left: 0; width: 100%; height: 100%;">
+            <a tabindex="0" class="btn" style="max-width: 50%;" id="run-jb" onclick="runJailbreak()">Jailbreak</a>
+        </div>
+
+        <div id="jb-progress" class=""
+            style="display: none; flex-direction: column; justify-content: center; align-items: center; position: absolute; top: 0;left: 0; width: 100%; height: 100%;">
+            <div class="lds-ellipsis">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <p id="jb-progress-status-text" style="text-align: center; width: 100%;">Getting
+                ready... <br/><span class="secondary-text">(may look frozen)</span></p>
+            <textarea id="console" class="log" style="display: none;"></textarea>
+        </div>
+
+        <div id="post-jb-view" class="opacity-transition"
+            style="display: flex; flex-direction: column; justify-content: center; align-items: center;opacity: 0; pointer-events: none; padding-top: 2rem;">
+            <!-- please dont judge this, if i create the elements in js after the jailbreak it 'runs out of memory'. -->
+            <!-- TODO: try making the buttons before the jb and assign the onclicks after, i think i tried this already but make sure -->
+            <div id="payloads-list" class="grid-container">
+                <a class="btn mx-auto hidden-btn" id="payload-0" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-1" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-2" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-3" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-4" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-5" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-6" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-7" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-8" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-9" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-10" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-11" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-12" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-13" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-14" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-15" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-16" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-17" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-18" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+                <a class="btn mx-auto hidden-btn" id="payload-19" tabindex="0">
+                    <p></p>
+                    <p class="secondary-text"></p>
+                </a>
+
+            </div>
+        </div>
+
+
+
+        <center style="position: fixed;bottom: 0;width: 100%;margin-bottom: 1.5rem;" class="info opacity-transition"
+            id="credits">
+            <h3>
+                <b>v1.04.</b>
+                <br />
+                <a href="https://twitter.com/theflow0" aria-hidden="true" tabindex="-1">@theflow0</a>,
+                <a href="https://twitter.com/SpecterDev" aria-hidden="true" tabindex="-1">@SpecterDev</a>,
+                ChendoChap,
+                <a href="https://twitter.com/Znullptr" aria-hidden="true" tabindex="-1">@Znullptr</a>,
+                <a href="https://twitter.com/sleirsgoevy" aria-hidden="true" tabindex="-1">@sleirsgoevy</a>,
+                <br />
+                <a href="https://twitter.com/psxdev" aria-hidden="true" tabindex="-1">@psxdev</a>,
+                <a href="https://twitter.com/flat_z" aria-hidden="true" tabindex="-1">@flat_z</a>,
+                <a href="https://twitter.com/notzecoxao" aria-hidden="true" tabindex="-1">@notzecoxao</a>,
+                <a href="https://twitter.com/SocraticBliss" aria-hidden="true" tabindex="-1">@SocraticBliss</a>,
+                laureeeeeee
+            </h3>
+        </center>
+    </div>
+
+</body>
+<script>
+
+</script>

@@ -49,7 +49,6 @@ a {
     color: white;
     width: 227px;
     height: 46px;
-    padding-bottom: 5px;
     text-align: center;
     font-size: 20px;
     margin-top: 8px;
@@ -88,4 +87,13 @@ a {
 
 .btn-toolbox:hover {
     background-color: #d42a01;
+}
+
+.btn-ps5 {
+    background-color: #3d3f4e;
+}
+
+.btn-ps5:hover {
+    background-color: #c2c2c2;
+    color: #303030;
 }
