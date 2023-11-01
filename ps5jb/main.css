@@ -65,21 +65,6 @@
     }
 }
 
-
-/* .info {
-    overflow: hidden;
-    position: fixed;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    font-size: 45px;
-    font-family: sans-serif;
-    color: #b8b8b8;
-
-    transform: translate(-50%, -50%);
-} */
-
 .j {
     font-size: 15px;
     color: #2F3335;
@@ -98,40 +83,33 @@
 }
 
 body {
-    /* background-color: #131313; */
-    background-color: rgb(18, 18, 25);
-    /* webkit renders this with banding... */
-    /* background : radial-gradient(ellipse at left top, rgb(31, 35, 43) 0%, rgb(10, 10, 20) 65%);     */
-    color: #def;
+    background-color: rgb(14, 14, 20);
+    color: white;
     font-family: Calibri, Helvetica, 'Sans-Serif';
 }
 
 .btn {
-    padding: 1rem 2rem;
+    padding: 16px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    margin: 0.2rem 0.1rem;
+    margin: 4px 2px;
     cursor: pointer;
-    line-height: 2.5rem;
-    /* height: 2.5rem; */
+    line-height: 40px;
     min-width: 75px;
-    /* border-radius: 5rem; */
     border-radius: 4px;
     width: 70%;
-    background-color: #3d3f4e;
+    background-color: #333348;
     border: none;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 20px;
     transition: background-color 0.3s ease-in-out;
 }
 
-.btn:hover,
-.btn:focus {
+.btn:hover {
     background-color: #c2c2c2;
     color: #303030;
 }
-
 
 a:active,
 a:focus {
@@ -146,8 +124,42 @@ a:focus {
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
-    font-size: 0.8em;
+    font-size: 13px;
 
+}
+
+
+.payload-name {
+    line-height: 32px;
+    font-weight: bolder;
+}
+
+
+.payload-description {
+    color: #959595;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 32px;
+    font-size: 15px;
+}
+
+.btn:hover p.payload-description {
+    color: #666;
+}
+
+.payload-author {
+    color: #777;
+    margin: 0;
+    padding: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 24px;
+    font-size: 13px;
+    font-weight:normal;
 }
 
 .info a {
@@ -167,13 +179,6 @@ a:focus {
     width: 100%;
 }
 
-.grid-item {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
@@ -185,7 +190,6 @@ a:focus {
 }
 
 .opacity-transition {
-    opacity: 1;
     transition: opacity 0.3s ease-in-out;
 }
 
@@ -194,7 +198,7 @@ a:focus {
     visibility: collapse;
 }
 
-#payloads-list a p {
+.grid-container a p {
     margin: 0;
     padding: 0;
 }

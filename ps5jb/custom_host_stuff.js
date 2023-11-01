@@ -1,10 +1,10 @@
 async function runJailbreak() {
+    let postjb = document.getElementById("post-jb-view");
+    postjb.style.opacity = "0";
+    postjb.style.pointerEvents = "none";
     document.getElementById("run-jb-parent").style.opacity = "0";
     await sleep(500);
     document.getElementById("run-jb-parent").style.display = "none";
-    document.getElementById("jb-progress").style.opacity = "0";
-    document.getElementById("jb-progress").classList.add("opacity-transition");
-    document.getElementById("jb-progress").style.display = "flex";
     document.getElementById("jb-progress").style.opacity = "1";
     await sleep(500);
 

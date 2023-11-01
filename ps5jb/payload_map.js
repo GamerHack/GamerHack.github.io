@@ -1,6 +1,22 @@
 const payload_map =
     [
         {
+            displayTitle: 'etaHEN 1.0b By LM',
+            description: 'Runs With 3.xx and 4.xx. FPKG enabler For FW 4.03 & 4.50 Only.',
+            fileName: 'etaHEN-1.0b.bin',
+            author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
+            source: 'https://github.com/LightningMods/etaHEN',
+            version: '1.0 beta'
+        },
+        {
+            displayTitle: 'etaHEN 1.0b With Cheats By LM',
+            description: 'Runs With 3.xx and 4.xx. FPKG enabler For FW 4.03 & 4.50 Only.',
+            fileName: 'etaHENwithcheats-1.0b.bin',
+            author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
+            source: 'https://github.com/LightningMods/etaHEN',
+            version: '1.0 beta'
+        },
+        {
             displayTitle: 'K-Stuff',
             description: 'FW 4.03 & 4.50 Only. FPKG enabler',
             fileName: 'ps5-kstuff-v1.1.bin',
@@ -10,7 +26,7 @@ const payload_map =
         },
         {
             displayTitle: 'libhijacker game-patch',
-            description: '(v1.124) Patches supported games to run at higher framerates, and adds debug menus to certain titles.',
+            description: 'Patches supported games to run at higher framerates, and adds debug menus to certain titles.',
             fileName: 'libhijacker-spawner-1.124.elf;libhijacker-daemon-1.124.elf',
             author: 'illusion0001, astrelsky',
             source: 'https://github.com/illusion0001/libhijacker/releases',
@@ -53,9 +69,9 @@ const payload_map =
             displayTitle: 'GetOSVersion',
             description: 'very slow',
             fileName: 'getOsVersion.elf',
-            author: 'todo',
-            source:'https://mega.nz/folder/4xA2ATTI#6lHvye1JUfhxRGvqOva8fw/folder/gwhWmRrB',
-            version: '1.0'
+            author: 'logic-68',
+            source:'https://github.com/logic-68/getOsVersion/releases',
+            version: '1.0.2'
         },
         {
             displayTitle: 'PS5_Browser_appCache_remove',
