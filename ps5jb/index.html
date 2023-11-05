@@ -16,12 +16,13 @@
     <script defer src="appcache_handler.js"></script>
     <script>
         window.addEventListener('load', function () {
-            add_cache_event_toasts();
+            if (document.documentElement.hasAttribute("manifest")) {
+                add_cache_event_toasts();
+            }
         }, false);
     </script>
 </head>
 
-</html>
 
 
 <body>
@@ -31,7 +32,8 @@
         <h1 style="text-align: center;">PS5 Jailbreak 3.xx-4.xx</h1>
         <p id="current-fw" class="text-secondary" style="text-align: center; margin-bottom: 8px; padding-bottom: 0;">
         </p>
-        <p id="listening-ip" class="text-secondary" style="text-align: center; margin-top: 0; padding-top: 0;"><br/></p>
+        <p id="listening-ip" class="text-secondary" style="text-align: center; margin-top: 0; padding-top: 0;"><br />
+        </p>
     </div>
 
     <div id="before-jb-view">
@@ -182,6 +184,5 @@
     </div>
 
 </body>
-<script>
 
-</script>
+</html>

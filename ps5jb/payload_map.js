@@ -1,28 +1,28 @@
 const payload_map =
     [
         {
-            displayTitle: 'etaHEN 1.0b By LM',
+            displayTitle: 'etaHEN 1.1b By LM',
             description: 'Runs With 3.xx and 4.xx. FPKG enabler For FW 4.03 & 4.50 Only.',
-            fileName: 'etaHEN-1.0b.bin',
+            fileName: 'etaHEN-1.1b.bin',
             author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
             source: 'https://github.com/LightningMods/etaHEN',
-            version: '1.0 beta'
+            version: '1.1 beta'
         },
         {
-            displayTitle: 'etaHEN 1.0b With Cheats By LM',
+            displayTitle: 'etaHEN 1.1b With Cheats By LM',
             description: 'Runs With 3.xx and 4.xx. FPKG enabler For FW 4.03 & 4.50 Only.',
-            fileName: 'etaHENwithcheats-1.0b.bin',
+            fileName: 'etaHENwithcheats-1.1b.bin',
             author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
             source: 'https://github.com/LightningMods/etaHEN',
-            version: '1.0 beta'
+            version: '1.1 beta'
         },
         {
             displayTitle: 'K-Stuff',
-            description: 'FW 4.03 & 4.50 Only. FPKG enabler',
-            fileName: 'ps5-kstuff-v1.1.bin',
+            description: 'FW 4.03-4.51 Only. FPKG enabler',
+            fileName: 'ps5-kstuff-v1.2.bin',
             author: 'sleirsgoevy',
             source: 'https://github.com/sleirsgoevy/ps4jb2/blob/ps5-403/ps5-kstuff.bin',
-            version: '1.1'
+            version: '1.2'
         },
         {
             displayTitle: 'libhijacker game-patch',
@@ -61,7 +61,7 @@ const payload_map =
             displayTitle: 'Versions',
             description: 'Shows kernel build, os and sdk versions',
             fileName: 'versions.elf',
-            author: '?',
+            author: 'SiSTRo',
             source:'https://mega.nz/folder/4xA2ATTI#6lHvye1JUfhxRGvqOva8fw/folder/gwhWmRrB',
             version: '1.0'
         },
