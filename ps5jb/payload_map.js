@@ -80,6 +80,14 @@ const payload_map =
             author: 'Storm21CH',
             source:'https://github.com/Storm21CH/PS5_Browser_appCache_remove/blob/main/Browser_appCache_remove.elf',
             version: '1.0fix'
+        },
+		{
+            displayTitle: 'PS5 Debug',
+            description: 'Debugger for PlayStation 5',
+            fileName: 'ps5debug.elf',
+            author: 'SISTRO',
+            source:'https://github.com/GoldHEN/ps5debug/releases/tag/1.0b1',
+            version: '1.0b1'
         }
 
     ];
