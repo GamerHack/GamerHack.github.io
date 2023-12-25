@@ -17,6 +17,14 @@ const payload_map =
             version: '1.1 beta'
         },
         {
+            displayTitle: 'etaHEN 1.2B By LM',
+            description: 'Runs With 3.xx and 4.xx. FPKG enabler For FW 4.03-4.51 Only.',
+            fileName: 'etaHEN-1.2B.bin',
+            author: 'LightningMods_',
+            source: 'https://github.com/LightningMods/etaHEN',
+            version: '1.2 beta'
+        },
+        {
             displayTitle: 'K-Stuff',
             description: 'FW 4.03-4.51 Only. FPKG enabler',
             fileName: 'ps5-kstuff-v1.2.bin',
