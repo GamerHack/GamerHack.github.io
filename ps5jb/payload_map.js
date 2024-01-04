@@ -1,28 +1,12 @@
 const payload_map =
     [
         {
-            displayTitle: 'etaHEN 1.1b By LM',
+            displayTitle: 'etaHEN 1.3B By LM',
             description: 'Runs With 3.xx and 4.xx. FPKG enabler For FW 4.03-4.51 Only.',
-            fileName: 'etaHEN-1.1b.bin',
+            fileName: 'etaHEN-1.3B.bin',
             author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
             source: 'https://github.com/LightningMods/etaHEN',
-            version: '1.1 beta'
-        },
-        {
-            displayTitle: 'etaHEN 1.1b With Cheats By LM',
-            description: 'Runs With 3.xx and 4.xx. FPKG enabler For FW 4.03-4.51 Only.',
-            fileName: 'etaHENwithcheats-1.1b.bin',
-            author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
-            source: 'https://github.com/LightningMods/etaHEN',
-            version: '1.1 beta'
-        },
-        {
-            displayTitle: 'etaHEN 1.2B By LM',
-            description: 'Runs With 3.xx and 4.xx. FPKG enabler For FW 4.03-4.51 Only.',
-            fileName: 'etaHEN-1.2B.bin',
-            author: 'LightningMods_',
-            source: 'https://github.com/LightningMods/etaHEN',
-            version: '1.2 beta'
+            version: '1.3 beta'
         },
         {
             displayTitle: 'K-Stuff',
@@ -35,11 +19,18 @@ const payload_map =
         {
             displayTitle: 'libhijacker game-patch',
             description: 'Patches supported games to run at higher framerates, and adds debug menus to certain titles.',
-            fileName: 'libhijacker-spawner-1.124.elf;libhijacker-daemon-1.124.elf',
+            fileName: 'libhijacker-1.137.elf',
             author: 'illusion0001, astrelsky',
             source: 'https://github.com/illusion0001/libhijacker/releases',
-            loader: 'libhijacker',
-            version: '1.124'
+            version: '1.137'
+        },
+		{
+            displayTitle: 'PS5 Debug',
+            description: 'Debugger for PlayStation 5',
+            fileName: 'ps5debug.elf',
+            author: 'SISTRO',
+            source:'https://github.com/GoldHEN/ps5debug/releases/tag/1.0b1',
+            version: '1.0b1'
         },
         {
             displayTitle: 'PS5 Payload ELF Loader',
@@ -48,14 +39,6 @@ const payload_map =
             author: 'john-tornblom',
             source:'https://github.com/john-tornblom/ps5-payload-elfldr/releases',
             version: '0.5'
-        },
-        {
-            displayTitle: 'FTPS5 (Non-Persistent)',
-            description: 'FTP Server',
-            fileName: 'ftps5-np.elf',
-            author: 'SiSTR0, zecoxao, EchoStretch',
-            source:'https://github.com/EchoStretch/FTPS5/releases',
-            version: '1.4'
         },
         {
             displayTitle: 'FTPS5 (Persistent)',
@@ -88,14 +71,6 @@ const payload_map =
             author: 'Storm21CH',
             source:'https://github.com/Storm21CH/PS5_Browser_appCache_remove/blob/main/Browser_appCache_remove.elf',
             version: '1.0fix'
-        },
-		{
-            displayTitle: 'PS5 Debug',
-            description: 'Debugger for PlayStation 5',
-            fileName: 'ps5debug.elf',
-            author: 'SISTRO',
-            source:'https://github.com/GoldHEN/ps5debug/releases/tag/1.0b1',
-            version: '1.0b1'
         }
 
     ];
