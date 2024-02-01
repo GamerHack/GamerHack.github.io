@@ -347,10 +347,8 @@ class thread_rop extends rop {
      * returns created pthread_t as int64
      */
     async spawn_thread() {
-
         //add pthread_exit((void*)0x44414544); -> "DEAD"
-        this.fcall(libKernelBase.add32(OFFSET_lk_pthread_exit), 0x44414544);
-
+        this.fcall(libKernelBase.add32(OFFSET_lk_pthread_exit), 0x44414544);        
         await chain.call(libKernelBase.add32(OFFSET_lk_pthread_create_name_np), this.stack_memory.add32(0x48), 0x0, libSceLibcInternalBase.add32(OFFSET_lc_longjmp), this.stack_memory, this.stack_memory.add32(0x50));
         return p.read8(this.stack_memory.add32(0x48));
     }
