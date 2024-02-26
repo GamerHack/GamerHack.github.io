@@ -1,12 +1,12 @@
 const payload_map =
     [
         {
-            displayTitle: 'etaHEN 1.6B By LM',
+            displayTitle: 'etaHEN 1.7B By LM',
             description: 'Runs With 3.xx and 4.xx. FPKG enabler For FW 4.03-4.51 Only.',
-            fileName: 'etaHEN-1.6B.bin',
+            fileName: 'etaHEN-1.7B.bin',
             author: 'LightningMods_, sleirsgoevy, ChendoChap, astrelsky, illusion',
             source: 'https://github.com/LightningMods/etaHEN',
-            version: '1.6 beta'
+            version: '1.7 beta'
         },
         {
             displayTitle: 'K-Stuff',
