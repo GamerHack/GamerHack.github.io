@@ -3,25 +3,55 @@
 <head>
 <title>PS4 5.05 FW GoldHEN Host by GamerHack</title>
 <link rel="stylesheet" href="../style.css">
+<script src="exploit.js"></script>
 </head>
-<body onload="if(localStorage.cached505G=='yes')setTimeout(load_goldhenbeta,50);">
+<body onload="if(localStorage.cached505=='yes')setTimeout(exploit,50);">
 <script>
 window.applicationCache.onprogress=function(a){document.getElementById("msgs2").innerHTML="Installing Offline Cache: "+(Math.round(100*(a.loaded/a.total)))+"%"};
-window.applicationCache.oncached=function(){setTimeout(function(){document.getElementById("msgs2").innerHTML="Cache Installed Successfully ✔";},1500);setTimeout(function(){document.getElementById("msgs2").innerHTML="Now Close And Re-Open Your Browser ..."; },3500);localStorage.cached505G="yes";};
+window.applicationCache.oncached=function(){setTimeout(function(){document.getElementById("msgs2").innerHTML="Cache Installed Successfully ✔";},1500);setTimeout(function(){document.getElementById("msgs2").innerHTML="Now Close And Re-Open Your Browser ..."; },3500);localStorage.cached505="yes";};
 </script>
 <h1 id="msgs">PS4 5.05 FW GoldHEN Host by GamerHack</h1>
 <hr>
 <br>
 <h1 id="msgs2" style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading GoldHEN v2.4b16.2... Please Wait</h1>
-<h1 style="margin-top: 105px;">Special Thanks to:<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@_AlAzif</a>Leeful<a href="https://twitter.com/SpecterDev" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@SpecterDev</a>SiSTR0</h1>
+<h1 style="margin-top: 105px;">Special Thanks to:<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@_AlAzif</a>Leeful<a href="https://twitter.com/SpecterDev" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@SpecterDev</a>SiSTR0<a href="https://twitter.com/Prb29327239" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Prb29327239</a></h1>
 <script>
-function getScript(source,callback){var gs = document.createElement('script');gs.src = source;gs.onload = callback;gs.async = false;document.body.appendChild(gs);}
-function loadScript(){getScript('exploit.js',function(){setTimeout(exploit,1000);});}
+function allset(){
+msgs2.innerHTML = LoadedMSG
+}
 
-function load_goldhenbeta(){
+function load_payload(){
+req1=null;
+var req1=new XMLHttpRequest();
+req1.open('GET',PLfile);req1.responseType="arraybuffer";
+req1.send();
+ req1.onreadystatechange=function(){
+  if (req1.readyState==4){
+   var padding1=new Uint8Array(4 - (req1.response.byteLength % 4) % 4);
+   var tmp1=new Uint8Array(req1.response.byteLength + padding1.byteLength);
+   tmp1.set(new Uint8Array(req1.response),0);
+   tmp1.set(padding1,req1.response.byteLength);
+   var shellcode1=new Uint32Array(tmp1.buffer);
+   var code_addr1=new int64(0x26100000,0x00000009);
+   p.syscall(477,code_addr1,0x300000,7,0x41000,-1,0);
+    for(var i=0;i < shellcode1.length; i++){
+	p.write4(code_addr1.add32(0x100000 + i * 4),shellcode1[i]);
+	}
+   runPAYLOAD1=function(){
+   p.fcall(code_addr1);
+   PLfile=null;
+    for(var x=0;x < 0x300000;x += 8){
+	p.write8(code_addr1.add32(x),0);}
+	};
+	allset();
+   setTimeout(runPAYLOAD1,100);
+  }
+ };
+}
+
+function success(){
 LoadedMSG = "<h1 style='font-size:30px;'>GoldHEN v2.4b16.2 Loaded ✔</h1>";
-bin = "goldhen_2.4b16.2.bin";
-loadScript();
+PLfile = "goldhen_2.4b16.2.bin";
 load_payload();
 }
 </script>
