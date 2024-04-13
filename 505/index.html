@@ -5,10 +5,12 @@
 <link rel="stylesheet" href="../style.css">
 <script src="exploit.js"></script>
 </head>
-<body onload="if(localStorage.cached505=='yes')setTimeout(exploit,50);">
+<body onload="if(localStorage.cached505=='yes')setTimeout(exploit, 50);">
 <script>
 window.applicationCache.onprogress=function(a){document.getElementById("msgs2").innerHTML="Installing Offline Cache: "+(Math.round(100*(a.loaded/a.total)))+"%"};
 window.applicationCache.oncached=function(){setTimeout(function(){document.getElementById("msgs2").innerHTML="Cache Installed Successfully ✔";},1500);setTimeout(function(){document.getElementById("msgs2").innerHTML="Now Close And Re-Open Your Browser ..."; },3500);localStorage.cached505="yes";};
+window.applicationCache.onnoupdate=function(){localStorage.cached505="yes";};
+window.applicationCache.onerror=function(){localStorage.cached505="yes";};
 </script>
 <h1 id="msgs">PS4 5.05 FW Host v2.0 by GamerHack</h1>
 <hr>
@@ -37,19 +39,13 @@ window.applicationCache.oncached=function(){setTimeout(function(){document.getEl
 <button class="btn" onmouseover="msgs.innerHTML='Renames (fake) RIFs to (free) RIFs'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_rifRen()"> RIF Renamer </button>
 <button class="btn" onmouseover="msgs.innerHTML='Active Remote Play'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_ren()"> Remote Play </button>
 <br>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux USB with 1GB VRAM'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_linux1gb()"> Linux 1GB </button>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux USB with 2GB VRAM'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_linux2gb()"> Linux 2GB </button>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux USB with 3GB VRAM'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_linux3gb()"> Linux 3GB </button>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux USB with 4GB VRAM'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_linux4gb()"> Linux 4GB </button>
-<button class="btn" onmouseover="msgs.innerHTML='Load Linux USB with 5GB VRAM'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_linux5gb()"> Linux 5GB </button>
-<br>
 <button class="btn" onmouseover="msgs.innerHTML='Required to Activate Cheats Through the PS4 Trainer Website'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_webrte()"> WebRTE </button>
 <a href="http://ps4trainer.com/Trainer/index.html"><button class="btn btn-onln" onmouseover="msgs.innerHTML='PS4 Trainer Website (Follow Instructions There)'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'"> PS4 Trainer Web </button></a>
 <button class="btn" onmouseover="msgs.innerHTML='Games Mods'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="mods_group()"> Games-Mods </button>
 <button class="btn" onmouseover="msgs.innerHTML='Parental Controls Passcode Notification - if shows 0000 that means passcode is not set'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_parental()"> Parental Controls </button>
 <br>
 <button class="btn btn-toolbox" onmouseover="msgs.innerHTML='Orbis Toolbox for 5.05 FW'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_toolbox()" style="margin-left: 68px;"> Orbis-Toolbox </button>
-<button class="btn" onmouseover="msgs.innerHTML='Modify PS4 FAN Speed'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_fanthreshold()"> Fan Threshold </button><select id="tempC"></select>°C
+<button class="btn" onmouseover="msgs.innerHTML='Modify PS4 FAN Speed'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_fanthreshold()" style="margin-bottom: 70px"> Fan Threshold </button><select id="tempC"></select>°C
 </div>
 <div id="mods">
 <h1 style="font-size: 18px;color: yellow;">Online Payloads</h1>
@@ -132,265 +128,198 @@ for(var i=50; i<=75; i=i+5){
 tempC.value=60;
 
 function load_goldhenbeta(){
-msgs.innerHTML = "<h1>Loading GoldHEN v2.4b16.2... Please Wait</h1>";
-LoadedMSG = "<h1>GoldHEN v2.4b16.2 Loaded ✔</h1>";
+LoadedMSG = "GoldHEN v2.4b16.2 Loaded ✔";
 PLfile = "goldhen_2.4b16.2.bin";
 load_payload();
 }
 
 function load_goldhen23(){
-msgs.innerHTML = "<h1>Loading GoldHEN v2.3... Please Wait</h1>";
-LoadedMSG = "<h1>GoldHEN v2.3 Loaded ✔</h1>";
+LoadedMSG = "GoldHEN v2.3 Loaded ✔";
 PLfile = "goldhen_2.3_505.bin";
 load_payload();
 }
 
 function load_binloader(){
-msgs.innerHTML = "<h1>Waiting for Payload... Send it using the PS4 IP and port 9020</h1>";
+msgs.innerHTML = "Bin Loader Launched ...";
+alert("Waiting for Payload... Send it using the PS4 IP and port 9020");
 }
 
 function load_todex(){
-msgs.innerHTML = "<h1>Loading ToDex... Please Wait</h1>"
-LoadedMSG = "<h1>ToDex Loaded ✔</h1>";
+LoadedMSG = "ToDex Loaded ✔";
 PLfile = "todex.bin";
 load_payload();
 }
 
 function load_dumper(){
-msgs.innerHTML = "<h1>Loading App-Dumper... Please Wait</h1>";
-LoadedMSG = "<h1>App-Dumper Loaded ✔</h1>";
+LoadedMSG = "App-Dumper Loaded ✔";
 PLfile = "dumper.bin";
 load_payload();
 }
 
 function load_ftp(){
-msgs.innerHTML = "<h1>Loading FTP... Please Wait</h1>"
-LoadedMSG = "<h1>FTP Loaded ✔</h1>";
+LoadedMSG = "FTP Loaded ✔";
 PLfile = "ftp.bin";
 load_payload();
 }
 
 function load_app2usb(){
-msgs.innerHTML = "<h1>Loading App2USB... Please Wait</h1>"
-LoadedMSG = "<h1>App2USB Loaded ✔</h1>"
+LoadedMSG = "App2USB Loaded ✔"
 PLfile = "app2usb.bin";
 load_payload();
 }
 
 function load_dbackup(){
-msgs.innerHTML = "<h1>Loading DB Backup... Please Wait</h1>"
-LoadedMSG = "<h1>DB Backup Loaded ✔</h1>"
+LoadedMSG = "DB Backup Loaded ✔"
 PLfile = "backup.bin";
 load_payload();
 }
 
 function load_dbrestore(){
-msgs.innerHTML = "<h1>Loading DB Restore... Please Wait</h1>"
-LoadedMSG = "<h1>DB Restore Loaded ✔</h1>"
+LoadedMSG = "DB Restore Loaded ✔"
 PLfile = "restore.bin";
 load_payload();
 }
 
 function load_enablebUpdates(){
-msgs.innerHTML = "<h1>Loading Enable Updates... Please Wait</h1>"
-LoadedMSG = "<h1>Enable Updates Loaded ✔</h1>"
+LoadedMSG = "Enable Updates Loaded ✔"
 PLfile = "enable-updates.bin";
 load_payload();
 }
 
 function load_disableUpdates(){
-msgs.innerHTML = "<h1>Loading Disable Updates... Please Wait</h1>"
-LoadedMSG = "<h1>Disable Updates Loaded ✔</h1>"
+LoadedMSG = "Disable Updates Loaded ✔"
 PLfile = "disable-updates.bin";
 load_payload();
 }
 
 function load_kernelDump(){
-msgs.innerHTML = "<h1>Loading Kernel Dumper... Please Wait</h1>"
-LoadedMSG = "<h1>Kernel Dumper Loaded ✔</h1>"
+LoadedMSG = "Kernel Dumper Loaded ✔"
 PLfile = "kernel-dumper.bin";
 load_payload();
 }
 
 function load_ps4debug(){
-msgs.innerHTML = "<h1>Loading PS4 Debug... Please Wait</h1>"
-LoadedMSG = "<h1>PS4 Debug Loaded ✔</h1>"
+LoadedMSG = "PS4 Debug Loaded ✔"
 PLfile = "ps4debug100.bin";
 load_payload();
 }
 
 function load_rifRen(){
-msgs.innerHTML = "<h1>Loading RIF Renamer... Please Wait</h1>"
-LoadedMSG = "<h1>RIF Renamer Loaded ✔</h1>"
+LoadedMSG = "RIF Renamer Loaded ✔"
 PLfile = "rif-renamer.bin";
 load_payload();
 }
 
 function load_ren(){
-msgs.innerHTML = "<h1>Loading Remote Play... Please Wait</h1>"
-LoadedMSG = "<h1>Remote Play ✔</h1>"
+LoadedMSG = "Remote Play ✔"
 PLfile = "PS4ren.bin";
 load_payload();
 }
 
-function load_linux1gb(){
-msgs.innerHTML = "<h1>Loading Linux Loader 1GB... Please Wait</h1>"
-LoadedMSG = "<h1>Linux Loader 1GB Launched ✔</h1>"
-PLfile = "Linux-1gb.bin";
-load_payload();
-}
-
-function load_linux2gb(){
-msgs.innerHTML = "<h1>Loading Linux Loader 2GB... Please Wait</h1>"
-LoadedMSG = "<h1>Linux Loader 2GB Launched ✔</h1>"
-PLfile = "Linux-2gb.bin";
-load_payload();
-}
-
-function load_linux3gb(){
-msgs.innerHTML = "<h1>Loading Linux Loader 3GB... Please Wait</h1>"
-LoadedMSG = "<h1>Linux Loader 3GB Launched ✔</h1>"
-PLfile = "Linux-3gb.bin";
-load_payload();
-}
-
-function load_linux4gb(){
-msgs.innerHTML = "<h1>Loading Linux Loader 4GB... Please Wait</h1>"
-LoadedMSG = "<h1>Linux Loader 4GB Launched ✔</h1>"
-PLfile = "Linux-4gb.bin";
-loadScript();
-load_payload();
-}
-
-function load_linux5gb(){
-msgs.innerHTML = "<h1>Loading Linux Loader 5GB... Please Wait</h1>"
-LoadedMSG = "<h1>Linux Loader 5GB Launched ✔</h1>"
-PLfile = "Linux-5gb.bin";
-load_payload();
-}
-
 function load_webrte(){
-msgs.innerHTML = "<h1>Loading WebRTE... Please Wait</h1>"
-LoadedMSG = "<h1>WebRTE Loaded ✔</h1>"
+LoadedMSG = "WebRTE Loaded ✔"
 PLfile = "webrte.bin";
 load_payload();
 }
 
 function load_parental(){
-msgs.innerHTML = "<h1>Parental Controls... Please Wait</h1>"
-LoadedMSG = "<h1>Parental Controls Loaded ✔</h1>"
+LoadedMSG = "Parental Controls Loaded ✔"
 PLfile = "parental-controls.bin";
 load_payload();
 }
 
 function load_toolbox(){
-msgs.innerHTML = "<h1>Loading Orbis-Toolbox... Please Wait</h1>"
-LoadedMSG = "<h1>Orbis-Toolbox Loaded ✔</h1>"
+LoadedMSG = "Orbis-Toolbox Loaded ✔"
 PLfile = "Orbis-Toolbox-505.bin";
 load_payload();
 }
 
 function load_fanthreshold(){
-msgs.innerHTML = "<h1>Loading Fan Threshold... Please Wait</h1>"
-LoadedMSG = "<h1>Fan Threshold Loaded ✔</h1>";
+LoadedMSG = "Fan Threshold Loaded ✔";
 PLfile = "fan-threshold"+tempC.value+".bin";
 load_payload();
 }
 
 function load_arabicGuy100(){
-msgs.innerHTML = "<h1>Loading Arabic Guy v1.00... Please Wait</h1>";
-LoadedMSG = "<h1>Arabic Guy v1.00 Loaded ✔</h1>"
+LoadedMSG = "Arabic Guy v1.00 Loaded ✔"
 PLfile = "arabic-guy100.bin";
 load_payload();
 }
 
 function load_arabicGuy127(){
-msgs.innerHTML = "<h1>Loading Arabic Guy v1.27... Please Wait</h1>";
-LoadedMSG = "<h1>Arabic Guy v1.27 Loaded ✔</h1>"
+LoadedMSG = "Arabic Guy v1.27 Loaded ✔"
 PLfile = "arabic-guy127.bin";
 load_payload();
 }
 
 function load_arabicGuy132(){
-msgs.innerHTML = "<h1>Loading Arabic Guy v1.32... Please Wait</h1>";
-LoadedMSG = "<h1>Arabic Guy v1.32 Loaded ✔</h1>"
+LoadedMSG = "Arabic Guy v1.32 Loaded ✔"
 PLfile = "arabic-guy132.bin";
 load_payload();
 }
 
 function load_arabicGuy133(){
-msgs.innerHTML = "<h1>Loading Arabic Guy v1.33... Please Wait</h1>";
-LoadedMSG = "<h1>Arabic Guy v1.33 Loaded ✔</h1>"
+LoadedMSG = "Arabic Guy v1.33 Loaded ✔"
 PLfile = "arabic-guy133.bin";
 load_payload();
 }
 
 function load_Lamance(){
-msgs.innerHTML = "<h1>Loading Lamance v0.9... Please Wait</h1>";
-LoadedMSG = "<h1>Lamance v0.9 Loaded ✔</h1>"
+LoadedMSG = "Lamance v0.9 Loaded ✔"
 PLfile = "Lamance-v0.9-1.38.bin";
 load_payload();
 }
 
 function load_WildeModz132(){
-msgs.innerHTML = "<h1>Loading WildeModz-1.32... Please Wait</h1>";
-LoadedMSG = "<h1>WildeModz-1.32 Loaded ✔</h1>"
+LoadedMSG = "WildeModz-1.32 Loaded ✔"
 PLfile = "WildeModz-1.32.bin";
 load_payload();
 }
 
 function load_WildeModz133(){
-msgs.innerHTML = "<h1>Loading WildeModz-1.33... Please Wait</h1>";
-LoadedMSG = "<h1>WildeModz-1.33 Loaded ✔</h1>"
+LoadedMSG = "WildeModz-1.33 Loaded ✔"
 PLfile = "WildeModz-1.33.bin";
 load_payload();
 }
 
 function load_WildeModz138(){
-msgs.innerHTML = "<h1>Loading WildeModz-1.38... Please Wait</h1>";
-LoadedMSG = "<h1>WildeModz-1.38 Loaded ✔</h1>"
+LoadedMSG = "WildeModz-1.38 Loaded ✔"
 PLfile = "WildeModz-1.38.bin";
 load_payload();
 }
 
 function load_WildeModz146(){
-msgs.innerHTML = "<h1>Loading WildeModz-1.46... Please Wait</h1>";
-LoadedMSG = "<h1>WildeModz-1.46 Loaded ✔</h1>"
+LoadedMSG = "WildeModz-1.46 Loaded ✔"
 PLfile = "WildeModz-1.46.bin";
 load_payload();
 }
 
 function load_Oysters100(){
-msgs.innerHTML = "<h1>Loading Oysters Menu v1.00... Please Wait</h1>";
-LoadedMSG = "<h1>Oysters Menu v1.00 Loaded ✔</h1>"
+LoadedMSG = "Oysters Menu v1.00 Loaded ✔"
 PLfile = "OystersMenu-v1.00.bin";
 load_payload();
 }
 
 function load_Oysters113(){
-msgs.innerHTML = "<h1>Loading Oysters Menu v1.13... Please Wait</h1>";
-LoadedMSG = "<h1>Oysters Menu v1.13 Loaded ✔</h1>"
+LoadedMSG = "Oysters Menu v1.13 Loaded ✔"
 PLfile = "OystersMenu-v1.13.bin";
 load_payload();
 }
 
 function load_Oysters119(){
-msgs.innerHTML = "<h1>Loading Oysters Menu v1.19... Please Wait</h1>";
-LoadedMSG = "<h1>Oysters Menu v1.19 Loaded ✔</h1>"
+LoadedMSG = "Oysters Menu v1.19 Loaded ✔"
 PLfile = "OystersMenu-v1.19.bin";
 load_payload();
 }
 
 function load_Oysters124(){
-msgs.innerHTML = "<h1>Loading Oysters Menu v1.24... Please Wait</h1>";
-LoadedMSG = "<h1>Oysters Menu v1.24 Loaded ✔</h1>"
+LoadedMSG = "Oysters Menu v1.24 Loaded ✔"
 PLfile = "OystersMenu-v1.24.bin";
 load_payload();
 }
 
 function load_Oysters129(){
-msgs.innerHTML = "<h1>Loading Oysters Menu v1.29... Please Wait</h1>";
-LoadedMSG = "<h1>Oysters Menu v1.29 Loaded ✔</h1>"
+LoadedMSG = "Oysters Menu v1.29 Loaded ✔"
 PLfile = "OystersMenu-v1.29.bin";
 load_payload();
 }
