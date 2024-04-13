@@ -112,7 +112,7 @@ req1.send();
     for(var x=0;x < 0x300000;x += 8){
 	p.write8(code_addr1.add32(x),0);}
 	};
-	allset();
+	setTimeout(allset, 50);
    setTimeout(runPAYLOAD1,100);
   }
  };
