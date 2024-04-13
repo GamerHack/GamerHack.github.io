@@ -110,9 +110,8 @@ req1.send();
    p.fcall(code_addr1);
    PLfile=null;
     for(var x=0;x < 0x300000;x += 8){
-	p.write8(code_addr1.add32(x),0);}
+	p.write8(code_addr1.add32(x),0);}setTimeout(allset, 50);
 	};
-	setTimeout(allset, 50);
    setTimeout(runPAYLOAD1,100);
   }
  };
@@ -128,12 +127,14 @@ for(var i=50; i<=75; i=i+5){
 tempC.value=60;
 
 function load_goldhenbeta(){
+msgs.innerHTML = "Loading GoldHEN v2.4b16.2... Please Wait";
 LoadedMSG = "GoldHEN v2.4b16.2 Loaded ✔";
 PLfile = "goldhen_2.4b16.2.bin";
 load_payload();
 }
 
 function load_goldhen23(){
+msgs.innerHTML = "Loading GoldHEN v2.3... Please Wait";
 LoadedMSG = "GoldHEN v2.3 Loaded ✔";
 PLfile = "goldhen_2.3_505.bin";
 load_payload();
@@ -145,180 +146,210 @@ alert("Waiting for Payload... Send it using the PS4 IP and port 9020");
 }
 
 function load_todex(){
+msgs.innerHTML = "Loading ToDex... Please Wait"
 LoadedMSG = "ToDex Loaded ✔";
 PLfile = "todex.bin";
 load_payload();
 }
 
 function load_dumper(){
+msgs.innerHTML = "Loading App-Dumper... Please Wait";
 LoadedMSG = "App-Dumper Loaded ✔";
 PLfile = "dumper.bin";
 load_payload();
 }
 
 function load_ftp(){
+msgs.innerHTML = "Loading FTP... Please Wait"
 LoadedMSG = "FTP Loaded ✔";
 PLfile = "ftp.bin";
 load_payload();
 }
 
 function load_app2usb(){
+msgs.innerHTML = "Loading App2USB... Please Wait"
 LoadedMSG = "App2USB Loaded ✔"
 PLfile = "app2usb.bin";
 load_payload();
 }
 
 function load_dbackup(){
+msgs.innerHTML = "Loading DB Backup... Please Wait"
 LoadedMSG = "DB Backup Loaded ✔"
 PLfile = "backup.bin";
 load_payload();
 }
 
 function load_dbrestore(){
+msgs.innerHTML = "Loading DB Restore... Please Wait"
 LoadedMSG = "DB Restore Loaded ✔"
 PLfile = "restore.bin";
 load_payload();
 }
 
 function load_enablebUpdates(){
+msgs.innerHTML = "Loading Enable Updates... Please Wait"
 LoadedMSG = "Enable Updates Loaded ✔"
 PLfile = "enable-updates.bin";
 load_payload();
 }
 
 function load_disableUpdates(){
+msgs.innerHTML = "Loading Disable Updates... Please Wait"
 LoadedMSG = "Disable Updates Loaded ✔"
 PLfile = "disable-updates.bin";
 load_payload();
 }
 
 function load_kernelDump(){
+msgs.innerHTML = "Loading Kernel Dumper... Please Wait"
 LoadedMSG = "Kernel Dumper Loaded ✔"
 PLfile = "kernel-dumper.bin";
 load_payload();
 }
 
 function load_ps4debug(){
+msgs.innerHTML = "Loading PS4 Debug... Please Wait"
 LoadedMSG = "PS4 Debug Loaded ✔"
 PLfile = "ps4debug100.bin";
 load_payload();
 }
 
 function load_rifRen(){
+msgs.innerHTML = "Loading RIF Renamer... Please Wait"
 LoadedMSG = "RIF Renamer Loaded ✔"
 PLfile = "rif-renamer.bin";
 load_payload();
 }
 
 function load_ren(){
+msgs.innerHTML = "Loading Remote Play... Please Wait"
 LoadedMSG = "Remote Play ✔"
 PLfile = "PS4ren.bin";
 load_payload();
 }
 
 function load_webrte(){
+msgs.innerHTML = "Loading WebRTE... Please Wait"
 LoadedMSG = "WebRTE Loaded ✔"
 PLfile = "webrte.bin";
 load_payload();
 }
 
 function load_parental(){
+msgs.innerHTML = "Parental Controls... Please Wait"
 LoadedMSG = "Parental Controls Loaded ✔"
 PLfile = "parental-controls.bin";
 load_payload();
 }
 
 function load_toolbox(){
+msgs.innerHTML = "Loading Orbis-Toolbox... Please Wait"
 LoadedMSG = "Orbis-Toolbox Loaded ✔"
 PLfile = "Orbis-Toolbox-505.bin";
 load_payload();
 }
 
 function load_fanthreshold(){
+msgs.innerHTML = "Loading Fan Threshold... Please Wait"
 LoadedMSG = "Fan Threshold Loaded ✔";
 PLfile = "fan-threshold"+tempC.value+".bin";
 load_payload();
 }
 
 function load_arabicGuy100(){
+msgs.innerHTML = "Loading Arabic Guy v1.00... Please Wait";
 LoadedMSG = "Arabic Guy v1.00 Loaded ✔"
 PLfile = "arabic-guy100.bin";
 load_payload();
 }
 
 function load_arabicGuy127(){
+msgs.innerHTML = "Loading Arabic Guy v1.27... Please Wait";
 LoadedMSG = "Arabic Guy v1.27 Loaded ✔"
 PLfile = "arabic-guy127.bin";
 load_payload();
 }
 
 function load_arabicGuy132(){
+msgs.innerHTML = "Loading Arabic Guy v1.32... Please Wait";
 LoadedMSG = "Arabic Guy v1.32 Loaded ✔"
 PLfile = "arabic-guy132.bin";
 load_payload();
 }
 
 function load_arabicGuy133(){
+msgs.innerHTML = "Loading Arabic Guy v1.33... Please Wait";
 LoadedMSG = "Arabic Guy v1.33 Loaded ✔"
 PLfile = "arabic-guy133.bin";
 load_payload();
 }
 
 function load_Lamance(){
+msgs.innerHTML = "Loading Lamance v0.9... Please Wait";
 LoadedMSG = "Lamance v0.9 Loaded ✔"
 PLfile = "Lamance-v0.9-1.38.bin";
 load_payload();
 }
 
 function load_WildeModz132(){
+msgs.innerHTML = "Loading WildeModz-1.32... Please Wait";
 LoadedMSG = "WildeModz-1.32 Loaded ✔"
 PLfile = "WildeModz-1.32.bin";
 load_payload();
 }
 
 function load_WildeModz133(){
+msgs.innerHTML = "Loading WildeModz-1.33... Please Wait";
 LoadedMSG = "WildeModz-1.33 Loaded ✔"
 PLfile = "WildeModz-1.33.bin";
 load_payload();
 }
 
 function load_WildeModz138(){
+msgs.innerHTML = "Loading WildeModz-1.38... Please Wait";
 LoadedMSG = "WildeModz-1.38 Loaded ✔"
 PLfile = "WildeModz-1.38.bin";
 load_payload();
 }
 
 function load_WildeModz146(){
+msgs.innerHTML = "Loading WildeModz-1.46... Please Wait";
 LoadedMSG = "WildeModz-1.46 Loaded ✔"
 PLfile = "WildeModz-1.46.bin";
 load_payload();
 }
 
 function load_Oysters100(){
+msgs.innerHTML = "Loading Oysters Menu v1.00... Please Wait";
 LoadedMSG = "Oysters Menu v1.00 Loaded ✔"
 PLfile = "OystersMenu-v1.00.bin";
 load_payload();
 }
 
 function load_Oysters113(){
+msgs.innerHTML = "Loading Oysters Menu v1.13... Please Wait";
 LoadedMSG = "Oysters Menu v1.13 Loaded ✔"
 PLfile = "OystersMenu-v1.13.bin";
 load_payload();
 }
 
 function load_Oysters119(){
+msgs.innerHTML = "Loading Oysters Menu v1.19... Please Wait";
 LoadedMSG = "Oysters Menu v1.19 Loaded ✔"
 PLfile = "OystersMenu-v1.19.bin";
 load_payload();
 }
 
 function load_Oysters124(){
+msgs.innerHTML = "Loading Oysters Menu v1.24... Please Wait";
 LoadedMSG = "Oysters Menu v1.24 Loaded ✔"
 PLfile = "OystersMenu-v1.24.bin";
 load_payload();
 }
 
 function load_Oysters129(){
+msgs.innerHTML = "Loading Oysters Menu v1.29... Please Wait";
 LoadedMSG = "Oysters Menu v1.29 Loaded ✔"
 PLfile = "OystersMenu-v1.29.bin";
 load_payload();
