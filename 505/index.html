@@ -26,7 +26,7 @@ window.applicationCache.onerror=function(){localStorage.cached505="yes";};
 <br>
 <h1 style="font-size: 18px;">Payloads</h1>
 <button class="btn" onmouseover="msgs.innerHTML='Enable Some Debugging Functions Available on TestKit'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_todex()"> ToDex </button>
-<button class="btn" onmouseover="msgs.innerHTML='Dump Games to USB Drive'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_dumper()"> App-Dumper </button>
+<button class="btn" onmouseover="msgs.innerHTML='Dump Games to USB Drive'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_dumper()"> Game-Dumper </button>
 <button class="btn" onmouseover="msgs.innerHTML='Access this console Through FTP (Be careful what you do)'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_ftp()"> FTP </button>
 <button class="btn" onmouseover="msgs.innerHTML='Transfer Installed Games to USB Drive in exFAT'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_app2usb()"> App2USB </button>
 <button class="btn" onmouseover="msgs.innerHTML='Create a Backup of the Database and Users to a USB Drive'" onmouseout="msgs.innerHTML='PS4 5.05 FW Host v2.0 by GamerHack'" onclick="load_dbackup()"> DB Backup </button>
@@ -152,8 +152,8 @@ load_payload();
 }
 
 function load_dumper(){
-msgs.innerHTML = "Loading App-Dumper... Please Wait";
-LoadedMSG = "App-Dumper Loaded ✔";
+msgs.innerHTML = "Loading Game-Dumper... Please Wait";
+LoadedMSG = "Game-Dumper Loaded ✔";
 PLfile = "dumper.bin";
 load_payload();
 }
