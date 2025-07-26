@@ -199,6 +199,7 @@ async function uaf_ssv(fsets, index, index2) {
 	input.style.top = "-100px";
     input.id = 'input';
     const foo = document.createElement('input');
+    foo.style.opacity = "0";
     foo.id = 'foo';
     const bar = document.createElement('a');
     bar.id = 'bar';
