@@ -199,7 +199,7 @@ async function uaf_ssv(fsets, index, index2) {
     input.style.top = "-100px";
     input.id = 'input';
     const foo = document.createElement('input');
-	foo.style.position = "absolute";
+    foo.style.position = "absolute";
     foo.style.top = "-100px";
     foo.id = 'foo';
     const bar = document.createElement('a');
