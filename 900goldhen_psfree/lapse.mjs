@@ -1606,7 +1606,7 @@ async function patch_kernel(kbase, kmem, p_ucred, restore_info) {
     localStorage.ExploitLoaded="yes"
     sessionStorage.ExploitLoaded="yes";
    //alert("kernel exploit succeeded!");
-    msgs.innerHTML = "GoldHEN v2.4b18.5 Loaded ...";
+    msgs.innerHTML = "GoldHEN v2.4b18.4 Loaded ...";
 }
 
 
@@ -1832,7 +1832,7 @@ var loader_addr = chain.sysp(
 
  var req = new XMLHttpRequest();
  req.responseType = "arraybuffer";
- req.open('GET','goldhen_2.4b18.5.bin');
+ req.open('GET','goldhen_2.4b18.4.bin');
  req.send();
  req.onreadystatechange = function () {
   if (req.readyState == 4) {
