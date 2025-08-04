@@ -1832,7 +1832,7 @@ var loader_addr = chain.sysp(
 
  var req = new XMLHttpRequest();
  req.responseType = "arraybuffer";
- req.open('GET','goldhen_2.4b18.4.bin');
+ req.open('GET','goldhen_2.4b18.5.bin');
  req.send();
  req.onreadystatechange = function () {
   if (req.readyState == 4) {
