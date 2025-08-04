@@ -1606,7 +1606,7 @@ async function patch_kernel(kbase, kmem, p_ucred, restore_info) {
     localStorage.ExploitLoaded="yes"
     sessionStorage.ExploitLoaded="yes";
    //alert("kernel exploit succeeded!");
-    msgs.innerHTML = "GoldHEN v2.4b18.4 Loaded ...";
+    msgs.innerHTML = "GoldHEN v2.4b18.5 Loaded ...";
 }
 
 
