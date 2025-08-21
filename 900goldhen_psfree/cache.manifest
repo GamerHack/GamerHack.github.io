@@ -3,6 +3,7 @@ CACHE MANIFEST
 CACHE: 
 ../img.jpg
 ../style.css
+aio_patches.bin
 alert.mjs
 config.mjs
 goldhen_2.4b18.5.bin
