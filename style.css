@@ -11,7 +11,7 @@ html {
 }
 
 h1 {
-    text-shadow: 0.1em 0.1em 0.2em black;
+    text-shadow: 1px 1px 2px black;
     font-size: 25px;
     color: white;
 }
@@ -102,3 +102,4 @@ a {
     background-color: #c2c2c2;
     color: #303030;
 }
+
