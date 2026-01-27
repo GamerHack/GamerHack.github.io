@@ -8,6 +8,7 @@ html {
     color: white;
     text-align: center;
     overflow: hidden;
+    height: 100%;
 }
 
 h1 {
@@ -102,5 +103,6 @@ a {
     background-color: #c2c2c2;
     color: #303030;
 }
+
 
 
