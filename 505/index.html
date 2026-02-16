@@ -140,8 +140,13 @@ PLfile = "goldhen_2.3_505.bin";
 load_payload();
 }
 
-function load_binloader(){									   
-msgs.innerHTML = "Bin Loader Ready... Send Payload to PS4 IP:9020";
+function load_binloader(){
+    if (!window.Click) {
+        msgs.innerHTML = "Bin Loader Ready... Send Payload to PS4 IP:9020";
+        window.Click = true;
+    } else {
+        alert("If Bin Loader is already in use:\nSend your payload to PS4 IP on port 9020\n\nIf Bin Loader was already used:\nReload page to use again");
+    }
 }
 
 function load_todex(){
