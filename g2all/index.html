@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>PS4 7.00 - 9.60 FW GoldHEN Host by GamerHack</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<script>
+var uaFull = navigator.userAgent;
+var match = uaFull.match(/PlayStation 4[ /]([\d.]+)/i);
+var isPS4 = match !== null;
+var fwVersion = isPS4 ? match[1] : "Unknown";
+var fwNum = parseFloat(fwVersion);
+
+if (!isPS4) {
+    document.addEventListener("DOMContentLoaded", () => {
+        msgs.innerHTML = "Only for PS4 with Firmware 7.00 to 9.60";
+    });
+} else {
+    if (window.applicationCache.status == '0') {
+        if (fwNum >= 7.00 && fwNum <= 8.52) {
+            window.location.replace("cache700.html");
+        } else if (fwNum >= 9.00 && fwNum <= 9.60) {
+            window.location.replace("cache900.html");
+        } else {
+            document.addEventListener("DOMContentLoaded", () => {
+                msgs.innerHTML = 'Unsupported Firmware: <span style="color: red;">' + fwVersion + '</span>';
+            });
+        }
+    } else {
+        if (fwNum >= 7.00 && fwNum <= 8.52) {
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = "700/alert.js";
+            document.head.appendChild(script);
+        } 
+        else if (fwNum >= 9.00 && fwNum <= 9.60) {
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = "900/alert.js";
+            document.head.appendChild(script);
+        }
+    }
+}
+</script>
+<h1>PS4 7.00 - 9.60 FW GoldHEN Host by GamerHack</h1>
+<hr>
+<br>
+<h1 id=msgs style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Loading GoldHEN v2.4b18.9... Please Wait</h1>
+<h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/_AlAzif" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@_AlAzif</a>ChendoChap<a href="https://x.com/Kameleonre_" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Kameleonre_</a>SiSTR0 Abc</h1>
+</body>
+</html>
