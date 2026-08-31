@@ -1,0 +1,22 @@
+CACHE MANIFEST 
+
+CACHE:
+../img.jpg
+../style.css
+goldhen_2.4b18.10.bin
+index.html
+slopkit\chain_lapse.js
+slopkit\chain_poops.js
+slopkit\core.js?v=10
+slopkit\core.js
+slopkit\int64.js
+slopkit\mem.js
+slopkit\ps4_offsets.js
+slopkit\rpc_worker.js
+slopkit\patches\1150.bin
+slopkit\patches\1200.bin
+slopkit\patches\1250.bin
+slopkit\patches\1300.bin
+
+NETWORK:
+*
