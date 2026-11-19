@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html manifest="cache.manifest">
+<head>
+<title>PS4 9.00 FW GoldHEN Host by GamerHack</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));setTimeout(function(){window.msgs.innerHTML="Installing Offline Cache: " + Percent + "%";},500)}
+function DisplayCacheProgress(){setTimeout(function(){window.msgs.innerHTML="Cache Installed Successfully ✔";},1500);setTimeout(function(){window.msgs.innerHTML="Now Close And Re-Open Your Browser ...";},3500);}window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+<h1>PS4 9.00 FW GoldHEN Host by GamerHack</h1>
+<hr>
+<br>
+<h1 id="msgs" style="font-size: 30px;margin-top: 77px;margin-bottom: 455px;">Wait a Moment...</h1>
+<h1 style="margin-top: 43px;">Special Thanks to:<a href="https://twitter.com/sleirsgoevy" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@sleirsgoevy</a>ChendoChap<a href="https://twitter.com/Znullptr" style="color: #f31414;margin-left: 10px;margin-right: 10px;">@Znullptr</a>SiSTR0</h1>
+</body>
+</html>
